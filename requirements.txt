@@ -1,2 +1,4 @@
+memory-profiler==0.61.0
 numpy==1.26.4
+psutil==5.9.8
 tqdm==4.66.2
