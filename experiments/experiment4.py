@@ -4,6 +4,7 @@ from main import *
 from tqdm import tqdm
 
 
+# GENERATE PERMUTERM INDICES
 def generate_permuterm_indices():
     postings, term_freq = load_index_in_memory("./s2/")
     # Here postings is the inverted index
@@ -20,6 +21,7 @@ def generate_permuterm_indices():
     return permuterm_index
 
 
+# PREFIX SEARCH ON PERMUTERM INDEX
 def prefix_search_on_permuterm_index(permuterm_index: dict, query: str):
     query = query + "$"
     # We have to rotate it such that last char is *
@@ -33,6 +35,7 @@ def prefix_search_on_permuterm_index(permuterm_index: dict, query: str):
             logging.info(permuterm_index[key])
 
 
+# PREFIX SEARCH ON ALL TERMS
 def prefix_search_on_all_terms(permuterm_index: dict):
     # Open the file and search for the term
     with open("./s2/s2_wildcard.json") as f:
@@ -45,5 +48,8 @@ def prefix_search_on_all_terms(permuterm_index: dict):
 
 # ENTRYPOINT
 if __name__ == "__main__":
+    # PART 3.4.1: PERMUTERM INDEX
     permuterm_index = generate_permuterm_indices()
     prefix_search_on_all_terms(permuterm_index)
+
+    # PART 3.4.2: TREE BASED INDEX
