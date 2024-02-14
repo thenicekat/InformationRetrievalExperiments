@@ -5,6 +5,7 @@ from datetime import datetime
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 os.chdir("..")
+os.makedirs("./logs", exist_ok=True)
 
 logging.basicConfig(
     level=logging.INFO,

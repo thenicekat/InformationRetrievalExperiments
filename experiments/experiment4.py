@@ -1,4 +1,4 @@
-import code_setup
+from code_setup import *
 from profiling import *
 from main import *
 from tqdm import tqdm
