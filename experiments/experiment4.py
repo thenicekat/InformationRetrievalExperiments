@@ -28,13 +28,22 @@ def prefix_search_on_permuterm_index(permuterm_index: dict, query: str):
     # We remove the * from the end
     query = query[:-1]
     # Now we can search for the query in the permuterm index
-    for key in tqdm(permuterm_index):
+    for key in permuterm_index:
         if key.startswith(query):
             logging.info(permuterm_index[key])
+
+
+def prefix_search_on_all_terms(permuterm_index: dict):
+    # Open the file and search for the term
+    with open("./s2/s2_wildcard.json") as f:
+        queries = json.load(f)
+
+    for term in tqdm(queries["queries"]):
+        logging.info(f"Term is: {term}")
+        prefix_search_on_permuterm_index(permuterm_index, term["query"])
 
 
 # ENTRYPOINT
 if __name__ == "__main__":
     permuterm_index = generate_permuterm_indices()
-    prefix_search_on_permuterm_index(permuterm_index, "hello*")
-    prefix_search_on_permuterm_index(permuterm_index, "world*")
+    prefix_search_on_all_terms(permuterm_index)
