@@ -1,8 +1,6 @@
-import path_setup
+import code_setup
 from profiling import *
-
 from main import *
-import json
 from tqdm import tqdm
 
 
@@ -19,3 +17,24 @@ def generate_permuterm_indices():
         term = term + "$"
         for i in range(len(term)):
             permuterm_index[term[i:] + term[:i]] = term
+    return permuterm_index
+
+
+def prefix_search_on_permuterm_index(permuterm_index: dict, query: str):
+    query = query + "$"
+    # We have to rotate it such that last char is *
+    while query[-1] != "*":
+        query = query[-1] + query[:-1]
+    # We remove the * from the end
+    query = query[:-1]
+    # Now we can search for the query in the permuterm index
+    for key in tqdm(permuterm_index):
+        if key.startswith(query):
+            logging.info(permuterm_index[key])
+
+
+# ENTRYPOINT
+if __name__ == "__main__":
+    permuterm_index = generate_permuterm_indices()
+    prefix_search_on_permuterm_index(permuterm_index, "hello*")
+    prefix_search_on_permuterm_index(permuterm_index, "world*")
