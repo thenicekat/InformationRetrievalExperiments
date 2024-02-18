@@ -4,7 +4,6 @@ from main import *
 from tqdm import tqdm
 
 
-
 # Trie Node for the tree based index
 class TrieNode:
     def __init__(self):
@@ -79,9 +78,14 @@ def tree_based_search(trie: Trie):
         logging.info(f"Result: {result}")
 
 
+@memory_profile
+def helper_trie():
+    trieBasedIndex = generate_trie_indices()
+    tree_based_search(trieBasedIndex)
+
+
 # ENTRYPOINT
 if __name__ == "__main__":
     # # PART 3.3.1: TREE BASED INDEX
     print("::> PART 3.3.1: TREE BASED INDEX")
-    trieBasedIndex = generate_trie_indices()
-    tree_based_search(trieBasedIndex)
+    time_profile.run("helper_trie()")
