@@ -4,6 +4,7 @@ from main import *
 from tqdm import tqdm
 
 
+
 # Trie Node for the tree based index
 class TrieNode:
     def __init__(self):
@@ -66,7 +67,6 @@ def generate_trie_indices():
 
 # TREE BASED SEARCH
 def tree_based_search(trie: Trie):
-
     # Open the file and search for the term
     with open("./s2/s2_query.json") as f:
         queries = json.load(f)
@@ -75,6 +75,8 @@ def tree_based_search(trie: Trie):
         # Split the term at the *
         # words = term["query"].split()
         result = trie.boolean_retrieval_multiple_words(term["query"])
+        logging.info(f"Query: {term['query']}")
+        logging.info(f"Result: {result}")
 
 
 # ENTRYPOINT
@@ -82,6 +84,4 @@ if __name__ == "__main__":
     # # PART 3.3.1: TREE BASED INDEX
     print("::> PART 3.3.1: TREE BASED INDEX")
     trieBasedIndex = generate_trie_indices()
-    # result = trieBasedIndex.search_multiple_words("if")
-    # print(result)
     tree_based_search(trieBasedIndex)
