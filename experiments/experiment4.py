@@ -52,10 +52,7 @@ class Trie:
 
 
 # GENERATE PERMUTERM INDICES
-def generate_permuterm_indices():
-    postings, term_freq = load_index_in_memory("./s2/")
-    # Here postings is the inverted index
-    # term_freq is the term frequency of each term in the collection
+def generate_permuterm_indices(term_freq: dict):
     # Create a permuterm index
     permuterm_index = {}
     # We can create a permutation index for each term in the collection
@@ -69,7 +66,7 @@ def generate_permuterm_indices():
 
 
 # PREFIX SEARCH ON PERMUTERM INDEX
-def permuterm_search_on_one_term(permuterm_index: dict, query: str):
+def permuterm_search_on_one_term(permuterm_index: dict, postings: dict, query: str):
     query = query + "$"
     # We have to rotate it such that last char is *
     while query[-1] != "*":
@@ -77,25 +74,33 @@ def permuterm_search_on_one_term(permuterm_index: dict, query: str):
     # We remove the * from the end
     query = query[:-1]
     # Now we can search for the query in the permuterm index
+    results = set()
     for key in permuterm_index:
         if key.startswith(query):
-            logging.info(f"Permuterm Search: Result Term is: {permuterm_index[key]}")
+            # We remove the $ from the end
+            # and add postings list to the results
+            for posting in postings[permuterm_index[key][:-1]]:
+                results.add(posting)
+    return results
 
 
 # PREFIX SEARCH ON ALL TERMS
-def permuterm_search_on_all_terms(permuterm_index: dict):
+def permuterm_search_on_all_terms(permuterm_index: dict, postings: dict):
     # Open the file and search for the term
     with open("./s2/s2_wildcard.json") as f:
         queries = json.load(f)
 
     for term in tqdm(queries["queries"]):
         logging.info(f"Permuterm Search: Query Term is: {term}")
-        permuterm_search_on_one_term(permuterm_index, term["query"])
+        results_per_query = permuterm_search_on_one_term(
+            permuterm_index, postings, term["query"]
+        )
+        logging.info(f"Permuterm Search: Result Term is: {len(results_per_query)}")
+        # logging.info(f"Permuterm Search: Result Term is: {results_per_query}")
 
 
 # GENERATE TRIE INDICES
-def generate_trie_indices():
-    postings, term_freq = load_index_in_memory("./s2/")
+def generate_trie_indices(term_freq: dict):
     # Here postings is the inverted index
     # term_freq is the term frequency of each term in the collection
     # Create a trie based index
@@ -118,7 +123,7 @@ def generate_trie_indices():
 
 
 # TREE BASED SEARCH
-def tree_based_search(start_trie: Trie, end_trie: Trie):
+def tree_based_search(start_trie: Trie, end_trie: Trie, postings: dict):
     # Open the file and search for the term
     with open("./s2/s2_wildcard.json") as f:
         queries = json.load(f)
@@ -140,22 +145,35 @@ def tree_based_search(start_trie: Trie, end_trie: Trie):
         final_results = list(
             set(first_half_results).intersection(set(second_half_results))
         )
-
+        postings_result = set()
         for result in final_results:
-            logging.info(f"Trie Search: Result Term is: {result}")
+            # logging.info(f"Trie Search: Result Term is: {result}")
+            for posting in postings[result]:
+                postings_result.add(posting)
+        logging.info(f"Trie Search: Result Term is: {len(postings_result)}")
 
 
 @memory_profile
 def permuterm_trial():
-    permuterm_index = generate_permuterm_indices()
-    permuterm_search_on_all_terms(permuterm_index)
+    postings, term_freq = load_index_in_memory("./s2/")
+    # Here postings is the inverted index
+    # term_freq is the term frequency of each term in the collection
+    permuterm_index = generate_permuterm_indices(term_freq=term_freq)
+    permuterm_search_on_all_terms(permuterm_index, postings)
 
 
 @memory_profile
 def trie_trial():
-    trieBasedIndexFromStart, trieBasedIndexFromEnd = generate_trie_indices()
+    postings, term_freq = load_index_in_memory("./s2/")
+    # Here postings is the inverted index
+    # term_freq is the term frequency of each term in the collection
+    trieBasedIndexFromStart, trieBasedIndexFromEnd = generate_trie_indices(
+        term_freq=term_freq
+    )
     tree_based_search(
-        start_trie=trieBasedIndexFromStart, end_trie=trieBasedIndexFromEnd
+        start_trie=trieBasedIndexFromStart,
+        end_trie=trieBasedIndexFromEnd,
+        postings=postings,
     )
 
 
