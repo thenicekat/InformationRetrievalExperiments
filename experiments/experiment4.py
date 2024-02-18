@@ -145,16 +145,24 @@ def tree_based_search(start_trie: Trie, end_trie: Trie):
             logging.info(f"Trie Search: Result Term is: {result}")
 
 
-# ENTRYPOINT
-if __name__ == "__main__":
-    # # PART 3.4.1: PERMUTERM INDEX
-    print("::> PART 3.4.1: PERMUTERM INDEX")
+def permuterm_trial():
     permuterm_index = generate_permuterm_indices()
     permuterm_search_on_all_terms(permuterm_index)
 
-    # # PART 3.4.2: TREE BASED INDEX
-    print("::> PART 3.4.2: TREE BASED INDEX")
+
+def trie_trial():
     trieBasedIndexFromStart, trieBasedIndexFromEnd = generate_trie_indices()
     tree_based_search(
         start_trie=trieBasedIndexFromStart, end_trie=trieBasedIndexFromEnd
     )
+
+
+# ENTRYPOINT
+if __name__ == "__main__":
+    # # PART 3.4.1: PERMUTERM INDEX
+    print("::> PART 3.4.1: PERMUTERM INDEX")
+    # time_profile.run("permuterm_trial()")
+
+    # # PART 3.4.2: TREE BASED INDEX
+    print("::> PART 3.4.2: TREE BASED INDEX")
+    # time_profile.run("trie_trial()")
