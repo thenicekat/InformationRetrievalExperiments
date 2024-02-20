@@ -13,6 +13,7 @@ def tolerant_retrieval(start_trie: Trie, end_trie: Trie):
 
     f_ = open("./s2/intermediate/postings.tsv", encoding="utf-8")
     postings = {}
+    threshold = 2
 
     for line in f_:
         splitline = line.split("\t")
@@ -23,8 +24,8 @@ def tolerant_retrieval(start_trie: Trie, end_trie: Trie):
             item_list.append(splitline[item].strip())
         postings[token] = item_list
 
-    for term in tqdm(queries["queries"]):
-        words = term["query"].split()
+    for query_ in tqdm(queries["queries"]):
+        words = query_["query"].split()
         final_doc_list = list()
         for w in words:
             if '*' in w:
@@ -46,7 +47,11 @@ def tolerant_retrieval(start_trie: Trie, end_trie: Trie):
                 final_doc_list.append(wildcard_docs)
 
             else:
-                final_doc_list.append(set(postings[w]))
+                docs = set()
+                for term in postings:
+                    if edit_distance(w,term)<=threshold:
+                        docs = docs.union(set(postings[term]))
+                final_doc_list.append(docs)
 
         result = set(final_doc_list[0])
         for i in range(1,len(final_doc_list)):
@@ -68,10 +73,10 @@ def edit_distance(word1, word2):
     # Fill in the matrix
     for i in range(1, m + 1):
         for j in range(1, n + 1):
-            cost = 0 if word1[i - 1] == word2[j - 1] else 2  #cost for substitution is 2
-            dp[i][j] = min(dp[i - 1][j] + 1,      #Deletion
-                           dp[i][j - 1] + 1,      #Insertion
-                           dp[i - 1][j - 1] + cost)  #Substitution
+            cost = 0 if word1[i-1] == word2[j-1] else 2  #cost for substitution is 2
+            dp[i][j] = min(dp[i-1][j] + 1,      #Deletion
+                           dp[i][j-1] + 1,      #Insertion
+                           dp[i-1][j-1] + cost)  #Substitution
 
     # Return the bottom-right cell of the matrix
     return dp[m][n]
