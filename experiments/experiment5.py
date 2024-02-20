@@ -81,4 +81,4 @@ def edit_distance(word1, word2):
 # ENTRYPOINT
 if __name__ == "__main__":
     postings, term_freq = load_index_in_memory("./s2/")
-    trieBasedIndex = generate_trie_indices()
+    #trieBasedIndex = generate_trie_indices()
