@@ -2,6 +2,7 @@ from code_setup import *
 from profiling import *
 from main import *
 from tqdm import tqdm
+import pandas as pd
 
 
 # Trie Node for the tree based index
@@ -84,21 +85,6 @@ def permuterm_search_on_one_term(permuterm_index: dict, postings: dict, query: s
     return results
 
 
-# PREFIX SEARCH ON ALL TERMS
-def permuterm_search_on_all_terms(permuterm_index: dict, postings: dict):
-    # Open the file and search for the term
-    with open("./s2/s2_wildcard.json") as f:
-        queries = json.load(f)
-
-    for term in tqdm(queries["queries"]):
-        logging.info(f"Permuterm Search: Query Term is: {term}")
-        results_per_query = permuterm_search_on_one_term(
-            permuterm_index, postings, term["query"]
-        )
-        logging.info(f"Permuterm Search: Result Term is: {len(results_per_query)}")
-        # logging.info(f"Permuterm Search: Result Term is: {results_per_query}")
-
-
 # GENERATE TRIE INDICES
 def generate_trie_indices(term_freq: dict):
     # Here postings is the inverted index
@@ -123,57 +109,114 @@ def generate_trie_indices(term_freq: dict):
 
 
 # TREE BASED SEARCH
-def tree_based_search(start_trie: Trie, end_trie: Trie, postings: dict):
-    # Open the file and search for the term
-    with open("./s2/s2_wildcard.json") as f:
-        queries = json.load(f)
+def tree_based_search(start_trie: Trie, end_trie: Trie, postings: dict, term: dict):
+    # Split the term at the *
+    first_half = term["query"].split("*")[0]
+    second_half = term["query"].split("*")[1]
+    logging.info(
+        f"Trie Search: Query Term is: {term} --> {first_half} and {second_half}"
+    )
+    # This will return all the words that start with the first half
+    first_half_results = start_trie.starts_with(first_half)
+    # This will return reverse of all the words that end with the second half
+    second_half_results = end_trie.starts_with(second_half[::-1])
+    # reverse all the words in the second half results
+    second_half_results = [i[::-1] for i in second_half_results]
 
-    for term in tqdm(queries["queries"]):
-        # Split the term at the *
-        first_half = term["query"].split("*")[0]
-        second_half = term["query"].split("*")[1]
-        logging.info(
-            f"Trie Search: Query Term is: {term} --> {first_half} and {second_half}"
-        )
-        # This will return all the words that start with the first half
-        first_half_results = start_trie.starts_with(first_half)
-        # This will return reverse of all the words that end with the second half
-        second_half_results = end_trie.starts_with(second_half[::-1])
-        # reverse all the words in the second half results
-        second_half_results = [i[::-1] for i in second_half_results]
-
-        final_results = list(
-            set(first_half_results).intersection(set(second_half_results))
-        )
-        postings_result = set()
-        for result in final_results:
-            # logging.info(f"Trie Search: Result Term is: {result}")
-            for posting in postings[result]:
-                postings_result.add(posting)
-        logging.info(f"Trie Search: Result Term is: {len(postings_result)}")
+    final_results = list(set(first_half_results).intersection(set(second_half_results)))
+    postings_result = set()
+    for result in final_results:
+        # logging.info(f"Trie Search: Result Term is: {result}")
+        for posting in postings[result]:
+            postings_result.add(posting)
+    logging.info(f"Trie Search: Result Term is: {len(postings_result)}")
 
 
 @memory_profile
 def permuterm_trial():
+    permuterm_profiler = time_profile.Profile()
+
     postings, term_freq = load_index_in_memory("./s2/")
     # Here postings is the inverted index
     # term_freq is the term frequency of each term in the collection
     permuterm_index = generate_permuterm_indices(term_freq=term_freq)
-    permuterm_search_on_all_terms(permuterm_index, postings)
+
+    # Open the file and search for the term
+    with open("./s2/s2_wildcard.json") as f:
+        queries = json.load(f)
+
+    initial_time = 0
+    times = []
+    for term in tqdm(queries["queries"]):
+        logging.info(f"Permuterm Search: Query Term is: {term}")
+
+        permuterm_profiler.enable()
+        results_per_query = permuterm_search_on_one_term(
+            permuterm_index=permuterm_index,
+            postings=postings,
+            query=term["query"],
+        )
+        permuterm_profiler.disable()
+
+        stats = pstats.Stats(permuterm_profiler)
+        current_iteration = stats.total_tt - initial_time
+        initial_time = stats.total_tt
+
+        times.append([term["query"], current_iteration])
+
+        logging.info(
+            f"Profiled {current_iteration} seconds at {index} for {permuterm_search_on_one_term.__name__}"
+        )
+        logging.info(f"Permuterm Search: Result Term is: {len(results_per_query)}")
+        # logging.info(f"Permuterm Search: Result Term is: {results_per_query}")
+
+    pd.DataFrame(times).to_csv(
+        "experiment4_permuterm_times.csv", index=False, header=["Query", "Time"]
+    )
 
 
 @memory_profile
 def trie_trial():
+    tree_profiler = time_profile.Profile()
     postings, term_freq = load_index_in_memory("./s2/")
     # Here postings is the inverted index
     # term_freq is the term frequency of each term in the collection
+
+    # Create the trie
     trieBasedIndexFromStart, trieBasedIndexFromEnd = generate_trie_indices(
         term_freq=term_freq
     )
-    tree_based_search(
-        start_trie=trieBasedIndexFromStart,
-        end_trie=trieBasedIndexFromEnd,
-        postings=postings,
+
+    # Open the file and search for the term
+    with open("./s2/s2_wildcard.json") as f:
+        queries = json.load(f)
+
+    initial_time = 0
+    times = []
+    for term in tqdm(queries["queries"]):
+        tree_profiler.enable()
+
+        tree_based_search(
+            start_trie=trieBasedIndexFromStart,
+            end_trie=trieBasedIndexFromEnd,
+            postings=postings,
+            term=term,
+        )
+
+        tree_profiler.disable()
+
+        stats = pstats.Stats(tree_profiler)
+        current_iteration = stats.total_tt - initial_time
+        initial_time = stats.total_tt
+
+        times.append([term["query"], current_iteration])
+
+        logging.info(
+            f"Profiled {current_iteration} seconds at {index} for {tree_based_search.__name__}"
+        )
+
+    pd.DataFrame(times).to_csv(
+        "experiment4_trie_times.csv", index=False, header=["Query", "Time"]
     )
 
 
@@ -181,8 +224,8 @@ def trie_trial():
 if __name__ == "__main__":
     # # PART 3.4.1: PERMUTERM INDEX
     print("::> PART 3.4.1: PERMUTERM INDEX")
-    time_profile.run("permuterm_trial()")
+    permuterm_trial()
 
     # # PART 3.4.2: TREE BASED INDEX
     print("::> PART 3.4.2: TREE BASED INDEX")
-    time_profile.run("trie_trial()")
+    trie_trial()
