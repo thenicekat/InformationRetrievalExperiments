@@ -5,83 +5,6 @@ from tqdm import tqdm
 from experiment3 import *
 from experiment4 import *
 
-# Trie Node for the tree based index
-class TrieNode:
-    def __init__(self):
-        self.children = {}
-        self.is_end_of_word = False
-        self.array = None
-
-
-# Trie data structure for the tree based index, this contains the actual implementation of the tree based index
-class Trie:
-    def __init__(self):
-        self.root = TrieNode()
-
-    def insert(self, word, array):
-        node = self.root
-        for char in word:
-            if char not in node.children:
-                node.children[char] = TrieNode()
-            node = node.children[char]
-        node.is_end_of_word = True
-        node.array = array
-
-    def search(self, word):
-        node = self.root
-        for char in word:
-            if char not in node.children:
-                return None
-            node = node.children[char]
-        if node.is_end_of_word:
-            return node.array
-        return None
-
-# GENERATE TRIE INDICES
-def generate_trie_indices(term_freq: dict):
-    # Here postings is the inverted index
-    # term_freq is the term frequency of each term in the collection
-    # Create a trie based index
-    trieBasedIndexFromStart = Trie()
-    # We can create a trie based index for each term in the collection
-    # so like if we have a term "hello" we can create a trie based index for it
-    # we store h->e->l->l->o and map it to the term "hello"
-    for term in term_freq:
-        trieBasedIndexFromStart.insert(term)
-
-    # Create a trie based index from the end
-    trieBasedIndexFromEnd = Trie()
-    # We can create a trie based index for each term in the collection
-    # so like if we have a term "hello" we can create a trie based index for it
-    # we store o->l->l->e->h and map it to the term "hello"
-    for term in term_freq:
-        trieBasedIndexFromEnd.insert(term[::-1])
-
-    return trieBasedIndexFromStart, trieBasedIndexFromEnd
-
-# TREE BASED SEARCH
-def wildcard_search(start_trie: Trie, end_trie: Trie, postings: dict, term: dict):
-    # Split the term at the *
-    first_half = term["query"].split("*")[0]
-    second_half = term["query"].split("*")[1]
-    logging.info(
-        f"Trie Search: Query Term is: {term} --> {first_half} and {second_half}"
-    )
-    # This will return all the words that start with the first half
-    first_half_results = start_trie.starts_with(first_half)
-    # This will return reverse of all the words that end with the second half
-    second_half_results = end_trie.starts_with(second_half[::-1])
-    # reverse all the words in the second half results
-    second_half_results = [i[::-1] for i in second_half_results]
-
-    final_results = list(set(first_half_results).intersection(set(second_half_results)))
-    postings_result = set()
-    for result in final_results:
-        # logging.info(f"Trie Search: Result Term is: {result}")
-        for posting in postings[result]:
-            postings_result.add(posting)
-    logging.info(f"Trie Search: Result Term is: {len(postings_result)}")
-
 
 def tolerant_retrieval(start_trie: Trie, end_trie: Trie):
     # Open the file and search for the term
@@ -130,12 +53,31 @@ def tolerant_retrieval(start_trie: Trie, end_trie: Trie):
             result = result.intersection(final_doc_list[i])
 
         result = list(result)
-        
+
+def edit_distance(word1, word2):
+    m, n = len(word1), len(word2)
+    # Initialize an m x n matrix
+    dp = [[0] * (n + 1) for _ in range(m + 1)]
+
+    # Initialize the first row and column
+    for i in range(m + 1):
+        dp[i][0] = i
+    for j in range(n + 1):
+        dp[0][j] = j
+
+    # Fill in the matrix
+    for i in range(1, m + 1):
+        for j in range(1, n + 1):
+            cost = 0 if word1[i - 1] == word2[j - 1] else 2  #cost for substitution is 2
+            dp[i][j] = min(dp[i - 1][j] + 1,      #Deletion
+                           dp[i][j - 1] + 1,      #Insertion
+                           dp[i - 1][j - 1] + cost)  #Substitution
+
+    # Return the bottom-right cell of the matrix
+    return dp[m][n]
+
 
                 
-
-        
-
 # ENTRYPOINT
 if __name__ == "__main__":
     postings, term_freq = load_index_in_memory("./s2/")
