@@ -4,8 +4,10 @@ from main import *
 from tqdm import tqdm
 from experiment4 import *
 
-
+@memory_profile
 def tolerant_retrieval():
+    tolerant_profile = time_profile.Profile()
+
     # Open the file and search for the term
     with open("./s2/s2_wildcard_boolean.json") as f:
         queries = json.load(f)
@@ -15,8 +17,13 @@ def tolerant_retrieval():
 
     start_trie, end_trie = generate_trie_indices(term_freq=term_freq)
 
+    initial_time = 0
+    times = []
+
     for query_ in tqdm(queries["queries"]):
         logging.info(f"Query: {query_}")
+
+        tolerant_profile.enable()
 
         words = query_["query"].split()
         final_doc_list = list()
@@ -48,7 +55,7 @@ def tolerant_retrieval():
                 for term in postings:
                     if edit_distance(w, term) <= threshold:
                         logging.info(
-                            f"::> Non Wildcard Term that's closer to this: {w}"
+                            f"::> Non Wildcard Term that's closer to this: {term}"
                         )
                         docs = docs.union(set(postings[term]))
                 final_doc_list.append(docs)
@@ -58,6 +65,22 @@ def tolerant_retrieval():
             result = result.intersection(final_doc_list[i])
 
         result = list(result)
+
+        tolerant_profile.disable()
+
+        stats = pstats.Stats(tolerant_profile)
+        current_iteration = stats.total_tt - initial_time
+        initial_time = stats.total_tt
+
+        times.append([term, current_iteration])
+
+        logging.info(
+            f"Profiled {current_iteration} seconds at {index} for {tree_based_search.__name__}"
+        )
+
+    pd.DataFrame(times).to_csv(
+        "experiment5.csv", index=False, header=["Query", "Time"]
+    )
 
 
 def edit_distance(word1, word2):
