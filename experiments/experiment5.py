@@ -4,6 +4,7 @@ from main import *
 from tqdm import tqdm
 from experiment4 import *
 
+
 @memory_profile
 def tolerant_retrieval():
     tolerant_profile = time_profile.Profile()
@@ -47,20 +48,23 @@ def tolerant_retrieval():
                 wildcard_docs = set()
                 for word in wildcard_words:
                     wildcard_docs = wildcard_docs.union(set(postings[word]))
-                #logging.info(f"::> Docs: {wildcard_docs}")
+                # logging.info(f"::> Docs: {wildcard_docs}")
                 final_doc_list.append(wildcard_docs)
 
             else:
                 logging.info(f"::> Non Wildcard Term: {w}")
                 docs = set()
                 for term in postings:
-                    if edit_distance(w, term) <= threshold and abs(len(w)-len(term)) <= 1:
+                    if (
+                        edit_distance(w, term) <= threshold
+                        and abs(len(w) - len(term)) <= 1
+                    ):
                         logging.info(
                             f"::> Non Wildcard Term that's closer to this: {term}"
                         )
-                        #logging.info(f"::> Docs: {postings[term][0]}")
+                        # logging.info(f"::> Docs: {postings[term][0]}")
                         docs = docs.union(set(postings[term]))
-                #logging.info(f"::> Docs: {docs}")
+                # logging.info(f"::> Docs: {docs}")
                 final_doc_list.append(docs)
 
         result = set(final_doc_list[0])
@@ -75,15 +79,13 @@ def tolerant_retrieval():
         current_iteration = stats.total_tt - initial_time
         initial_time = stats.total_tt
 
-        times.append([term, current_iteration])
+        times.append([query_, current_iteration])
 
         logging.info(
             f"Profiled {current_iteration} seconds at {index} for {tree_based_search.__name__}"
         )
 
-    pd.DataFrame(times).to_csv(
-        "experiment5.csv", index=False, header=["Query", "Time"]
-    )
+    pd.DataFrame(times).to_csv("experiment5.csv", index=False, header=["Query", "Time"])
 
 
 def edit_distance(word1, word2):
