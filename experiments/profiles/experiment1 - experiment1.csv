@@ -1,0 +1,104 @@
+Query & Time Boolean Retrieval (s) & Time Grep (s) \\
+deep learning & 0.472382605 & 0.061440221 \\
+artificial intelligence & 0.449085407 & 0.029902562 \\
+information retrieval & 0.481301454 & 0.179626733 \\
+machine learning & 0.472779107 & 0.086920084 \\
+question answering & 0.468614263 & 0.062409813 \\
+noun phrases & 0.446689708 & 0.035486419 \\
+penn treebank & 0.456808042 & 0.019216184 \\
+speech recognition & 0.464063801 & 0.056306365 \\
+data mining & 0.470758826 & 0.278174002 \\
+computer vision & 0.468797683 & 0.083484417 \\
+reinforcement learning & 0.445772876 & 0.034669869 \\
+natural language & 0.453514997 & 0.088087642 \\
+autoencoder & 0.470102153 & 0.0081876 \\
+ontology & 0.505698312 & 0.007587665 \\
+sentiment analysis & 0.489179397 & 0.031523633 \\
+sap & 0.485215203 & 0.010259675 \\
+lstm & 0.56071924 & 0.008932941 \\
+natural language processing & 0.580616633 & 0.101951113 \\
+semantic web & 0.488458819 & 0.07507908 \\
+mooc & 0.494969916 & 0.009769463 \\
+human computer interaction & 0.456171508 & 0.108205347 \\
+eye movement clustering & 0.470313495 & 0.053757423 \\
+semantic relations & 0.47659888 & 0.072077276 \\
+efficient estimation of word representations in vector space & 0.518970046 & 0.240674804 \\
+big data & 0.49754573 & 0.052016639 \\
+audio visual fusion & 0.591193385 & 0.048464657 \\
+object detection & 0.793980323 & 0.103813745 \\
+gfdm & 0.76774435 & 0.008574555 \\
+neural network & 0.554498027 & 0.070345476 \\
+generalized extreme value & 0.439840505 & 0.042503195 \\
+information geometry & 0.481552973 & 0.175949473 \\
+image panorama video & 0.54825147 & 0.111966931 \\
+data science & 0.471492264 & 0.274469086 \\
+semantic parsing & 0.469763381 & 0.070433555 \\
+augmented reality & 0.448826255 & 0.027515166 \\
+imbalanced data & 0.468983043 & 0.035936641 \\
+recommender system & 0.455238806 & 0.028934642 \\
+inverse reinforcement learning mixture & 0.463421501 & 0.0431699 \\
+transfer learning & 0.460755757 & 0.03732696 \\
+cnn & 0.437491002 & 0.013520262 \\
+dynamic programming segmentation & 0.448239738 & 0.083469629 \\
+natural language interface & 0.478260749 & 0.098979132 \\
+genetic algorithm & 0.465013234 & 0.034821952 \\
+prolog & 0.439851145 & 0.007205941 \\
+contact prediction & 0.474040454 & 0.034255996 \\
+wifi malware & 0.457560552 & 0.022553023 \\
+nsdi machine learning & 0.48695752 & 0.011062254 \\
+forensics and machine learning & 0.555037588 & 0.062177162 \\
+words to speech & 0.461295729 & 0.098900777 \\
+information theory & 0.528026164 & 0.17604063 \\
+morphology morphological & 0.556951748 & 0.020324073 \\
+category theory & 0.622228234 & 0.029291592 \\
+graph theory & 0.482299162 & 0.115685747 \\
+smart thermostat & 0.460817848 & 0.034378126 \\
+exploit vulnerability & 0.47059869 & 0.061050091 \\
+reinforcement learning and video game & 0.498406198 & 0.075377966 \\
+system health management & 0.507592577 & 0.253684899 \\
+spatial multi agent systems & 0.649900437 & 0.082592084 \\
+service composition & 0.620324119 & 0.061833094 \\
+mobile payment & 0.572757011 & 0.05033093 \\
+3 axis gantry & 0.488761194 & 0.78131761 \\
+softmax categorization & 0.482178458 & 0.025609244 \\
+cost aggregation & 0.475590955 & 0.076058683 \\
+chinese dialect & 0.501758615 & 0.021545801 \\
+depth camera & 0.501362548 & 0.042453986 \\
+mobile tcp traffic analysis & 0.482317163 & 0.076116582 \\
+collective learning & 0.693147249 & 0.030766591 \\
+robust production planning & 0.647405647 & 0.084228889 \\
+memory hierarchy & 0.70121581 & 0.051741093 \\
+hashing & 0.735468183 & 0.009180613 \\
+comparable corpora & 0.545459977 & 0.038944035 \\
+knowledge graph & 0.517409388 & 0.10779197 \\
+social media & 0.474850425 & 0.0739462 \\
+deep learning surveillance & 0.466750645 & 0.070846026 \\
+cryptography & 0.459717194 & 0.006921458 \\
+parametric max flow & 0.469255153 & 0.037817396 \\
+deep reinforcement learning & 0.482377762 & 0.069315078 \\
+varying weight grasp & 0.449868963 & 0.043831058 \\
+dirichlet process & 0.456694433 & 0.023013083 \\
+word embedding & 0.459539551 & 0.086483094 \\
+graph drawing & 0.461792962 & 0.124382232 \\
+robust principal component analysis & 0.436742749 & 0.09956356 \\
+differential evolution & 0.452004622 & 0.029450748 \\
+seq2seq & 0.452835393 & 0.003726822 \\
+document logical structure & 0.458055088 & 0.078702993 \\
+duality & 0.461531525 & 0.007512349 \\
+variable neighborhood search & 0.43792966 & 0.063348464 \\
+urban public transportation systems & 0.450589978 & 0.051741081 \\
+edx coursera & 0.461590937 & 0.003854295 \\
+fdir & 0.458424456 & 0.01075119 \\
+cryptography key management & 0.460214013 & 0.034693563 \\
+ontology construction & 0.443175595 & 0.032791998 \\
+go game & 0.466658604 & 0.410170857 \\
+personality trait & 0.487053957 & 0.03262021 \\
+sparse learning & 0.51230167 & 0.051575216 \\
+directed hypergraph & 0.498614805 & 0.031256293 \\
+inventory management & 0.444355246 & 0.022726576 \\
+clojure & 0.462745818 & 0.009746358 \\
+ontology semantic web & 0.457735965 & 0.055649087 \\
+convolutional neural network time series & 0.459982785 & 0.078804918 \\
+MAX & 0.793980323 & 0.78131761 \\
+MIN & 0.436742749 & 0.003726822 \\
+AVERAGE & 0.4984978518 & 0.07293683612 \\
