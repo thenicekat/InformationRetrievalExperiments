@@ -47,17 +47,20 @@ def tolerant_retrieval():
                 wildcard_docs = set()
                 for word in wildcard_words:
                     wildcard_docs = wildcard_docs.union(set(postings[word]))
+                #logging.info(f"::> Docs: {wildcard_docs}")
                 final_doc_list.append(wildcard_docs)
 
             else:
                 logging.info(f"::> Non Wildcard Term: {w}")
                 docs = set()
                 for term in postings:
-                    if edit_distance(w, term) <= threshold:
+                    if edit_distance(w, term) <= threshold and abs(len(w)-len(term)) <= 1:
                         logging.info(
                             f"::> Non Wildcard Term that's closer to this: {term}"
                         )
+                        #logging.info(f"::> Docs: {postings[term][0]}")
                         docs = docs.union(set(postings[term]))
+                #logging.info(f"::> Docs: {docs}")
                 final_doc_list.append(docs)
 
         result = set(final_doc_list[0])
