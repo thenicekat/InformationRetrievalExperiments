@@ -1,0 +1,101 @@
+Query,Time
+deep learning,1.9098176009999992
+artificial intelligence,1.6296726099999999
+information retrieval,1.7215184250000042
+machine learning,1.6020545819999992
+question answering,1.529310800000001
+noun phrases,1.6090858250000064
+penn treebank,1.7224875929999932
+speech recognition,1.5891441380000018
+data mining,1.5364573759999942
+computer vision,1.458792687999992
+reinforcement learning,1.6954759540000026
+natural language,1.7090997829999957
+autoencoder,1.613880335000001
+ontology,1.6454771730000033
+sentiment analysis,1.6149836490000027
+sap,1.5237275419999854
+lstm,1.6673770580000102
+natural language processing,1.5965520850000061
+semantic web,1.637747146999999
+mooc,1.5532918300000382
+human computer interaction,1.538672985999952
+eye movement clustering,1.5988922000000088
+semantic relations,1.5259283769999996
+efficient estimation of word representations in vector space,1.5723557680000368
+big data,1.5562958409999652
+audio visual fusion,1.6857905870000067
+object detection,1.6702670340000054
+gfdm,1.7121420180000015
+neural network,1.745931481999989
+generalized extreme value,1.6853567130000329
+information geometry,1.6855797559999814
+image panorama video,1.5528422789999823
+data science,1.611903930000004
+semantic parsing,1.5535373540000137
+augmented reality,1.4642904410000028
+imbalanced data,1.620195787
+recommender system,1.695948933000004
+inverse reinforcement learning mixture,1.6198830089999987
+transfer learning,1.5847490069999992
+cnn,1.5688460659999564
+dynamic programming segmentation,1.547286657000015
+natural language interface,1.5928874260000327
+genetic algorithm,1.5538077840000142
+prolog,1.5349576429999559
+contact prediction,1.5239361160000016
+wifi malware,1.6931775369999684
+nsdi machine learning,1.6329930940000565
+forensics and machine learning,1.6149367280000035
+words to speech,1.7479095299999585
+information theory,2.0072133250000377
+morphology morphological,1.7571539999999999
+category theory,1.5649450329999723
+graph theory,1.8685131909999768
+smart thermostat,1.727197540000077
+exploit vulnerability,1.9352540819999433
+reinforcement learning and video game,1.8169504770000628
+system health management,1.7612569479999678
+spatial multi agent systems,1.9902327269999915
+service composition,1.8441486669999847
+mobile payment,1.594724541000005
+3 axis gantry,1.7437786220000646
+softmax categorization,1.9028246859999456
+cost aggregation,1.8669231500000052
+chinese dialect,1.846385866999995
+depth camera,1.9376533219999743
+mobile tcp traffic analysis,1.5980293170000124
+collective learning,1.683891747000004
+robust production planning,1.7220470820000031
+memory hierarchy,1.748713476999967
+hashing,2.032416358000006
+comparable corpora,1.8532328690000668
+knowledge graph,1.8668180349999517
+social media,1.9091285990000273
+deep learning surveillance,1.751413277000026
+cryptography,1.592060564999926
+parametric max flow,1.6209109620000248
+deep reinforcement learning,1.7098160960000115
+varying weight grasp,1.7713228749999814
+dirichlet process,1.9765669239999966
+word embedding,2.0851215619998413
+graph drawing,1.5837858660001132
+robust principal component analysis,1.8866443469999865
+differential evolution,1.946314629000085
+seq2seq,1.7635265029999232
+document logical structure,1.5805007700001
+duality,1.628099874999947
+variable neighborhood search,1.6192724120000719
+urban public transportation systems,1.5629897849999281
+edx coursera,1.5931204450000394
+fdir,1.8297864570000115
+cryptography key management,2.018531221999865
+ontology construction,1.6597962990001065
+go game,1.5585477319999939
+personality trait,1.7367694289999918
+sparse learning,1.6409882040000525
+directed hypergraph,1.6346070089998932
+inventory management,1.7182547390000593
+clojure,1.5199467900000911
+ontology semantic web,1.5418763559999604
+convolutional neural network time series,1.5491449889999842

@@ -10,7 +10,7 @@ import pandas as pd
 def grep_boolean_retrieval():
     with open("s2/s2_query.json") as f:
         queries = [i["query"] for i in json.load(f)["queries"]]
-    
+
     os.makedirs("experiments/experiment1_temp", exist_ok=True)
 
     for q in tqdm(queries[:1]):
@@ -34,6 +34,8 @@ def grep_boolean_retrieval():
         except subprocess.CalledProcessError:
             print(f"Error with query: {q}")
 
+
+@memory_profile
 def grep_boolean_retrieval_single_query(query: str):
     try:
         doc_count = 0
@@ -46,7 +48,7 @@ def grep_boolean_retrieval_single_query(query: str):
                 stdout=subprocess.PIPE,
             )
             doc_count += 1
-        
+
         if doc_count == 1:
             return
         command = f"grep -Fx -f {' '.join(f'experiments/experiment1_temp/output{i}.tsv' for i in range(doc_count))} > experiments/experiment1_temp/common.tsv"
@@ -59,11 +61,14 @@ def grep_boolean_retrieval_single_query(query: str):
     except subprocess.CalledProcessError:
         print(f"Error with query: {query}")
 
+
+@memory_profile
 def boolean_retrieval_single_query(query: str):
     try:
         output = and_query(query.split(" "), "s2/")
     except KeyError:
         print(f"Error with query: {query}")
+
 
 def boolean_retrieval():
     with open("s2/s2_query.json") as f:
@@ -76,6 +81,7 @@ def boolean_retrieval():
         except KeyError:
             print(f"Error with query: {q}")
 
+
 if __name__ == "__main__":
     with open("s2/s2_query.json") as f:
         queries = [i["query"] for i in json.load(f)["queries"]]
@@ -86,7 +92,7 @@ if __name__ == "__main__":
     times = []
     for query in tqdm(queries):
         profiler.enable()
-        grep_boolean_retrieval_single_query(query)
+        boolean_retrieval_single_query(query)
         profiler.disable()
         stats = pstats.Stats(profiler)
         current_iteration = stats.total_tt - initial_time
@@ -94,7 +100,7 @@ if __name__ == "__main__":
 
         times.append([query, current_iteration])
     pd.DataFrame(times).to_csv(
-        "experiments/profiles/experiment1.csv", index=False, header=["Query", "Time"]
+        "experiments/profiles/experiment1_boolean.csv",
+        index=False,
+        header=["Query", "Time"],
     )
-
-

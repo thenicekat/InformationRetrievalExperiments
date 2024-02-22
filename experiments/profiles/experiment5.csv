@@ -1,31 +1,31 @@
 Query,Time
-deep l*ng,8.546362840999997
-artificial in*e,21.119960187
-*tion ret*val,0.5190098459999994
-mac* learning,18.826394217000008
-question *nswering,17.52072147399999
-noun *ses,9.698818806000034
-*n tree*,3.1630164689999987
-sp*h recognition,24.32941021999997
-data m*g,9.422325878999985
-computer v*n,17.724692494999914
-rein* learning,19.74296488600004
-natural lan*ge,14.929088904000054
-auto*,2.1997160570000176
-on*y,0.09017341199998441
-senti* analysis,19.128271254000026
-s*p,0.04944026900002996
-l*m,0.03883530899992138
-nat*l language *ing,17.78813296800007
-semantic we*,18.833185211999933
-mo*c,0.04857099900004869
-hu* com*er interaction,25.080614075000057
-e* movement cl*g,19.162903927999935
-s*ic relations,18.347630232999904
-e*t est* of word re*s in v*r space,30.409767137000244
-big *ata,6.714321505999749
-a*o v*l f*sion,0.10324248100010891
-o*ject *tion,0.49214242000005015
-g*dm,0.008122427999808224
-n*ural network,13.718071500000178
-genera* e*treme value,12.257952225999986
+"{'qid': '1', 'query': 'deep l*ng'}",2.4397613240000005
+"{'qid': '2', 'query': 'artificial in*e'}",5.993898602000003
+"{'qid': '3', 'query': '*tion ret*val'}",0.27537511099999357
+"{'qid': '4', 'query': 'mac* learning'}",4.893383112
+"{'qid': '5', 'query': 'question *nswering'}",4.802547126
+"{'qid': '6', 'query': 'noun *ses'}",2.316147085000008
+"{'qid': '7', 'query': '*n tree*'}",0.6982331829999886
+"{'qid': '8', 'query': 'sp*h recognition'}",6.6255947020000185
+"{'qid': '9', 'query': 'data m*g'}",2.4877869190000013
+"{'qid': '10', 'query': 'computer v*n'}",5.061464155999992
+"{'qid': '11', 'query': 'rein* learning'}",4.909235403999979
+"{'qid': '12', 'query': 'natural lan*ge'}",4.442450787000013
+"{'qid': '13', 'query': 'auto*'}",0.2830487389999874
+"{'qid': '14', 'query': 'on*y'}",0.012867236000012383
+"{'qid': '15', 'query': 'senti* analysis'}",4.620828328999991
+"{'qid': '16', 'query': 's*p'}",0.012324759000016172
+"{'qid': '17', 'query': 'l*m'}",0.005559866999995222
+"{'qid': '18', 'query': 'nat*l language *ing'}",4.489051705999984
+"{'qid': '19', 'query': 'semantic we*'}",4.087597762000023
+"{'qid': '20', 'query': 'mo*c'}",0.005701045999984444
+"{'qid': '21', 'query': 'hu* com*er interaction'}",6.006286252000038
+"{'qid': '22', 'query': 'e* movement cl*g'}",5.3422105379999465
+"{'qid': '23', 'query': 's*ic relations'}",4.473780968000071
+"{'qid': '24', 'query': 'e*t est* of word re*s in v*r space'}",7.951470854999997
+"{'qid': '25', 'query': 'big *ata'}",2.03216089299994
+"{'qid': '26', 'query': 'a*o v*l f*sion'}",0.03352365900002496
+"{'qid': '27', 'query': 'o*ject *tion'}",0.2957992780000467
+"{'qid': '28', 'query': 'g*dm'}",0.004205629999944449
+"{'qid': '29', 'query': 'n*ural network'}",3.944280727999967
+"{'qid': '30', 'query': 'genera* e*treme value'}",2.9930711480000554
