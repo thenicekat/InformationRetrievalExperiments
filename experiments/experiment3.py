@@ -2,6 +2,7 @@ from code_setup import *
 from profiling import *
 from main import *
 from tqdm import tqdm
+import pandas as pd
 
 
 # Trie Node for the tree based index
@@ -65,27 +66,64 @@ def generate_trie_indices():
 
 
 # TREE BASED SEARCH
-def tree_based_search(trie: Trie):
+# @memory_profile
+def Compare_hash_based_and_tree_based_search():
+    tree_profiler = time_profile.Profile()
+    hash_profiler = time_profile.Profile()
+
+    trie = generate_trie_indices()
+
     # Open the file and search for the term
     with open("./s2/s2_query.json") as f:
         queries = json.load(f)
 
+    initial_tree_time = 0
+    initial_hash_time = 0
+
+    results = []
     for term in tqdm(queries["queries"]):
-        # Split the term at the *
-        # words = term["query"].split()
-        result = trie.boolean_retrieval_multiple_words(term["query"])
         logging.info(f"Query: {term['query']}")
-        logging.info(f"Result: {result}")
 
+        tree_profiler.enable()
+        tree_result = trie.boolean_retrieval_multiple_words(term["query"])
+        tree_profiler.disable()
+        logging.info(f"Tree-based result: {len(tree_result)}")
 
-@memory_profile
-def helper_trie():
-    trieBasedIndex = generate_trie_indices()
-    tree_based_search(trieBasedIndex)
+        tree_stats = pstats.Stats(tree_profiler)
+        tree_time = tree_stats.total_tt - initial_tree_time
+        initial_tree_time = tree_stats.total_tt
+
+        logging.info(
+            f"Profiled {tree_time} seconds at {index} for {trie.boolean_retrieval_multiple_words.__name__}"
+        )
+
+        hash_profiler.enable()
+
+        try:
+            output = and_query(term["query"].split(" "), "s2/")
+            logging.info(f"Hash-based result: {len(output)}")
+        except KeyError:
+            print(f"Error with query: {term['query']}")
+
+        hash_profiler.disable()
+
+        hash_stats = pstats.Stats(hash_profiler)
+        hash_time = hash_stats.total_tt - initial_hash_time
+        initial_hash_time = hash_stats.total_tt
+
+        logging.info(
+            f"Profiled {hash_time} seconds at {index} for {and_query.__name__}"
+        )
+
+        results.append([term["query"], tree_time, hash_time])
+    df = pd.DataFrame(results, columns=["Query", "Tree_based", "Hash_based"])
+    df.to_csv("experiment3_combined.csv", index=False)
 
 
 # ENTRYPOINT
 if __name__ == "__main__":
-    # # PART 3.3.1: TREE BASED INDEX
-    print("::> PART 3.3.1: TREE BASED INDEX")
-    time_profile.run("helper_trie()")
+    # # PART 3.3: Compare hash-based and tree-based implementation of dictionaries
+    print(
+        "::> PART 3.3: Compare hash-based and tree-based implementation of dictionaries"
+    )
+    Compare_hash_based_and_tree_based_search()
