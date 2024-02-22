@@ -66,7 +66,7 @@ def generate_trie_indices():
 
 
 # TREE BASED SEARCH
-# @memory_profile
+@memory_profile
 def Compare_hash_based_and_tree_based_search():
     tree_profiler = time_profile.Profile()
     hash_profiler = time_profile.Profile()
