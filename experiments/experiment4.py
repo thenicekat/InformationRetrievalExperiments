@@ -10,6 +10,7 @@ class TrieNode:
     def __init__(self):
         self.children = {}
         self.is_end_of_word = False
+        self.array = None
 
 
 # Trie data structure for the tree based index, this contains the actual implementation of the tree based index
@@ -17,21 +18,36 @@ class Trie:
     def __init__(self):
         self.root = TrieNode()
 
-    def insert(self, word):
+    def insert(self, word, array):
         node = self.root
         for char in word:
             if char not in node.children:
                 node.children[char] = TrieNode()
             node = node.children[char]
         node.is_end_of_word = True
+        node.array = array
 
     def search(self, word):
         node = self.root
         for char in word:
             if char not in node.children:
-                return False
+                return None
             node = node.children[char]
-        return node.is_end_of_word
+        if node.is_end_of_word:
+            return node.array
+        return None
+
+    def boolean_retrieval_multiple_words(self, sentence):
+        words = sentence.split()
+        result_array = None
+        for word in words:
+            array = self.search(word)
+            if array is not None:
+                if result_array is None:
+                    result_array = array.copy()
+                else:
+                    result_array = intersection(result_array, array)
+        return result_array
 
     def starts_with(self, prefix):
         node = self.root

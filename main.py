@@ -4,6 +4,7 @@ import shutil
 import os
 import json
 import numpy as np
+import sys
 
 
 # reads s2 corpus in json and
@@ -208,9 +209,40 @@ def and_query(query_terms, corpus):
 
     return result
 
+def create_doc_to_tsv():
+    output = []
+    with open("s2/s2_doc.json") as f:
+        json_data = json.load(f)
+
+    for i in json_data['all_papers']:
+        output.append(f"{i['docno']}\t{''.join(i['title'])}\t{''.join(i['paperAbstract'])}")
+        # output.append(f"{i['docno']}\t{''.join(i['title'])}")
+
+    with open("s2/intermediate/doc_to_tsv.tsv", "w") as f:
+        f.write("\n".join(output))
+
 
 # Code starts here
 if __name__ == '__main__':
-    index('s2/')
+    import platform
+    import subprocess
+    if sys.version_info.major < 3:
+        raise Exception("Python version is less than 3")
 
+
+    # Choices for the user
+    option = int(input("Which experiment do you want to do (1-5, or (c)reate postings): "))
+    
+    # Creating source data
+    if option == 'c':
+        index('s2/')
+        create_doc_to_tsv()
+        exit(0)
+
+    os.chdir('./experiments')
+    match platform.system():
+        case "Linux":
+            subprocess.run(["python3", f"experiment{option}.py"])
+        case "Windows":
+            subprocess.run(["python", f"experiment{option}.py"])
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
