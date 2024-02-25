@@ -16,7 +16,7 @@ def tolerant_retrieval():
     postings, term_freq = load_index_in_memory("./s2/")
     threshold = 2
 
-    start_trie, end_trie = generate_trie_indices(term_freq=term_freq)
+    start_trie, end_trie = generate_trie_indices(term_freq=term_freq, postings=postings)
 
     initial_time = 0
     times = []
@@ -82,7 +82,7 @@ def tolerant_retrieval():
         times.append([query_, current_iteration])
 
         logging.info(
-            f"Profiled {current_iteration} seconds at {index} for {tree_based_search.__name__}"
+            f"Profiled {current_iteration} seconds at {index} for Tolerant Retrieval"
         )
 
     pd.DataFrame(times).to_csv("experiment5.csv", index=False, header=["Query", "Time"])

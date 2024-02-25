@@ -102,7 +102,7 @@ def permuterm_search_on_one_term(permuterm_index: dict, postings: dict, query: s
 
 
 # GENERATE TRIE INDICES
-def generate_trie_indices(term_freq: dict):
+def generate_trie_indices(term_freq: dict, postings: dict):
     # Here postings is the inverted index
     # term_freq is the term frequency of each term in the collection
     # Create a trie based index
@@ -111,7 +111,7 @@ def generate_trie_indices(term_freq: dict):
     # so like if we have a term "hello" we can create a trie based index for it
     # we store h->e->l->l->o and map it to the term "hello"
     for term in term_freq:
-        trieBasedIndexFromStart.insert(term)
+        trieBasedIndexFromStart.insert(term, postings[term])
 
     # Create a trie based index from the end
     trieBasedIndexFromEnd = Trie()
@@ -119,7 +119,7 @@ def generate_trie_indices(term_freq: dict):
     # so like if we have a term "hello" we can create a trie based index for it
     # we store o->l->l->e->h and map it to the term "hello"
     for term in term_freq:
-        trieBasedIndexFromEnd.insert(term[::-1])
+        trieBasedIndexFromEnd.insert(term[::-1], postings[term])
 
     return trieBasedIndexFromStart, trieBasedIndexFromEnd
 
@@ -200,7 +200,7 @@ def trie_trial():
 
     # Create the trie
     trieBasedIndexFromStart, trieBasedIndexFromEnd = generate_trie_indices(
-        term_freq=term_freq
+        term_freq=term_freq, postings=postings
     )
 
     # Open the file and search for the term

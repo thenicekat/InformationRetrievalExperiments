@@ -11,16 +11,17 @@ import sys
 # creates an intermediary file
 # containing token and doc_id pairs.
 
+
 def read_json_corpus(json_path):
     f = open(json_path + "/s2_doc.json", encoding="utf-8")
     json_file = json.load(f)
     if not os.path.exists(json_path + "/intermediate/"):
         os.mkdir(json_path + "/intermediate/")
     o = open(json_path + "/intermediate/output.tsv", "w", encoding="utf-8")
-    for json_object in json_file['all_papers']:
-        doc_no = json_object['docno']
-        title = json_object['title'][0]
-        paper_abstract = json_object['paperAbstract'][0]
+    for json_object in json_file["all_papers"]:
+        doc_no = json_object["docno"]
+        title = json_object["title"][0]
+        paper_abstract = json_object["paperAbstract"][0]
         tokens = title.split(" ")
         for t in tokens:
             o.write(t.lower() + "\t" + str(doc_no) + "\n")
@@ -209,13 +210,16 @@ def and_query(query_terms, corpus):
 
     return result
 
+
 def create_doc_to_tsv():
     output = []
     with open("s2/s2_doc.json") as f:
         json_data = json.load(f)
 
-    for i in json_data['all_papers']:
-        output.append(f"{i['docno']}\t{''.join(i['title'])}\t{''.join(i['paperAbstract'])}")
+    for i in json_data["all_papers"]:
+        output.append(
+            f"{i['docno']}\t{''.join(i['title'])}\t{''.join(i['paperAbstract'])}"
+        )
         # output.append(f"{i['docno']}\t{''.join(i['title'])}")
 
     with open("s2/intermediate/doc_to_tsv.tsv", "w") as f:
@@ -223,26 +227,22 @@ def create_doc_to_tsv():
 
 
 # Code starts here
-if __name__ == '__main__':
+if __name__ == "__main__":
     import platform
     import subprocess
+
     if sys.version_info.major < 3:
         raise Exception("Python version is less than 3")
 
-
     # Choices for the user
-    option = int(input("Which experiment do you want to do (1-5, or (c)reate postings): "))
-    
-    # Creating source data
-    if option == 'c':
-        index('s2/')
-        create_doc_to_tsv()
-        exit(0)
+    option = int(input("Which experiment do you want to do (1-5): "))
 
-    os.chdir('./experiments')
-    match platform.system():
-        case "Linux":
-            subprocess.run(["python3", f"experiment{option}.py"])
-        case "Windows":
-            subprocess.run(["python", f"experiment{option}.py"])
+    index("s2/")
+    create_doc_to_tsv()
+
+    os.chdir("./experiments")
+    if platform.system() == "Linux":
+        subprocess.run(["python3", f"experiment{option}.py"])
+    elif platform.system() == "Windows":
+        subprocess.run(["python", f"experiment{option}.py"])
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
