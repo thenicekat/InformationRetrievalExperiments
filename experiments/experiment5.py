@@ -5,7 +5,7 @@ from tqdm import tqdm
 from experiment4 import *
 
 
-@memory_profile
+# @memory_profile
 def tolerant_retrieval():
     tolerant_profile = time_profile.Profile()
 

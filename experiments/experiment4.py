@@ -186,9 +186,7 @@ def permuterm_trial():
         logging.info(f"Permuterm Search: Result Term is: {len(results_per_query)}")
         # logging.info(f"Permuterm Search: Result Term is: {results_per_query}")
 
-    pd.DataFrame(times).to_csv(
-        "experiment4_permuterm_times.csv", index=False, header=["Query", "Time"]
-    )
+    return times
 
 
 @memory_profile
@@ -231,17 +229,28 @@ def trie_trial():
             f"Profiled {current_iteration} seconds at {index} for {tree_based_search.__name__}"
         )
 
-    pd.DataFrame(times).to_csv(
-        "experiment4_trie_times.csv", index=False, header=["Query", "Time"]
-    )
+    return times
 
 
 # ENTRYPOINT
 if __name__ == "__main__":
     # # PART 3.4.1: PERMUTERM INDEX
     print("::> PART 3.4.1: PERMUTERM INDEX")
-    permuterm_trial()
+    times_p = permuterm_trial()
 
     # # PART 3.4.2: TREE BASED INDEX
     print("::> PART 3.4.2: TREE BASED INDEX")
-    trie_trial()
+    times_t = trie_trial()
+
+    combined_times = []
+    for i in range(len(times_p)):
+        combined_times.append(
+            [
+                times_p[i][0],
+                times_p[i][1],
+                times_t[i][1],
+            ]
+        )
+    pd.DataFrame(combined_times, columns=["Query", "Permuterm", "Trie"]).to_csv(
+        "experiments/profiles/experiment4_combined.csv", index=False
+    )

@@ -74,5 +74,5 @@ if __name__ == "__main__":
     updated_terms = process_all_terms(terms)
     logging.info(f"Total terms after: {len(updated_terms)}")
     for term in updated_terms:
-        logging.info(f"Before {term}")
+        logging.info(f"After {term}")
     time_profile.run("process_all_terms_time(terms)")
