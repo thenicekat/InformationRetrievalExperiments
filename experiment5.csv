@@ -1,0 +1,31 @@
+Query,Time
+"{'qid': '1', 'query': 'deep l*ng'}",1.270524102000001
+"{'qid': '2', 'query': 'artificial in*e'}",2.897279271999998
+"{'qid': '3', 'query': '*tion ret*val'}",0.14774103199999988
+"{'qid': '4', 'query': 'mac* learning'}",2.3798907280000012
+"{'qid': '5', 'query': 'question *nswering'}",2.2689380079999992
+"{'qid': '6', 'query': 'noun *ses'}",1.2269727840000062
+"{'qid': '7', 'query': '*n tree*'}",0.4468874930000002
+"{'qid': '8', 'query': 'sp*h recognition'}",3.063825046999998
+"{'qid': '9', 'query': 'data m*g'}",1.1570386299999935
+"{'qid': '10', 'query': 'computer v*n'}",2.252121084999997
+"{'qid': '11', 'query': 'rein* learning'}",2.5418330190000233
+"{'qid': '12', 'query': 'natural lan*ge'}",2.3957693089999843
+"{'qid': '13', 'query': 'auto*'}",0.13896232500001204
+"{'qid': '14', 'query': 'on*y'}",0.005168698999995058
+"{'qid': '15', 'query': 'senti* analysis'}",2.3847976230000043
+"{'qid': '16', 'query': 's*p'}",0.008686719999992931
+"{'qid': '17', 'query': 'l*m'}",0.004353863999998708
+"{'qid': '18', 'query': 'nat*l language *ing'}",2.5287790120000047
+"{'qid': '19', 'query': 'semantic we*'}",2.435109455999992
+"{'qid': '20', 'query': 'mo*c'}",0.0034281069999977376
+"{'qid': '21', 'query': 'hu* com*er interaction'}",3.284070515999982
+"{'qid': '22', 'query': 'e* movement cl*g'}",2.496219293000003
+"{'qid': '23', 'query': 's*ic relations'}",2.6163474730000047
+"{'qid': '24', 'query': 'e*t est* of word re*s in v*r space'}",4.618079594000001
+"{'qid': '25', 'query': 'big *ata'}",1.1082846600000167
+"{'qid': '26', 'query': 'a*o v*l f*sion'}",0.020304923999994173
+"{'qid': '27', 'query': 'o*ject *tion'}",0.16870575899999807
+"{'qid': '28', 'query': 'g*dm'}",0.001971990999997786
+"{'qid': '29', 'query': 'n*ural network'}",2.0245534760000226
+"{'qid': '30', 'query': 'genera* e*treme value'}",1.6432332999999772

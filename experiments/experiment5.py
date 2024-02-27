@@ -48,7 +48,8 @@ def tolerant_retrieval():
                 wildcard_docs = set()
                 for word in wildcard_words:
                     wildcard_docs = wildcard_docs.union(set(postings[word]))
-                # logging.info(f"::> Docs: {wildcard_docs}")
+                
+                logging.info(f"::> Docs returned for this term: {len(wildcard_docs)}")
                 final_doc_list.append(wildcard_docs)
 
             else:
@@ -64,7 +65,7 @@ def tolerant_retrieval():
                         )
                         # logging.info(f"::> Docs: {postings[term][0]}")
                         docs = docs.union(set(postings[term]))
-                # logging.info(f"::> Docs: {docs}")
+                logging.info(f"::> Docs returned for this term: {len(docs)}")
                 final_doc_list.append(docs)
 
         result = set(final_doc_list[0])
@@ -72,6 +73,7 @@ def tolerant_retrieval():
             result = result.intersection(final_doc_list[i])
 
         result = list(result)
+        logging.info(f"::> No of docs returned for full query: {len(result)}")
 
         tolerant_profile.disable()
 
