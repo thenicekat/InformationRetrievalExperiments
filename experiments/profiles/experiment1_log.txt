@@ -1,0 +1,300 @@
+27-Feb-24 10:59:58 [INFO] Query: deep learning
+27-Feb-24 10:59:58 [INFO] Profiled 0.002076381 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 10:59:58 [INFO] Profiled 0.07317740499999996 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 10:59:58 [INFO] Query: artificial intelligence
+27-Feb-24 10:59:58 [INFO] Profiled 0.0003629600000000003 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 10:59:58 [INFO] Profiled 0.032893990000000095 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 10:59:58 [INFO] Query: information retrieval
+27-Feb-24 10:59:58 [INFO] Profiled 0.0021460839999999995 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 10:59:58 [INFO] Profiled 0.20760941999999982 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 10:59:58 [INFO] Query: machine learning
+27-Feb-24 10:59:58 [INFO] Profiled 0.002232579 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 10:59:58 [INFO] Profiled 0.09500494700000012 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 10:59:58 [INFO] Query: question answering
+27-Feb-24 10:59:58 [INFO] Profiled 0.0003941120000000003 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 10:59:58 [INFO] Profiled 0.07473848600000016 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 10:59:58 [INFO] Query: noun phrases
+27-Feb-24 10:59:58 [INFO] Profiled 0.00018759500000000047 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 10:59:58 [INFO] Profiled 0.038224784999999484 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 10:59:58 [INFO] Query: penn treebank
+27-Feb-24 10:59:58 [INFO] Profiled 0.00015780500000000044 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 10:59:58 [INFO] Profiled 0.02484540199999996 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 10:59:58 [INFO] Query: speech recognition
+27-Feb-24 10:59:58 [INFO] Profiled 0.0009634479999999996 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 10:59:58 [INFO] Profiled 0.05972555000000035 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 10:59:58 [INFO] Query: data mining
+27-Feb-24 10:59:58 [INFO] Profiled 0.002722286000000001 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 10:59:59 [INFO] Profiled 0.3993114560000003 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 10:59:59 [INFO] Query: computer vision
+27-Feb-24 10:59:59 [INFO] Profiled 0.0008244529999999993 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 10:59:59 [INFO] Profiled 0.09813826400000036 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 10:59:59 [INFO] Query: reinforcement learning
+27-Feb-24 10:59:59 [INFO] Profiled 0.0018440269999999998 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 10:59:59 [INFO] Profiled 0.03457367999999872 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 10:59:59 [INFO] Query: natural language
+27-Feb-24 10:59:59 [INFO] Profiled 0.0014081349999999996 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 10:59:59 [INFO] Profiled 0.09981852900000154 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 10:59:59 [INFO] Query: autoencoder
+27-Feb-24 10:59:59 [INFO] Profiled 1.8424999999998998e-05 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 10:59:59 [INFO] Profiled 0.009986510999998366 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 10:59:59 [INFO] Query: ontology
+27-Feb-24 10:59:59 [INFO] Profiled 1.9634000000002746e-05 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 10:59:59 [INFO] Profiled 0.007699669000001075 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 10:59:59 [INFO] Query: sentiment analysis
+27-Feb-24 10:59:59 [INFO] Profiled 0.0015887709999999992 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 10:59:59 [INFO] Profiled 0.035883600999999654 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 10:59:59 [INFO] Query: sap
+27-Feb-24 10:59:59 [INFO] Profiled 1.983000000000193e-05 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 10:59:59 [INFO] Profiled 0.011686214999999 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 10:59:59 [INFO] Query: lstm
+27-Feb-24 10:59:59 [INFO] Profiled 2.0664999999996103e-05 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 10:59:59 [INFO] Profiled 0.00983150600000049 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 10:59:59 [INFO] Query: natural language processing
+27-Feb-24 10:59:59 [INFO] Profiled 0.002270124000000002 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 10:59:59 [INFO] Profiled 0.10837408600000131 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 10:59:59 [INFO] Query: semantic web
+27-Feb-24 10:59:59 [INFO] Profiled 0.0010889030000000022 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 10:59:59 [INFO] Profiled 0.0816170159999996 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 10:59:59 [INFO] Query: mooc
+27-Feb-24 10:59:59 [INFO] Profiled 1.9139999999997354e-05 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 10:59:59 [INFO] Profiled 0.011294304000000421 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 10:59:59 [INFO] Query: human computer interaction
+27-Feb-24 10:59:59 [INFO] Profiled 0.0017323620000000046 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 10:59:59 [INFO] Profiled 0.13203876899999956 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 10:59:59 [INFO] Query: eye movement clustering
+27-Feb-24 10:59:59 [INFO] Profiled 0.000526750999999992 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 10:59:59 [INFO] Profiled 0.09044898500000031 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 10:59:59 [INFO] Query: semantic relations
+27-Feb-24 10:59:59 [INFO] Profiled 0.0008422050000000091 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 10:59:59 [INFO] Profiled 0.07875413699999978 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 10:59:59 [INFO] Query: efficient estimation of word representations in vector space
+27-Feb-24 11:00:00 [INFO] Profiled 0.009644044999999997 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:00 [INFO] Profiled 0.2466140769999987 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:00 [INFO] Query: big data
+27-Feb-24 11:00:00 [INFO] Profiled 0.0025384030000000016 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:00 [INFO] Profiled 0.05774905499999994 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:00 [INFO] Query: audio visual fusion
+27-Feb-24 11:00:00 [INFO] Profiled 0.0007855129999999946 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:00 [INFO] Profiled 0.05535157200000018 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:00 [INFO] Query: object detection
+27-Feb-24 11:00:00 [INFO] Profiled 0.0008927339999999992 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:00 [INFO] Profiled 0.10694738800000136 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:00 [INFO] Query: gfdm
+27-Feb-24 11:00:00 [INFO] Profiled 1.9945999999999853e-05 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:00 [INFO] Profiled 0.010278151999999263 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:00 [INFO] Query: neural network
+27-Feb-24 11:00:00 [INFO] Profiled 0.0016709210000000058 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:00 [INFO] Profiled 0.087610309 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:00 [INFO] Query: generalized extreme value
+27-Feb-24 11:00:00 [INFO] Profiled 0.0007223060000000059 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:00 [INFO] Profiled 0.05163085100000053 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:00 [INFO] Query: information geometry
+27-Feb-24 11:00:00 [INFO] Profiled 0.001989532999999981 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:00 [INFO] Profiled 0.17920946999999954 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:00 [INFO] Query: image panorama video
+27-Feb-24 11:00:00 [INFO] Profiled 0.0012796740000000084 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:00 [INFO] Profiled 0.11952253200000085 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:00 [INFO] Query: data science
+27-Feb-24 11:00:00 [INFO] Profiled 0.002606607000000004 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:01 [INFO] Profiled 0.3499280009999981 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:01 [INFO] Query: semantic parsing
+27-Feb-24 11:00:01 [INFO] Profiled 0.0008371449999999975 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:01 [INFO] Profiled 0.08112054800000168 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:01 [INFO] Query: augmented reality
+27-Feb-24 11:00:01 [INFO] Profiled 0.0002748489999999937 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:01 [INFO] Profiled 0.026009020000000493 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:01 [INFO] Query: imbalanced data
+27-Feb-24 11:00:01 [INFO] Profiled 0.0026446480000000064 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:01 [INFO] Profiled 0.03769795499999962 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:01 [INFO] Query: recommender system
+27-Feb-24 11:00:01 [INFO] Profiled 0.001966270000000006 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:01 [INFO] Profiled 0.0324851749999997 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:01 [INFO] Query: inverse reinforcement learning mixture
+27-Feb-24 11:00:01 [INFO] Profiled 0.0006529379999999987 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:01 [INFO] Profiled 0.047706975999998846 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:01 [INFO] Query: transfer learning
+27-Feb-24 11:00:01 [INFO] Profiled 0.0018648549999999986 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:01 [INFO] Profiled 0.04389547200000132 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:01 [INFO] Query: cnn
+27-Feb-24 11:00:01 [INFO] Profiled 1.9481000000008686e-05 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:01 [INFO] Profiled 0.015674027999998508 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:01 [INFO] Query: dynamic programming segmentation
+27-Feb-24 11:00:01 [INFO] Profiled 0.0011547229999999895 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:01 [INFO] Profiled 0.08805305400000174 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:01 [INFO] Query: natural language interface
+27-Feb-24 11:00:01 [INFO] Profiled 0.0019923239999999967 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:01 [INFO] Profiled 0.1061750659999996 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:01 [INFO] Query: genetic algorithm
+27-Feb-24 11:00:01 [INFO] Profiled 0.0014651350000000063 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:01 [INFO] Profiled 0.03970493399999908 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:01 [INFO] Query: prolog
+27-Feb-24 11:00:01 [INFO] Profiled 1.8652000000000946e-05 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:01 [INFO] Profiled 0.00816141299999984 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:01 [INFO] Query: contact prediction
+27-Feb-24 11:00:01 [INFO] Profiled 0.00046122999999999303 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:01 [INFO] Profiled 0.03916646600000062 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:01 [INFO] Query: wifi malware
+27-Feb-24 11:00:01 [INFO] Profiled 0.0001407840000000049 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:01 [INFO] Profiled 0.025331679999999857 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:01 [INFO] Query: nsdi machine learning
+27-Feb-24 11:00:01 [INFO] Profiled 1.49600000000083e-05 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:01 [INFO] Profiled 0.01191511500000031 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:01 [INFO] Query: forensics and machine learning
+27-Feb-24 11:00:01 [INFO] Profiled 0.010410349999999992 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:02 [INFO] Profiled 0.0609627020000012 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:02 [INFO] Query: words to speech
+27-Feb-24 11:00:02 [INFO] Profiled 0.008488062000000005 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:02 [INFO] Profiled 0.09517335699999929 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:02 [INFO] Query: information theory
+27-Feb-24 11:00:02 [INFO] Profiled 0.0024870449999999933 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:02 [INFO] Profiled 0.19688001800000032 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:02 [INFO] Query: morphology morphological
+27-Feb-24 11:00:02 [INFO] Profiled 0.00017709400000000264 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:02 [INFO] Profiled 0.024008948999997948 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:02 [INFO] Query: category theory
+27-Feb-24 11:00:02 [INFO] Profiled 0.0006755960000000005 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:02 [INFO] Profiled 0.02971038499999956 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:02 [INFO] Query: graph theory
+27-Feb-24 11:00:02 [INFO] Profiled 0.0010041559999999922 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:02 [INFO] Profiled 0.1192479749999995 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:02 [INFO] Query: smart thermostat
+27-Feb-24 11:00:02 [INFO] Profiled 0.00018620300000000978 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:02 [INFO] Profiled 0.04164137400000367 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:02 [INFO] Query: exploit vulnerability
+27-Feb-24 11:00:02 [INFO] Profiled 0.0003467860000000017 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:02 [INFO] Profiled 0.0645249959999985 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:02 [INFO] Query: reinforcement learning and video game
+27-Feb-24 11:00:02 [INFO] Profiled 0.002386956999999995 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:02 [INFO] Profiled 0.08838474800000107 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:02 [INFO] Query: system health management
+27-Feb-24 11:00:02 [INFO] Profiled 0.002440205000000001 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:03 [INFO] Profiled 0.32026474699999863 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:03 [INFO] Query: spatial multi agent systems
+27-Feb-24 11:00:03 [INFO] Profiled 0.0005268369999999883 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:03 [INFO] Profiled 0.09781168500000081 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:03 [INFO] Query: service composition
+27-Feb-24 11:00:03 [INFO] Profiled 0.0004463420000000162 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:03 [INFO] Profiled 0.06514382499999627 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:03 [INFO] Query: mobile payment
+27-Feb-24 11:00:03 [INFO] Profiled 0.0005198689999999923 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:03 [INFO] Profiled 0.05463826800000149 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:03 [INFO] Query: 3 axis gantry
+27-Feb-24 11:00:03 [INFO] Profiled 0.00028246700000000846 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:04 [INFO] Profiled 1.4327053790000024 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:04 [INFO] Query: softmax categorization
+27-Feb-24 11:00:04 [INFO] Profiled 0.0001376039999999995 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:04 [INFO] Profiled 0.01881423499999979 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:04 [INFO] Query: cost aggregation
+27-Feb-24 11:00:04 [INFO] Profiled 0.0005804449999999989 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:04 [INFO] Profiled 0.07501759899999971 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:04 [INFO] Query: chinese dialect
+27-Feb-24 11:00:04 [INFO] Profiled 0.0002274889999999974 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:04 [INFO] Profiled 0.02329607999999528 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:04 [INFO] Query: depth camera
+27-Feb-24 11:00:04 [INFO] Profiled 0.00034212299999998586 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:04 [INFO] Profiled 0.04675543900000534 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:04 [INFO] Query: mobile tcp traffic analysis
+27-Feb-24 11:00:04 [INFO] Profiled 0.0019922390000000206 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:04 [INFO] Profiled 0.07730430899999874 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:04 [INFO] Query: collective learning
+27-Feb-24 11:00:04 [INFO] Profiled 0.0018424119999999738 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:04 [INFO] Profiled 0.03530608200000174 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:04 [INFO] Query: robust production planning
+27-Feb-24 11:00:04 [INFO] Profiled 0.0009038720000000139 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:05 [INFO] Profiled 0.07579546899999823 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:05 [INFO] Query: memory hierarchy
+27-Feb-24 11:00:05 [INFO] Profiled 0.0005026840000000032 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:05 [INFO] Profiled 0.04950395699999799 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:05 [INFO] Query: hashing
+27-Feb-24 11:00:05 [INFO] Profiled 2.131299999999503e-05 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:05 [INFO] Profiled 0.009754053000003537 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:05 [INFO] Query: comparable corpora
+27-Feb-24 11:00:05 [INFO] Profiled 0.00038469700000001716 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:05 [INFO] Profiled 0.0452278570000022 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:05 [INFO] Query: knowledge graph
+27-Feb-24 11:00:05 [INFO] Profiled 0.0012061349999999832 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:05 [INFO] Profiled 0.10940461599999818 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:05 [INFO] Query: social media
+27-Feb-24 11:00:05 [INFO] Profiled 0.0005888550000000131 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:05 [INFO] Profiled 0.07468482199999915 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:05 [INFO] Query: deep learning surveillance
+27-Feb-24 11:00:05 [INFO] Profiled 0.0030749409999999977 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:05 [INFO] Profiled 0.13482448999999797 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:05 [INFO] Query: cryptography
+27-Feb-24 11:00:05 [INFO] Profiled 1.9454999999987677e-05 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:05 [INFO] Profiled 0.007068713999998089 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:05 [INFO] Query: parametric max flow
+27-Feb-24 11:00:05 [INFO] Profiled 0.00039063200000000187 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:05 [INFO] Profiled 0.0701026600000052 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:05 [INFO] Query: deep reinforcement learning
+27-Feb-24 11:00:05 [INFO] Profiled 0.0017516550000000047 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:05 [INFO] Profiled 0.07347515200000121 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:05 [INFO] Query: varying weight grasp
+27-Feb-24 11:00:05 [INFO] Profiled 0.0003133869999999983 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:05 [INFO] Profiled 0.04775467199999728 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:05 [INFO] Query: dirichlet process
+27-Feb-24 11:00:05 [INFO] Profiled 0.0010269540000000105 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:05 [INFO] Profiled 0.026898211000002448 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:05 [INFO] Query: word embedding
+27-Feb-24 11:00:05 [INFO] Profiled 0.0005431209999999936 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:05 [INFO] Profiled 0.09613889199999726 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:05 [INFO] Query: graph drawing
+27-Feb-24 11:00:05 [INFO] Profiled 0.0006197010000000003 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:06 [INFO] Profiled 0.15072779700000094 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:06 [INFO] Query: robust principal component analysis
+27-Feb-24 11:00:06 [INFO] Profiled 0.0034566260000000043 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:06 [INFO] Profiled 0.14791093599999972 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:06 [INFO] Query: differential evolution
+27-Feb-24 11:00:06 [INFO] Profiled 0.0010481339999999922 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:06 [INFO] Profiled 0.04368840600000112 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:06 [INFO] Query: seq2seq
+27-Feb-24 11:00:06 [INFO] Profiled 2.4485000000004642e-05 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:06 [INFO] Profiled 0.005744224000000742 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:06 [INFO] Query: document logical structure
+27-Feb-24 11:00:06 [INFO] Profiled 0.0014884010000000003 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:06 [INFO] Profiled 0.11361040799999422 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:06 [INFO] Query: duality
+27-Feb-24 11:00:06 [INFO] Profiled 2.4190999999992857e-05 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:06 [INFO] Profiled 0.010859179000004993 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:06 [INFO] Query: variable neighborhood search
+27-Feb-24 11:00:06 [INFO] Profiled 0.0018112540000000121 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:06 [INFO] Profiled 0.08127325300000088 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:06 [INFO] Query: urban public transportation systems
+27-Feb-24 11:00:06 [INFO] Profiled 0.0021582859999999954 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:06 [INFO] Profiled 0.08317784499999803 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:06 [INFO] Query: edx coursera
+27-Feb-24 11:00:06 [INFO] Profiled 0.00016194299999999773 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:06 [INFO] Profiled 0.006270496000000847 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:06 [INFO] Query: fdir
+27-Feb-24 11:00:06 [INFO] Profiled 3.162700000000629e-05 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:06 [INFO] Profiled 0.016543094999999397 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:06 [INFO] Query: cryptography key management
+27-Feb-24 11:00:06 [INFO] Profiled 0.0015980049999999996 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:06 [INFO] Profiled 0.052750089999998195 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:06 [INFO] Query: ontology construction
+27-Feb-24 11:00:06 [INFO] Profiled 0.0005767380000000072 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:06 [INFO] Profiled 0.045348491999998686 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:06 [INFO] Query: go game
+27-Feb-24 11:00:06 [INFO] Profiled 0.0003419199999999817 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:07 [INFO] Profiled 0.5650366229999975 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:07 [INFO] Query: personality trait
+27-Feb-24 11:00:07 [INFO] Profiled 0.00017021100000001732 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:07 [INFO] Profiled 0.03320285400001133 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:07 [INFO] Query: sparse learning
+27-Feb-24 11:00:07 [INFO] Profiled 0.001992568 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:07 [INFO] Profiled 0.05287843199999642 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:07 [INFO] Query: directed hypergraph
+27-Feb-24 11:00:07 [INFO] Profiled 0.00022535099999998476 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:07 [INFO] Profiled 0.03365064800000006 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:07 [INFO] Query: inventory management
+27-Feb-24 11:00:07 [INFO] Profiled 0.000525180000000014 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:07 [INFO] Profiled 0.02368335899999785 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:07 [INFO] Query: clojure
+27-Feb-24 11:00:07 [INFO] Profiled 2.008199999999072e-05 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:07 [INFO] Profiled 0.010627653000002013 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:07 [INFO] Query: ontology semantic web
+27-Feb-24 11:00:07 [INFO] Profiled 0.0018773389999999918 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:07 [INFO] Profiled 0.05723507199999922 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query
+27-Feb-24 11:00:07 [INFO] Query: convolutional neural network time series
+27-Feb-24 11:00:07 [INFO] Profiled 0.0030672029999999906 seconds at <function index at 0x7f37031e8540> for non_grep_boolean_retrieval_single_query
+27-Feb-24 11:00:07 [INFO] Profiled 0.10451994900000017 seconds at <function index at 0x7f37031e8540> for grep_boolean_retrieval_single_query

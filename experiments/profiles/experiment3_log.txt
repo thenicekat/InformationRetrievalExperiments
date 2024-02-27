@@ -1,0 +1,499 @@
+27-Feb-24 10:56:44 [INFO] Query: deep learning
+27-Feb-24 10:56:44 [INFO] Tree-based result: 222
+27-Feb-24 10:56:44 [INFO] Profiled 0.0020159360000000003 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 222
+27-Feb-24 10:56:44 [INFO] Profiled 0.0021276120000000005 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: artificial intelligence
+27-Feb-24 10:56:44 [INFO] Tree-based result: 116
+27-Feb-24 10:56:44 [INFO] Profiled 0.0003423530000000001 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 116
+27-Feb-24 10:56:44 [INFO] Profiled 0.0004534569999999991 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: information retrieval
+27-Feb-24 10:56:44 [INFO] Tree-based result: 205
+27-Feb-24 10:56:44 [INFO] Profiled 0.0018707569999999998 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 205
+27-Feb-24 10:56:44 [INFO] Profiled 0.002232468 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: machine learning
+27-Feb-24 10:56:44 [INFO] Tree-based result: 359
+27-Feb-24 10:56:44 [INFO] Profiled 0.0023628499999999997 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 359
+27-Feb-24 10:56:44 [INFO] Profiled 0.002535224000000001 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: question answering
+27-Feb-24 10:56:44 [INFO] Tree-based result: 107
+27-Feb-24 10:56:44 [INFO] Profiled 0.00041371100000000063 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 107
+27-Feb-24 10:56:44 [INFO] Profiled 0.0005323109999999989 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: noun phrases
+27-Feb-24 10:56:44 [INFO] Tree-based result: 48
+27-Feb-24 10:56:44 [INFO] Profiled 0.00018753099999999946 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 48
+27-Feb-24 10:56:44 [INFO] Profiled 0.0004864220000000037 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: penn treebank
+27-Feb-24 10:56:44 [INFO] Tree-based result: 67
+27-Feb-24 10:56:44 [INFO] Profiled 0.00015157200000000086 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 67
+27-Feb-24 10:56:44 [INFO] Profiled 0.00029317599999999916 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: speech recognition
+27-Feb-24 10:56:44 [INFO] Tree-based result: 201
+27-Feb-24 10:56:44 [INFO] Profiled 0.000897458999999998 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 201
+27-Feb-24 10:56:44 [INFO] Profiled 0.0010208090000000027 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: data mining
+27-Feb-24 10:56:44 [INFO] Tree-based result: 169
+27-Feb-24 10:56:44 [INFO] Profiled 0.0024120900000000004 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 169
+27-Feb-24 10:56:44 [INFO] Profiled 0.0029323679999999925 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: computer vision
+27-Feb-24 10:56:44 [INFO] Tree-based result: 158
+27-Feb-24 10:56:44 [INFO] Profiled 0.000770576000000002 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 158
+27-Feb-24 10:56:44 [INFO] Profiled 0.0011410710000000057 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: reinforcement learning
+27-Feb-24 10:56:44 [INFO] Tree-based result: 150
+27-Feb-24 10:56:44 [INFO] Profiled 0.0017975519999999991 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 150
+27-Feb-24 10:56:44 [INFO] Profiled 0.001994965999999999 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: natural language
+27-Feb-24 10:56:44 [INFO] Tree-based result: 357
+27-Feb-24 10:56:44 [INFO] Profiled 0.0013774560000000009 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 357
+27-Feb-24 10:56:44 [INFO] Profiled 0.0016559449999999885 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: autoencoder
+27-Feb-24 10:56:44 [INFO] Tree-based result: 70
+27-Feb-24 10:56:44 [INFO] Profiled 1.7459000000000918e-05 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 70
+27-Feb-24 10:56:44 [INFO] Profiled 0.00014492100000000271 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: ontology
+27-Feb-24 10:56:44 [INFO] Tree-based result: 233
+27-Feb-24 10:56:44 [INFO] Profiled 1.9172999999999066e-05 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 233
+27-Feb-24 10:56:44 [INFO] Profiled 0.00015330500000000982 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: sentiment analysis
+27-Feb-24 10:56:44 [INFO] Tree-based result: 88
+27-Feb-24 10:56:44 [INFO] Profiled 0.001563568999999999 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 88
+27-Feb-24 10:56:44 [INFO] Profiled 0.001734221000000001 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: sap
+27-Feb-24 10:56:44 [INFO] Tree-based result: 61
+27-Feb-24 10:56:44 [INFO] Profiled 1.0090000000000793e-05 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 61
+27-Feb-24 10:56:44 [INFO] Profiled 0.00014531999999999393 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: lstm
+27-Feb-24 10:56:44 [INFO] Tree-based result: 79
+27-Feb-24 10:56:44 [INFO] Profiled 1.577100000000123e-05 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 79
+27-Feb-24 10:56:44 [INFO] Profiled 0.00014435299999999984 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: natural language processing
+27-Feb-24 10:56:44 [INFO] Tree-based result: 134
+27-Feb-24 10:56:44 [INFO] Profiled 0.0022779189999999963 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 134
+27-Feb-24 10:56:44 [INFO] Profiled 0.002449226000000009 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: semantic web
+27-Feb-24 10:56:44 [INFO] Tree-based result: 180
+27-Feb-24 10:56:44 [INFO] Profiled 0.0010856469999999986 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 180
+27-Feb-24 10:56:44 [INFO] Profiled 0.0014930709999999951 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: mooc
+27-Feb-24 10:56:44 [INFO] Tree-based result: 120
+27-Feb-24 10:56:44 [INFO] Profiled 1.3585000000006925e-05 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 120
+27-Feb-24 10:56:44 [INFO] Profiled 0.00015171899999999808 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: human computer interaction
+27-Feb-24 10:56:44 [INFO] Tree-based result: 38
+27-Feb-24 10:56:44 [INFO] Profiled 0.0018297549999999989 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 38
+27-Feb-24 10:56:44 [INFO] Profiled 0.002392784999999998 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: eye movement clustering
+27-Feb-24 10:56:44 [INFO] Tree-based result: 7
+27-Feb-24 10:56:44 [INFO] Profiled 0.0006073109999999958 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 7
+27-Feb-24 10:56:44 [INFO] Profiled 0.0006449850000000111 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: semantic relations
+27-Feb-24 10:56:44 [INFO] Tree-based result: 74
+27-Feb-24 10:56:44 [INFO] Profiled 0.0009137960000000049 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 74
+27-Feb-24 10:56:44 [INFO] Profiled 0.0015896469999999961 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: efficient estimation of word representations in vector space
+27-Feb-24 10:56:44 [INFO] Tree-based result: 1
+27-Feb-24 10:56:44 [INFO] Profiled 0.014461106999999994 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 1
+27-Feb-24 10:56:44 [INFO] Profiled 0.010156779000000015 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: big data
+27-Feb-24 10:56:44 [INFO] Tree-based result: 101
+27-Feb-24 10:56:44 [INFO] Profiled 0.003987899000000003 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 101
+27-Feb-24 10:56:44 [INFO] Profiled 0.0031336769999999806 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: audio visual fusion
+27-Feb-24 10:56:44 [INFO] Tree-based result: 27
+27-Feb-24 10:56:44 [INFO] Profiled 0.0008184089999999922 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 27
+27-Feb-24 10:56:44 [INFO] Profiled 0.0009377690000000119 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: object detection
+27-Feb-24 10:56:44 [INFO] Tree-based result: 131
+27-Feb-24 10:56:44 [INFO] Profiled 0.0009375660000000147 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 131
+27-Feb-24 10:56:44 [INFO] Profiled 0.0011150609999999797 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: gfdm
+27-Feb-24 10:56:44 [INFO] Tree-based result: 50
+27-Feb-24 10:56:44 [INFO] Profiled 1.4451999999991194e-05 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 50
+27-Feb-24 10:56:44 [INFO] Profiled 0.00018496700000000116 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: neural network
+27-Feb-24 10:56:44 [INFO] Tree-based result: 303
+27-Feb-24 10:56:44 [INFO] Profiled 0.0015948109999999946 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 303
+27-Feb-24 10:56:44 [INFO] Profiled 0.0016559419999999936 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: generalized extreme value
+27-Feb-24 10:56:44 [INFO] Tree-based result: 31
+27-Feb-24 10:56:44 [INFO] Profiled 0.0006762370000000101 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 31
+27-Feb-24 10:56:44 [INFO] Profiled 0.0009420260000000125 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: information geometry
+27-Feb-24 10:56:44 [INFO] Tree-based result: 62
+27-Feb-24 10:56:44 [INFO] Profiled 0.0020360540000000024 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 62
+27-Feb-24 10:56:44 [INFO] Profiled 0.0025375049999999955 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: image panorama video
+27-Feb-24 10:56:44 [INFO] Tree-based result: 8
+27-Feb-24 10:56:44 [INFO] Profiled 0.001391060999999992 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 8
+27-Feb-24 10:56:44 [INFO] Profiled 0.0014223560000000066 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: data science
+27-Feb-24 10:56:44 [INFO] Tree-based result: 63
+27-Feb-24 10:56:44 [INFO] Profiled 0.0023549970000000114 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 63
+27-Feb-24 10:56:44 [INFO] Profiled 0.002813363000000027 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: semantic parsing
+27-Feb-24 10:56:44 [INFO] Tree-based result: 69
+27-Feb-24 10:56:44 [INFO] Profiled 0.0008129369999999927 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 69
+27-Feb-24 10:56:44 [INFO] Profiled 0.001105129999999968 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: augmented reality
+27-Feb-24 10:56:44 [INFO] Tree-based result: 104
+27-Feb-24 10:56:44 [INFO] Profiled 0.0003357359999999962 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 104
+27-Feb-24 10:56:44 [INFO] Profiled 0.00040586999999998874 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: imbalanced data
+27-Feb-24 10:56:44 [INFO] Tree-based result: 87
+27-Feb-24 10:56:44 [INFO] Profiled 0.002674254000000008 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 87
+27-Feb-24 10:56:44 [INFO] Profiled 0.0027544190000000288 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: recommender system
+27-Feb-24 10:56:44 [INFO] Tree-based result: 49
+27-Feb-24 10:56:44 [INFO] Profiled 0.001868696000000003 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 49
+27-Feb-24 10:56:44 [INFO] Profiled 0.002134984999999992 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: inverse reinforcement learning mixture
+27-Feb-24 10:56:44 [INFO] Tree-based result: 1
+27-Feb-24 10:56:44 [INFO] Profiled 0.0022037739999999986 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 1
+27-Feb-24 10:56:44 [INFO] Profiled 0.0007596240000000004 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: transfer learning
+27-Feb-24 10:56:44 [INFO] Tree-based result: 93
+27-Feb-24 10:56:44 [INFO] Profiled 0.0019163319999999928 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 93
+27-Feb-24 10:56:44 [INFO] Profiled 0.002058789999999998 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: cnn
+27-Feb-24 10:56:44 [INFO] Tree-based result: 91
+27-Feb-24 10:56:44 [INFO] Profiled 1.182800000000539e-05 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 91
+27-Feb-24 10:56:44 [INFO] Profiled 0.00014109900000001951 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: dynamic programming segmentation
+27-Feb-24 10:56:44 [INFO] Tree-based result: 26
+27-Feb-24 10:56:44 [INFO] Profiled 0.001064032999999992 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 26
+27-Feb-24 10:56:44 [INFO] Profiled 0.001210221999999983 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: natural language interface
+27-Feb-24 10:56:44 [INFO] Tree-based result: 43
+27-Feb-24 10:56:44 [INFO] Profiled 0.001945174000000001 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 43
+27-Feb-24 10:56:44 [INFO] Profiled 0.002134693000000021 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: genetic algorithm
+27-Feb-24 10:56:44 [INFO] Tree-based result: 68
+27-Feb-24 10:56:44 [INFO] Profiled 0.0015402129999999986 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 68
+27-Feb-24 10:56:44 [INFO] Profiled 0.001702599999999957 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: prolog
+27-Feb-24 10:56:44 [INFO] Tree-based result: 93
+27-Feb-24 10:56:44 [INFO] Profiled 1.7339000000018978e-05 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 93
+27-Feb-24 10:56:44 [INFO] Profiled 0.00020026800000001732 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: contact prediction
+27-Feb-24 10:56:44 [INFO] Tree-based result: 63
+27-Feb-24 10:56:44 [INFO] Profiled 0.0004856999999999778 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 63
+27-Feb-24 10:56:44 [INFO] Profiled 0.0005492710000000317 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: wifi malware
+27-Feb-24 10:56:44 [INFO] Tree-based result: 8
+27-Feb-24 10:56:44 [INFO] Profiled 0.00014913500000000857 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 8
+27-Feb-24 10:56:44 [INFO] Profiled 0.0002598859999999592 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: nsdi machine learning
+27-Feb-24 10:56:44 [INFO] Tree-based result: 359
+27-Feb-24 10:56:44 [INFO] Profiled 0.0021766960000000057 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Profiled 5.59499999999713e-06 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: forensics and machine learning
+27-Feb-24 10:56:44 [INFO] Tree-based result: 7
+27-Feb-24 10:56:44 [INFO] Profiled 0.011745150999999981 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 7
+27-Feb-24 10:56:44 [INFO] Profiled 0.01133286 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: words to speech
+27-Feb-24 10:56:44 [INFO] Tree-based result: 36
+27-Feb-24 10:56:44 [INFO] Profiled 0.009181028000000008 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 36
+27-Feb-24 10:56:44 [INFO] Profiled 0.00998867099999999 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: information theory
+27-Feb-24 10:56:44 [INFO] Tree-based result: 136
+27-Feb-24 10:56:44 [INFO] Profiled 0.0024189639999999957 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 136
+27-Feb-24 10:56:44 [INFO] Profiled 0.0026321470000000707 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: morphology morphological
+27-Feb-24 10:56:44 [INFO] Tree-based result: 32
+27-Feb-24 10:56:44 [INFO] Profiled 0.00018589100000000747 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 32
+27-Feb-24 10:56:44 [INFO] Profiled 0.0003135879999999619 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: category theory
+27-Feb-24 10:56:44 [INFO] Tree-based result: 56
+27-Feb-24 10:56:44 [INFO] Profiled 0.0006851180000000123 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 56
+27-Feb-24 10:56:44 [INFO] Profiled 0.0007946009999999643 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: graph theory
+27-Feb-24 10:56:44 [INFO] Tree-based result: 59
+27-Feb-24 10:56:44 [INFO] Profiled 0.000919028999999974 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 59
+27-Feb-24 10:56:44 [INFO] Profiled 0.0010427770000000086 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: smart thermostat
+27-Feb-24 10:56:44 [INFO] Tree-based result: 9
+27-Feb-24 10:56:44 [INFO] Profiled 0.00015719100000001485 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 9
+27-Feb-24 10:56:44 [INFO] Profiled 0.0005411550000000431 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: exploit vulnerability
+27-Feb-24 10:56:44 [INFO] Tree-based result: 23
+27-Feb-24 10:56:44 [INFO] Profiled 0.00028646000000000227 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 23
+27-Feb-24 10:56:44 [INFO] Profiled 0.00043526299999996354 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: reinforcement learning and video game
+27-Feb-24 10:56:44 [INFO] Tree-based result: 1
+27-Feb-24 10:56:44 [INFO] Profiled 0.01064556500000001 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 1
+27-Feb-24 10:56:44 [INFO] Profiled 0.0025453679999999784 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: system health management
+27-Feb-24 10:56:44 [INFO] Tree-based result: 18
+27-Feb-24 10:56:44 [INFO] Profiled 0.002192315999999986 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 18
+27-Feb-24 10:56:44 [INFO] Profiled 0.0025700570000000145 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: spatial multi agent systems
+27-Feb-24 10:56:44 [INFO] Tree-based result: 0
+27-Feb-24 10:56:44 [INFO] Profiled 0.0003939470000000056 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 0
+27-Feb-24 10:56:44 [INFO] Profiled 0.0006356290000000264 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: service composition
+27-Feb-24 10:56:44 [INFO] Tree-based result: 91
+27-Feb-24 10:56:44 [INFO] Profiled 0.0004144910000000168 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 91
+27-Feb-24 10:56:44 [INFO] Profiled 0.000541493000000004 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: mobile payment
+27-Feb-24 10:56:44 [INFO] Tree-based result: 82
+27-Feb-24 10:56:44 [INFO] Profiled 0.0004729539999999838 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 82
+27-Feb-24 10:56:44 [INFO] Profiled 0.0006947649999999583 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: 3 axis gantry
+27-Feb-24 10:56:44 [INFO] Tree-based result: 1
+27-Feb-24 10:56:44 [INFO] Profiled 0.000251375000000012 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 1
+27-Feb-24 10:56:44 [INFO] Profiled 0.0004091740000000399 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: softmax categorization
+27-Feb-24 10:56:44 [INFO] Tree-based result: 1
+27-Feb-24 10:56:44 [INFO] Profiled 0.00015155599999998326 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 1
+27-Feb-24 10:56:44 [INFO] Profiled 0.00025922000000000445 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: cost aggregation
+27-Feb-24 10:56:44 [INFO] Tree-based result: 48
+27-Feb-24 10:56:44 [INFO] Profiled 0.0004681800000000125 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 48
+27-Feb-24 10:56:44 [INFO] Profiled 0.0006326169999999465 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: chinese dialect
+27-Feb-24 10:56:44 [INFO] Tree-based result: 21
+27-Feb-24 10:56:44 [INFO] Profiled 0.00021902799999999611 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 21
+27-Feb-24 10:56:44 [INFO] Profiled 0.00033232000000006645 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: depth camera
+27-Feb-24 10:56:44 [INFO] Tree-based result: 61
+27-Feb-24 10:56:44 [INFO] Profiled 0.0003377089999999916 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 61
+27-Feb-24 10:56:44 [INFO] Profiled 0.00047520599999996416 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: mobile tcp traffic analysis
+27-Feb-24 10:56:44 [INFO] Tree-based result: 1
+27-Feb-24 10:56:44 [INFO] Profiled 0.0019842450000000095 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 1
+27-Feb-24 10:56:44 [INFO] Profiled 0.002431105000000003 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: collective learning
+27-Feb-24 10:56:44 [INFO] Tree-based result: 52
+27-Feb-24 10:56:44 [INFO] Profiled 0.002146190000000006 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 52
+27-Feb-24 10:56:44 [INFO] Profiled 0.002229210999999995 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: robust production planning
+27-Feb-24 10:56:44 [INFO] Tree-based result: 16
+27-Feb-24 10:56:44 [INFO] Profiled 0.0009517909999999935 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 16
+27-Feb-24 10:56:44 [INFO] Profiled 0.0012165260000000233 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: memory hierarchy
+27-Feb-24 10:56:44 [INFO] Tree-based result: 53
+27-Feb-24 10:56:44 [INFO] Profiled 0.0005277480000000084 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 53
+27-Feb-24 10:56:44 [INFO] Profiled 0.0006829169999999912 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: hashing
+27-Feb-24 10:56:44 [INFO] Tree-based result: 103
+27-Feb-24 10:56:44 [INFO] Profiled 1.4482999999995694e-05 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 103
+27-Feb-24 10:56:44 [INFO] Profiled 0.00016413799999998036 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: comparable corpora
+27-Feb-24 10:56:44 [INFO] Tree-based result: 80
+27-Feb-24 10:56:44 [INFO] Profiled 0.00037408099999998445 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 80
+27-Feb-24 10:56:44 [INFO] Profiled 0.00051521700000004 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: knowledge graph
+27-Feb-24 10:56:44 [INFO] Tree-based result: 46
+27-Feb-24 10:56:44 [INFO] Profiled 0.001258891000000012 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 46
+27-Feb-24 10:56:44 [INFO] Profiled 0.001396034999999976 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: social media
+27-Feb-24 10:56:44 [INFO] Tree-based result: 127
+27-Feb-24 10:56:44 [INFO] Profiled 0.0006604850000000023 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 127
+27-Feb-24 10:56:44 [INFO] Profiled 0.0007973250000000015 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: deep learning surveillance
+27-Feb-24 10:56:44 [INFO] Tree-based result: 8
+27-Feb-24 10:56:44 [INFO] Profiled 0.0023327199999999826 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 8
+27-Feb-24 10:56:44 [INFO] Profiled 0.002309795000000031 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: cryptography
+27-Feb-24 10:56:44 [INFO] Tree-based result: 115
+27-Feb-24 10:56:44 [INFO] Profiled 1.9348000000002363e-05 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 115
+27-Feb-24 10:56:44 [INFO] Profiled 0.00015861400000000137 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: parametric max flow
+27-Feb-24 10:56:44 [INFO] Tree-based result: 3
+27-Feb-24 10:56:44 [INFO] Profiled 0.0003188570000000196 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 3
+27-Feb-24 10:56:44 [INFO] Profiled 0.00047755699999994794 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: deep reinforcement learning
+27-Feb-24 10:56:44 [INFO] Tree-based result: 10
+27-Feb-24 10:56:44 [INFO] Profiled 0.0017893169999999986 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 10
+27-Feb-24 10:56:44 [INFO] Profiled 0.0017968420000000485 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: varying weight grasp
+27-Feb-24 10:56:44 [INFO] Tree-based result: 1
+27-Feb-24 10:56:44 [INFO] Profiled 0.00022360499999998784 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 1
+27-Feb-24 10:56:44 [INFO] Profiled 0.000423074999999995 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: dirichlet process
+27-Feb-24 10:56:44 [INFO] Tree-based result: 58
+27-Feb-24 10:56:44 [INFO] Profiled 0.000794069999999994 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 58
+27-Feb-24 10:56:44 [INFO] Profiled 0.000968338000000013 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: word embedding
+27-Feb-24 10:56:44 [INFO] Tree-based result: 37
+27-Feb-24 10:56:44 [INFO] Profiled 0.0004895160000000093 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 37
+27-Feb-24 10:56:44 [INFO] Profiled 0.0006675029999999582 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: graph drawing
+27-Feb-24 10:56:44 [INFO] Tree-based result: 80
+27-Feb-24 10:56:44 [INFO] Profiled 0.0005305830000000011 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 80
+27-Feb-24 10:56:44 [INFO] Profiled 0.000709482999999983 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: robust principal component analysis
+27-Feb-24 10:56:44 [INFO] Tree-based result: 58
+27-Feb-24 10:56:44 [INFO] Profiled 0.0027093859999999803 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 58
+27-Feb-24 10:56:44 [INFO] Profiled 0.002929446000000016 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: differential evolution
+27-Feb-24 10:56:44 [INFO] Tree-based result: 98
+27-Feb-24 10:56:44 [INFO] Profiled 0.0004754480000000172 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 98
+27-Feb-24 10:56:44 [INFO] Profiled 0.0005982899999999874 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: seq2seq
+27-Feb-24 10:56:44 [INFO] Tree-based result: 9
+27-Feb-24 10:56:44 [INFO] Profiled 2.8026000000014317e-05 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 9
+27-Feb-24 10:56:44 [INFO] Profiled 0.00026546799999999093 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: document logical structure
+27-Feb-24 10:56:44 [INFO] Tree-based result: 43
+27-Feb-24 10:56:44 [INFO] Profiled 0.0012648629999999772 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 43
+27-Feb-24 10:56:44 [INFO] Profiled 0.0014238470000000336 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: duality
+27-Feb-24 10:56:44 [INFO] Tree-based result: 85
+27-Feb-24 10:56:44 [INFO] Profiled 2.2223999999987365e-05 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 85
+27-Feb-24 10:56:44 [INFO] Profiled 0.00016389899999996738 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: variable neighborhood search
+27-Feb-24 10:56:44 [INFO] Tree-based result: 85
+27-Feb-24 10:56:44 [INFO] Profiled 0.0010545380000000215 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 85
+27-Feb-24 10:56:44 [INFO] Profiled 0.001222996000000004 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: urban public transportation systems
+27-Feb-24 10:56:44 [INFO] Tree-based result: 11
+27-Feb-24 10:56:44 [INFO] Profiled 0.00203684400000001 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 11
+27-Feb-24 10:56:44 [INFO] Profiled 0.002143483000000085 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: edx coursera
+27-Feb-24 10:56:44 [INFO] Tree-based result: 7
+27-Feb-24 10:56:44 [INFO] Profiled 7.415899999999032e-05 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 7
+27-Feb-24 10:56:44 [INFO] Profiled 0.00021262399999996684 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: fdir
+27-Feb-24 10:56:44 [INFO] Tree-based result: 16
+27-Feb-24 10:56:44 [INFO] Profiled 1.2476999999982974e-05 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 16
+27-Feb-24 10:56:44 [INFO] Profiled 0.00014862699999995677 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: cryptography key management
+27-Feb-24 10:56:44 [INFO] Tree-based result: 12
+27-Feb-24 10:56:44 [INFO] Profiled 0.0012962210000000418 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 12
+27-Feb-24 10:56:44 [INFO] Profiled 0.0013479290000000532 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: ontology construction
+27-Feb-24 10:56:44 [INFO] Tree-based result: 50
+27-Feb-24 10:56:44 [INFO] Profiled 0.00047776199999996494 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 50
+27-Feb-24 10:56:44 [INFO] Profiled 0.0006566099999999742 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: go game
+27-Feb-24 10:56:44 [INFO] Tree-based result: 33
+27-Feb-24 10:56:44 [INFO] Profiled 0.0002640250000000288 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 33
+27-Feb-24 10:56:44 [INFO] Profiled 0.0004148520000000211 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: personality trait
+27-Feb-24 10:56:44 [INFO] Tree-based result: 35
+27-Feb-24 10:56:44 [INFO] Profiled 0.00015316699999998185 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 35
+27-Feb-24 10:56:44 [INFO] Profiled 0.0002871980000000163 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: sparse learning
+27-Feb-24 10:56:44 [INFO] Tree-based result: 99
+27-Feb-24 10:56:44 [INFO] Profiled 0.002101295000000003 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 99
+27-Feb-24 10:56:44 [INFO] Profiled 0.00214862399999996 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: directed hypergraph
+27-Feb-24 10:56:44 [INFO] Tree-based result: 15
+27-Feb-24 10:56:44 [INFO] Profiled 0.0002282919999999633 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 15
+27-Feb-24 10:56:44 [INFO] Profiled 0.0003554419999999281 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: inventory management
+27-Feb-24 10:56:44 [INFO] Tree-based result: 81
+27-Feb-24 10:56:44 [INFO] Profiled 0.0005143440000000554 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 81
+27-Feb-24 10:56:44 [INFO] Profiled 0.000639552000000071 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: clojure
+27-Feb-24 10:56:44 [INFO] Tree-based result: 32
+27-Feb-24 10:56:44 [INFO] Profiled 2.3805999999987337e-05 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 32
+27-Feb-24 10:56:44 [INFO] Profiled 0.00028254399999996793 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: ontology semantic web
+27-Feb-24 10:56:44 [INFO] Tree-based result: 66
+27-Feb-24 10:56:44 [INFO] Profiled 0.0016474829999999774 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 66
+27-Feb-24 10:56:44 [INFO] Profiled 0.0017128640000000084 seconds at <function index at 0x7f62ff894540> for and_query
+27-Feb-24 10:56:44 [INFO] Query: convolutional neural network time series
+27-Feb-24 10:56:44 [INFO] Tree-based result: 2
+27-Feb-24 10:56:44 [INFO] Profiled 0.003114527000000006 seconds at <function index at 0x7f62ff894540> for boolean_retrieval_multiple_words
+27-Feb-24 10:56:44 [INFO] Hash-based result: 2
+27-Feb-24 10:56:44 [INFO] Profiled 0.002906362000000051 seconds at <function index at 0x7f62ff894540> for and_query
