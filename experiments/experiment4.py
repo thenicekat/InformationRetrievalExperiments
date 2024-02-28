@@ -69,21 +69,22 @@ class Trie:
 
 
 # GENERATE PERMUTERM INDICES
-def generate_permuterm_indices(term_freq: dict):
+def generate_permuterm_indices(term_freq: dict, postings: dict):
     # Create a permuterm index
     permuterm_index = {}
     # We can create a permutation index for each term in the collection
     # so like if we have a term "hello" we can create a permutation index for it
     # we store hello$, ello$h, llo$he, lo$hel, o$hell and map it to the term "hello"
     for term in term_freq:
+        original_term = term
         term = term + "$"
         for i in range(len(term)):
-            permuterm_index[term[i:] + term[:i]] = term
+            permuterm_index[term[i:] + term[:i]] = postings[original_term]
     return permuterm_index
 
 
 # PREFIX SEARCH ON PERMUTERM INDEX
-def permuterm_search_on_one_term(permuterm_index: dict, postings: dict, query: str):
+def permuterm_search_on_one_term(permuterm_index: dict, query: str):
     query = query + "$"
     # We have to rotate it such that last char is *
     while query[-1] != "*":
@@ -96,7 +97,7 @@ def permuterm_search_on_one_term(permuterm_index: dict, postings: dict, query: s
         if key.startswith(query):
             # We remove the $ from the end
             # and add postings list to the results
-            for posting in postings[permuterm_index[key][:-1]]:
+            for posting in permuterm_index[key]:
                 results.add(posting)
     return results
 
@@ -155,7 +156,7 @@ def permuterm_trial():
     postings, term_freq = load_index_in_memory("./s2/")
     # Here postings is the inverted index
     # term_freq is the term frequency of each term in the collection
-    permuterm_index = generate_permuterm_indices(term_freq=term_freq)
+    permuterm_index = generate_permuterm_indices(term_freq=term_freq, postings=postings)
 
     # Open the file and search for the term
     with open("./s2/s2_wildcard.json") as f:
