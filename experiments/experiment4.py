@@ -170,7 +170,6 @@ def permuterm_trial():
         permuterm_profiler.enable()
         results_per_query = permuterm_search_on_one_term(
             permuterm_index=permuterm_index,
-            postings=postings,
             query=term["query"],
         )
         permuterm_profiler.disable()
