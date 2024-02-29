@@ -72,7 +72,7 @@ class Trie:
 def generate_permuterm_indices(term_freq: dict, postings: dict):
     # We can create a permutation index for each term in the collection
     # so like if we have a term "hello" we can create a permutation index for it
-    # we store hello$, ello$h, llo$he, lo$hel, o$hell and map it to the term "hello"
+    # we store hello$, ello$h, llo$he, lo$hel, o$hell
     permuterm_trie = Trie()
     for term in term_freq:
         original_term = term
