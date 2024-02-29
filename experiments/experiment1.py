@@ -8,36 +8,20 @@ import pandas as pd
 
 
 def custom_and_query(query_terms, postings, doc_freq):
-    # postings for only the query terms
     postings_for_keywords = {}
     doc_freq_for_keywords = {}
 
     for q in query_terms:
         postings_for_keywords[q] = postings[q]
-
-    # store doc frequency for query token in
-    # dictionary
-
-    for q in query_terms:
         doc_freq_for_keywords[q] = doc_freq[q]
 
-    # sort tokens in increasing order of their
-    # frequencies
+    sorted_tokens = [k for k, _ in sorted(doc_freq_for_keywords.items(), key=lambda item: item[1])]
 
-    sorted_tokens = sorted(doc_freq_for_keywords.items(), key=lambda x: x[1])
+    result = postings_for_keywords[sorted_tokens[0]]
 
-    # initialize result to postings list of the
-    # token with minimum doc frequency
-
-    result = postings_for_keywords[sorted_tokens[0][0]]
-
-    # iterate over the remaining postings list and
-    # intersect them with result, and updating it
-    # in every step
-
-    for i in range(1, len(postings_for_keywords)):
-        result = intersection(result, postings_for_keywords[sorted_tokens[i][0]])
-        if len(result) == 0:
+    for token in sorted_tokens[1:]:
+        result = list(set(result) & set(postings_for_keywords[token]))
+        if not result:
             return result
 
     return result
