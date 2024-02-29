@@ -1,180 +1,180 @@
-27-Feb-24 11:08:28 [INFO] Permuterm Search: Query Term is: {'qid': '1', 'query': 'l*ng'}
-27-Feb-24 11:08:29 [INFO] Profiled 0.6759590970000001 seconds at <function index at 0x7f35cbc2c540> for permuterm_search_on_one_term
-27-Feb-24 11:08:29 [INFO] Permuterm Search: Result Term is: 2214
-27-Feb-24 11:08:29 [INFO] Permuterm Search: Query Term is: {'qid': '2', 'query': 'in*e'}
-27-Feb-24 11:08:30 [INFO] Profiled 0.617859227 seconds at <function index at 0x7f35cbc2c540> for permuterm_search_on_one_term
-27-Feb-24 11:08:30 [INFO] Permuterm Search: Result Term is: 3133
-27-Feb-24 11:08:30 [INFO] Permuterm Search: Query Term is: {'qid': '3', 'query': 'ret*val'}
-27-Feb-24 11:08:30 [INFO] Profiled 0.8092251620000002 seconds at <function index at 0x7f35cbc2c540> for permuterm_search_on_one_term
-27-Feb-24 11:08:30 [INFO] Permuterm Search: Result Term is: 306
-27-Feb-24 11:08:30 [INFO] Permuterm Search: Query Term is: {'qid': '4', 'query': 'mac*'}
-27-Feb-24 11:08:31 [INFO] Profiled 0.6757676739999998 seconds at <function index at 0x7f35cbc2c540> for permuterm_search_on_one_term
-27-Feb-24 11:08:31 [INFO] Permuterm Search: Result Term is: 858
-27-Feb-24 11:08:31 [INFO] Permuterm Search: Query Term is: {'qid': '5', 'query': '*nswering'}
-27-Feb-24 11:08:32 [INFO] Profiled 0.6815094100000003 seconds at <function index at 0x7f35cbc2c540> for permuterm_search_on_one_term
-27-Feb-24 11:08:32 [INFO] Permuterm Search: Result Term is: 141
-27-Feb-24 11:08:32 [INFO] Permuterm Search: Query Term is: {'qid': '6', 'query': '*ses'}
-27-Feb-24 11:08:32 [INFO] Profiled 0.6474149249999996 seconds at <function index at 0x7f35cbc2c540> for permuterm_search_on_one_term
-27-Feb-24 11:08:32 [INFO] Permuterm Search: Result Term is: 2512
-27-Feb-24 11:08:32 [INFO] Permuterm Search: Query Term is: {'qid': '7', 'query': 'tree*'}
-27-Feb-24 11:08:33 [INFO] Profiled 0.6251258590000006 seconds at <function index at 0x7f35cbc2c540> for permuterm_search_on_one_term
-27-Feb-24 11:08:33 [INFO] Permuterm Search: Result Term is: 357
-27-Feb-24 11:08:33 [INFO] Permuterm Search: Query Term is: {'qid': '8', 'query': 'sp*h'}
-27-Feb-24 11:08:34 [INFO] Profiled 0.6676937289999998 seconds at <function index at 0x7f35cbc2c540> for permuterm_search_on_one_term
-27-Feb-24 11:08:34 [INFO] Permuterm Search: Result Term is: 326
-27-Feb-24 11:08:34 [INFO] Permuterm Search: Query Term is: {'qid': '9', 'query': 'm*g'}
-27-Feb-24 11:08:34 [INFO] Profiled 0.6566766839999998 seconds at <function index at 0x7f35cbc2c540> for permuterm_search_on_one_term
-27-Feb-24 11:08:34 [INFO] Permuterm Search: Result Term is: 2230
-27-Feb-24 11:08:34 [INFO] Permuterm Search: Query Term is: {'qid': '10', 'query': 'v*n'}
-27-Feb-24 11:08:35 [INFO] Profiled 0.6304587430000002 seconds at <function index at 0x7f35cbc2c540> for permuterm_search_on_one_term
-27-Feb-24 11:08:35 [INFO] Permuterm Search: Result Term is: 838
-27-Feb-24 11:08:35 [INFO] Permuterm Search: Query Term is: {'qid': '11', 'query': 'rein*'}
-27-Feb-24 11:08:36 [INFO] Profiled 0.607065865 seconds at <function index at 0x7f35cbc2c540> for permuterm_search_on_one_term
-27-Feb-24 11:08:36 [INFO] Permuterm Search: Result Term is: 187
-27-Feb-24 11:08:36 [INFO] Permuterm Search: Query Term is: {'qid': '12', 'query': 'lan*ge'}
-27-Feb-24 11:08:36 [INFO] Profiled 0.604872888 seconds at <function index at 0x7f35cbc2c540> for permuterm_search_on_one_term
-27-Feb-24 11:08:36 [INFO] Permuterm Search: Result Term is: 830
-27-Feb-24 11:08:36 [INFO] Permuterm Search: Query Term is: {'qid': '13', 'query': 'auto*'}
-27-Feb-24 11:08:37 [INFO] Profiled 0.6745833330000002 seconds at <function index at 0x7f35cbc2c540> for permuterm_search_on_one_term
-27-Feb-24 11:08:37 [INFO] Permuterm Search: Result Term is: 1214
-27-Feb-24 11:08:37 [INFO] Permuterm Search: Query Term is: {'qid': '14', 'query': 'on*y'}
-27-Feb-24 11:08:38 [INFO] Profiled 0.6335569989999996 seconds at <function index at 0x7f35cbc2c540> for permuterm_search_on_one_term
-27-Feb-24 11:08:38 [INFO] Permuterm Search: Result Term is: 1272
-27-Feb-24 11:08:38 [INFO] Permuterm Search: Query Term is: {'qid': '15', 'query': 'senti*'}
-27-Feb-24 11:08:38 [INFO] Profiled 0.6354679010000002 seconds at <function index at 0x7f35cbc2c540> for permuterm_search_on_one_term
-27-Feb-24 11:08:38 [INFO] Permuterm Search: Result Term is: 123
-27-Feb-24 11:08:38 [INFO] Permuterm Search: Query Term is: {'qid': '16', 'query': 's*p'}
-27-Feb-24 11:08:39 [INFO] Profiled 0.6910723619999999 seconds at <function index at 0x7f35cbc2c540> for permuterm_search_on_one_term
-27-Feb-24 11:08:39 [INFO] Permuterm Search: Result Term is: 455
-27-Feb-24 11:08:39 [INFO] Permuterm Search: Query Term is: {'qid': '17', 'query': 'l*m'}
-27-Feb-24 11:08:40 [INFO] Profiled 0.6620757160000004 seconds at <function index at 0x7f35cbc2c540> for permuterm_search_on_one_term
-27-Feb-24 11:08:40 [INFO] Permuterm Search: Result Term is: 189
-27-Feb-24 11:08:40 [INFO] Permuterm Search: Query Term is: {'qid': '18', 'query': 'nat*l'}
-27-Feb-24 11:08:40 [INFO] Profiled 0.6597050399999986 seconds at <function index at 0x7f35cbc2c540> for permuterm_search_on_one_term
-27-Feb-24 11:08:40 [INFO] Permuterm Search: Result Term is: 736
-27-Feb-24 11:08:40 [INFO] Permuterm Search: Query Term is: {'qid': '19', 'query': 'we*'}
-27-Feb-24 11:08:41 [INFO] Profiled 0.6368644970000013 seconds at <function index at 0x7f35cbc2c540> for permuterm_search_on_one_term
-27-Feb-24 11:08:41 [INFO] Permuterm Search: Result Term is: 6120
-27-Feb-24 11:08:41 [INFO] Permuterm Search: Query Term is: {'qid': '20', 'query': 'mo*c'}
-27-Feb-24 11:08:41 [INFO] Profiled 0.6517351400000013 seconds at <function index at 0x7f35cbc2c540> for permuterm_search_on_one_term
-27-Feb-24 11:08:41 [INFO] Permuterm Search: Result Term is: 168
-27-Feb-24 11:08:41 [INFO] Permuterm Search: Query Term is: {'qid': '21', 'query': 'com*er'}
-27-Feb-24 11:08:42 [INFO] Profiled 0.6077062909999977 seconds at <function index at 0x7f35cbc2c540> for permuterm_search_on_one_term
-27-Feb-24 11:08:42 [INFO] Permuterm Search: Result Term is: 554
-27-Feb-24 11:08:42 [INFO] Permuterm Search: Query Term is: {'qid': '22', 'query': 'cl*g'}
-27-Feb-24 11:08:43 [INFO] Profiled 0.6153347910000022 seconds at <function index at 0x7f35cbc2c540> for permuterm_search_on_one_term
-27-Feb-24 11:08:43 [INFO] Permuterm Search: Result Term is: 290
-27-Feb-24 11:08:43 [INFO] Permuterm Search: Query Term is: {'qid': '23', 'query': 's*ic'}
-27-Feb-24 11:08:43 [INFO] Profiled 0.6275636289999991 seconds at <function index at 0x7f35cbc2c540> for permuterm_search_on_one_term
-27-Feb-24 11:08:43 [INFO] Permuterm Search: Result Term is: 1854
-27-Feb-24 11:08:43 [INFO] Permuterm Search: Query Term is: {'qid': '24', 'query': 're*s'}
-27-Feb-24 11:08:44 [INFO] Profiled 0.6969753370000014 seconds at <function index at 0x7f35cbc2c540> for permuterm_search_on_one_term
-27-Feb-24 11:08:44 [INFO] Permuterm Search: Result Term is: 4039
-27-Feb-24 11:08:44 [INFO] Permuterm Search: Query Term is: {'qid': '25', 'query': '*ata'}
-27-Feb-24 11:08:45 [INFO] Profiled 0.6630997979999993 seconds at <function index at 0x7f35cbc2c540> for permuterm_search_on_one_term
-27-Feb-24 11:08:45 [INFO] Permuterm Search: Result Term is: 2183
-27-Feb-24 11:08:45 [INFO] Permuterm Search: Query Term is: {'qid': '26', 'query': 'f*sion'}
-27-Feb-24 11:08:45 [INFO] Profiled 0.6154799010000005 seconds at <function index at 0x7f35cbc2c540> for permuterm_search_on_one_term
-27-Feb-24 11:08:45 [INFO] Permuterm Search: Result Term is: 111
-27-Feb-24 11:08:45 [INFO] Permuterm Search: Query Term is: {'qid': '27', 'query': 'o*ject'}
-27-Feb-24 11:08:46 [INFO] Profiled 0.6581010809999981 seconds at <function index at 0x7f35cbc2c540> for permuterm_search_on_one_term
-27-Feb-24 11:08:46 [INFO] Permuterm Search: Result Term is: 409
-27-Feb-24 11:08:46 [INFO] Permuterm Search: Query Term is: {'qid': '28', 'query': 'g*dm'}
-27-Feb-24 11:08:47 [INFO] Profiled 0.6310010170000027 seconds at <function index at 0x7f35cbc2c540> for permuterm_search_on_one_term
-27-Feb-24 11:08:47 [INFO] Permuterm Search: Result Term is: 50
-27-Feb-24 11:08:47 [INFO] Permuterm Search: Query Term is: {'qid': '29', 'query': 'n*ural'}
-27-Feb-24 11:08:47 [INFO] Profiled 0.6144915609999977 seconds at <function index at 0x7f35cbc2c540> for permuterm_search_on_one_term
-27-Feb-24 11:08:47 [INFO] Permuterm Search: Result Term is: 1206
-27-Feb-24 11:08:47 [INFO] Permuterm Search: Query Term is: {'qid': '30', 'query': 'e*treme'}
-27-Feb-24 11:08:48 [INFO] Profiled 0.6089835479999977 seconds at <function index at 0x7f35cbc2c540> for permuterm_search_on_one_term
-27-Feb-24 11:08:48 [INFO] Permuterm Search: Result Term is: 91
-27-Feb-24 11:08:53 [INFO] Trie Search: Query Term is: {'qid': '1', 'query': 'l*ng'} --> l and ng
-27-Feb-24 11:08:53 [INFO] Trie Search: Result Term is: 2214
-27-Feb-24 11:08:53 [INFO] Profiled 0.06273096 seconds at <function index at 0x7f35cbc2c540> for tree_based_search
-27-Feb-24 11:08:53 [INFO] Trie Search: Query Term is: {'qid': '2', 'query': 'in*e'} --> in and e
-27-Feb-24 11:08:53 [INFO] Trie Search: Result Term is: 3133
-27-Feb-24 11:08:53 [INFO] Profiled 0.080311725 seconds at <function index at 0x7f35cbc2c540> for tree_based_search
-27-Feb-24 11:08:53 [INFO] Trie Search: Query Term is: {'qid': '3', 'query': 'ret*val'} --> ret and val
-27-Feb-24 11:08:53 [INFO] Trie Search: Result Term is: 306
-27-Feb-24 11:08:53 [INFO] Profiled 0.0017455550000000097 seconds at <function index at 0x7f35cbc2c540> for tree_based_search
-27-Feb-24 11:08:53 [INFO] Trie Search: Query Term is: {'qid': '4', 'query': 'mac*'} --> mac and 
-27-Feb-24 11:08:54 [INFO] Trie Search: Result Term is: 858
-27-Feb-24 11:08:54 [INFO] Profiled 0.784154563 seconds at <function index at 0x7f35cbc2c540> for tree_based_search
-27-Feb-24 11:08:54 [INFO] Trie Search: Query Term is: {'qid': '5', 'query': '*nswering'} -->  and nswering
-27-Feb-24 11:08:54 [INFO] Trie Search: Result Term is: 141
-27-Feb-24 11:08:54 [INFO] Profiled 0.5845513410000003 seconds at <function index at 0x7f35cbc2c540> for tree_based_search
-27-Feb-24 11:08:54 [INFO] Trie Search: Query Term is: {'qid': '6', 'query': '*ses'} -->  and ses
-27-Feb-24 11:08:55 [INFO] Trie Search: Result Term is: 2512
-27-Feb-24 11:08:55 [INFO] Profiled 0.6295172859999998 seconds at <function index at 0x7f35cbc2c540> for tree_based_search
-27-Feb-24 11:08:55 [INFO] Trie Search: Query Term is: {'qid': '7', 'query': 'tree*'} --> tree and 
-27-Feb-24 11:08:56 [INFO] Trie Search: Result Term is: 357
-27-Feb-24 11:08:56 [INFO] Profiled 0.7422235799999997 seconds at <function index at 0x7f35cbc2c540> for tree_based_search
-27-Feb-24 11:08:56 [INFO] Trie Search: Query Term is: {'qid': '8', 'query': 'sp*h'} --> sp and h
-27-Feb-24 11:08:56 [INFO] Trie Search: Result Term is: 326
-27-Feb-24 11:08:56 [INFO] Profiled 0.011688092000000871 seconds at <function index at 0x7f35cbc2c540> for tree_based_search
-27-Feb-24 11:08:56 [INFO] Trie Search: Query Term is: {'qid': '9', 'query': 'm*g'} --> m and g
-27-Feb-24 11:08:56 [INFO] Trie Search: Result Term is: 2230
-27-Feb-24 11:08:56 [INFO] Profiled 0.07573202199999951 seconds at <function index at 0x7f35cbc2c540> for tree_based_search
-27-Feb-24 11:08:56 [INFO] Trie Search: Query Term is: {'qid': '10', 'query': 'v*n'} --> v and n
-27-Feb-24 11:08:56 [INFO] Trie Search: Result Term is: 838
-27-Feb-24 11:08:56 [INFO] Profiled 0.04438609699999985 seconds at <function index at 0x7f35cbc2c540> for tree_based_search
-27-Feb-24 11:08:56 [INFO] Trie Search: Query Term is: {'qid': '11', 'query': 'rein*'} --> rein and 
-27-Feb-24 11:08:56 [INFO] Trie Search: Result Term is: 187
-27-Feb-24 11:08:57 [INFO] Profiled 0.7333906799999999 seconds at <function index at 0x7f35cbc2c540> for tree_based_search
-27-Feb-24 11:08:57 [INFO] Trie Search: Query Term is: {'qid': '12', 'query': 'lan*ge'} --> lan and ge
-27-Feb-24 11:08:57 [INFO] Trie Search: Result Term is: 830
-27-Feb-24 11:08:57 [INFO] Profiled 0.003923524000000622 seconds at <function index at 0x7f35cbc2c540> for tree_based_search
-27-Feb-24 11:08:57 [INFO] Trie Search: Query Term is: {'qid': '13', 'query': 'auto*'} --> auto and 
-27-Feb-24 11:08:57 [INFO] Trie Search: Result Term is: 1214
-27-Feb-24 11:08:57 [INFO] Profiled 0.7165823520000001 seconds at <function index at 0x7f35cbc2c540> for tree_based_search
-27-Feb-24 11:08:57 [INFO] Trie Search: Query Term is: {'qid': '14', 'query': 'on*y'} --> on and y
-27-Feb-24 11:08:57 [INFO] Trie Search: Result Term is: 1272
-27-Feb-24 11:08:57 [INFO] Profiled 0.04465085999999996 seconds at <function index at 0x7f35cbc2c540> for tree_based_search
-27-Feb-24 11:08:57 [INFO] Trie Search: Query Term is: {'qid': '15', 'query': 'senti*'} --> senti and 
-27-Feb-24 11:08:58 [INFO] Trie Search: Result Term is: 123
-27-Feb-24 11:08:58 [INFO] Profiled 0.7526666080000002 seconds at <function index at 0x7f35cbc2c540> for tree_based_search
-27-Feb-24 11:08:58 [INFO] Trie Search: Query Term is: {'qid': '16', 'query': 's*p'} --> s and p
-27-Feb-24 11:08:58 [INFO] Trie Search: Result Term is: 455
-27-Feb-24 11:08:58 [INFO] Profiled 0.07697690199999929 seconds at <function index at 0x7f35cbc2c540> for tree_based_search
-27-Feb-24 11:08:58 [INFO] Trie Search: Query Term is: {'qid': '17', 'query': 'l*m'} --> l and m
-27-Feb-24 11:08:58 [INFO] Trie Search: Result Term is: 189
-27-Feb-24 11:08:58 [INFO] Profiled 0.03169463900000036 seconds at <function index at 0x7f35cbc2c540> for tree_based_search
-27-Feb-24 11:08:58 [INFO] Trie Search: Query Term is: {'qid': '18', 'query': 'nat*l'} --> nat and l
-27-Feb-24 11:08:58 [INFO] Trie Search: Result Term is: 736
-27-Feb-24 11:08:58 [INFO] Profiled 0.025905694999999618 seconds at <function index at 0x7f35cbc2c540> for tree_based_search
-27-Feb-24 11:08:58 [INFO] Trie Search: Query Term is: {'qid': '19', 'query': 'we*'} --> we and 
-27-Feb-24 11:08:59 [INFO] Trie Search: Result Term is: 6120
-27-Feb-24 11:08:59 [INFO] Profiled 0.7519921740000015 seconds at <function index at 0x7f35cbc2c540> for tree_based_search
-27-Feb-24 11:08:59 [INFO] Trie Search: Query Term is: {'qid': '20', 'query': 'mo*c'} --> mo and c
-27-Feb-24 11:08:59 [INFO] Trie Search: Result Term is: 168
-27-Feb-24 11:08:59 [INFO] Profiled 0.017145746999998934 seconds at <function index at 0x7f35cbc2c540> for tree_based_search
-27-Feb-24 11:08:59 [INFO] Trie Search: Query Term is: {'qid': '21', 'query': 'com*er'} --> com and er
-27-Feb-24 11:08:59 [INFO] Trie Search: Result Term is: 554
-27-Feb-24 11:08:59 [INFO] Profiled 0.022883709000000252 seconds at <function index at 0x7f35cbc2c540> for tree_based_search
-27-Feb-24 11:08:59 [INFO] Trie Search: Query Term is: {'qid': '22', 'query': 'cl*g'} --> cl and g
-27-Feb-24 11:08:59 [INFO] Trie Search: Result Term is: 290
-27-Feb-24 11:08:59 [INFO] Profiled 0.05622921899999955 seconds at <function index at 0x7f35cbc2c540> for tree_based_search
-27-Feb-24 11:08:59 [INFO] Trie Search: Query Term is: {'qid': '23', 'query': 's*ic'} --> s and ic
-27-Feb-24 11:08:59 [INFO] Trie Search: Result Term is: 1854
-27-Feb-24 11:08:59 [INFO] Profiled 0.05882117200000092 seconds at <function index at 0x7f35cbc2c540> for tree_based_search
-27-Feb-24 11:08:59 [INFO] Trie Search: Query Term is: {'qid': '24', 'query': 're*s'} --> re and s
-27-Feb-24 11:08:59 [INFO] Trie Search: Result Term is: 4039
-27-Feb-24 11:08:59 [INFO] Profiled 0.09069695899999974 seconds at <function index at 0x7f35cbc2c540> for tree_based_search
-27-Feb-24 11:08:59 [INFO] Trie Search: Query Term is: {'qid': '25', 'query': '*ata'} -->  and ata
-27-Feb-24 11:09:00 [INFO] Trie Search: Result Term is: 2183
-27-Feb-24 11:09:00 [INFO] Profiled 0.6780832019999998 seconds at <function index at 0x7f35cbc2c540> for tree_based_search
-27-Feb-24 11:09:00 [INFO] Trie Search: Query Term is: {'qid': '26', 'query': 'f*sion'} --> f and sion
-27-Feb-24 11:09:00 [INFO] Trie Search: Result Term is: 111
-27-Feb-24 11:09:00 [INFO] Profiled 0.015487822000000762 seconds at <function index at 0x7f35cbc2c540> for tree_based_search
-27-Feb-24 11:09:00 [INFO] Trie Search: Query Term is: {'qid': '27', 'query': 'o*ject'} --> o and ject
-27-Feb-24 11:09:00 [INFO] Trie Search: Result Term is: 409
-27-Feb-24 11:09:00 [INFO] Profiled 0.014695777999999216 seconds at <function index at 0x7f35cbc2c540> for tree_based_search
-27-Feb-24 11:09:00 [INFO] Trie Search: Query Term is: {'qid': '28', 'query': 'g*dm'} --> g and dm
-27-Feb-24 11:09:00 [INFO] Trie Search: Result Term is: 50
-27-Feb-24 11:09:00 [INFO] Profiled 0.011106228000000051 seconds at <function index at 0x7f35cbc2c540> for tree_based_search
-27-Feb-24 11:09:00 [INFO] Trie Search: Query Term is: {'qid': '29', 'query': 'n*ural'} --> n and ural
-27-Feb-24 11:09:00 [INFO] Trie Search: Result Term is: 1206
-27-Feb-24 11:09:00 [INFO] Profiled 0.01645665499999982 seconds at <function index at 0x7f35cbc2c540> for tree_based_search
-27-Feb-24 11:09:00 [INFO] Trie Search: Query Term is: {'qid': '30', 'query': 'e*treme'} --> e and treme
-27-Feb-24 11:09:00 [INFO] Trie Search: Result Term is: 91
-27-Feb-24 11:09:00 [INFO] Profiled 0.018528375000000707 seconds at <function index at 0x7f35cbc2c540> for tree_based_search
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Query Term is: {'qid': '1', 'query': 'l*ng'}
+29-Feb-24 07:52:14 [INFO] Profiled 0.0023496410000000004 seconds at <function index at 0x7f57c3c40540> for permuterm_search_on_one_term
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Length of Results is: 2214
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Query Term is: {'qid': '2', 'query': 'in*e'}
+29-Feb-24 07:52:14 [INFO] Profiled 0.006932009 seconds at <function index at 0x7f57c3c40540> for permuterm_search_on_one_term
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Length of Results is: 3133
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Query Term is: {'qid': '3', 'query': 'ret*val'}
+29-Feb-24 07:52:14 [INFO] Profiled 0.0002865840000000012 seconds at <function index at 0x7f57c3c40540> for permuterm_search_on_one_term
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Length of Results is: 306
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Query Term is: {'qid': '4', 'query': 'mac*'}
+29-Feb-24 07:52:14 [INFO] Profiled 0.001758329999999999 seconds at <function index at 0x7f57c3c40540> for permuterm_search_on_one_term
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Length of Results is: 858
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Query Term is: {'qid': '5', 'query': '*nswering'}
+29-Feb-24 07:52:14 [INFO] Profiled 0.0001723930000000016 seconds at <function index at 0x7f57c3c40540> for permuterm_search_on_one_term
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Length of Results is: 141
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Query Term is: {'qid': '6', 'query': '*ses'}
+29-Feb-24 07:52:14 [INFO] Profiled 0.0040558320000000005 seconds at <function index at 0x7f57c3c40540> for permuterm_search_on_one_term
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Length of Results is: 2512
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Query Term is: {'qid': '7', 'query': 'tree*'}
+29-Feb-24 07:52:14 [INFO] Profiled 0.0007700709999999972 seconds at <function index at 0x7f57c3c40540> for permuterm_search_on_one_term
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Length of Results is: 357
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Query Term is: {'qid': '8', 'query': 'sp*h'}
+29-Feb-24 07:52:14 [INFO] Profiled 0.0002928450000000034 seconds at <function index at 0x7f57c3c40540> for permuterm_search_on_one_term
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Length of Results is: 326
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Query Term is: {'qid': '9', 'query': 'm*g'}
+29-Feb-24 07:52:14 [INFO] Profiled 0.004316827999999995 seconds at <function index at 0x7f57c3c40540> for permuterm_search_on_one_term
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Length of Results is: 2230
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Query Term is: {'qid': '10', 'query': 'v*n'}
+29-Feb-24 07:52:14 [INFO] Profiled 0.0013326340000000061 seconds at <function index at 0x7f57c3c40540> for permuterm_search_on_one_term
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Length of Results is: 838
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Query Term is: {'qid': '11', 'query': 'rein*'}
+29-Feb-24 07:52:14 [INFO] Profiled 0.0004810639999999998 seconds at <function index at 0x7f57c3c40540> for permuterm_search_on_one_term
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Length of Results is: 187
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Query Term is: {'qid': '12', 'query': 'lan*ge'}
+29-Feb-24 07:52:14 [INFO] Profiled 0.00042704999999999826 seconds at <function index at 0x7f57c3c40540> for permuterm_search_on_one_term
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Length of Results is: 830
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Query Term is: {'qid': '13', 'query': 'auto*'}
+29-Feb-24 07:52:14 [INFO] Profiled 0.0023615179999999965 seconds at <function index at 0x7f57c3c40540> for permuterm_search_on_one_term
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Length of Results is: 1214
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Query Term is: {'qid': '14', 'query': 'on*y'}
+29-Feb-24 07:52:14 [INFO] Profiled 0.0008472170000000008 seconds at <function index at 0x7f57c3c40540> for permuterm_search_on_one_term
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Length of Results is: 1272
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Query Term is: {'qid': '15', 'query': 'senti*'}
+29-Feb-24 07:52:14 [INFO] Profiled 0.0005425400000000011 seconds at <function index at 0x7f57c3c40540> for permuterm_search_on_one_term
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Length of Results is: 123
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Query Term is: {'qid': '16', 'query': 's*p'}
+29-Feb-24 07:52:14 [INFO] Profiled 0.0009069210000000015 seconds at <function index at 0x7f57c3c40540> for permuterm_search_on_one_term
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Length of Results is: 455
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Query Term is: {'qid': '17', 'query': 'l*m'}
+29-Feb-24 07:52:14 [INFO] Profiled 0.0008584300000000003 seconds at <function index at 0x7f57c3c40540> for permuterm_search_on_one_term
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Length of Results is: 189
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Query Term is: {'qid': '18', 'query': 'nat*l'}
+29-Feb-24 07:52:14 [INFO] Profiled 0.0004095370000000015 seconds at <function index at 0x7f57c3c40540> for permuterm_search_on_one_term
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Length of Results is: 736
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Query Term is: {'qid': '19', 'query': 'we*'}
+29-Feb-24 07:52:14 [INFO] Profiled 0.007690946999999997 seconds at <function index at 0x7f57c3c40540> for permuterm_search_on_one_term
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Length of Results is: 6120
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Query Term is: {'qid': '20', 'query': 'mo*c'}
+29-Feb-24 07:52:14 [INFO] Profiled 0.0004804690000000042 seconds at <function index at 0x7f57c3c40540> for permuterm_search_on_one_term
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Length of Results is: 168
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Query Term is: {'qid': '21', 'query': 'com*er'}
+29-Feb-24 07:52:14 [INFO] Profiled 0.00045215599999999523 seconds at <function index at 0x7f57c3c40540> for permuterm_search_on_one_term
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Length of Results is: 554
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Query Term is: {'qid': '22', 'query': 'cl*g'}
+29-Feb-24 07:52:14 [INFO] Profiled 0.0005185730000000013 seconds at <function index at 0x7f57c3c40540> for permuterm_search_on_one_term
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Length of Results is: 290
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Query Term is: {'qid': '23', 'query': 's*ic'}
+29-Feb-24 07:52:14 [INFO] Profiled 0.0032095200000000004 seconds at <function index at 0x7f57c3c40540> for permuterm_search_on_one_term
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Length of Results is: 1854
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Query Term is: {'qid': '24', 'query': 're*s'}
+29-Feb-24 07:52:14 [INFO] Profiled 0.005449756999999993 seconds at <function index at 0x7f57c3c40540> for permuterm_search_on_one_term
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Length of Results is: 4039
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Query Term is: {'qid': '25', 'query': '*ata'}
+29-Feb-24 07:52:14 [INFO] Profiled 0.0017309350000000098 seconds at <function index at 0x7f57c3c40540> for permuterm_search_on_one_term
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Length of Results is: 2183
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Query Term is: {'qid': '26', 'query': 'f*sion'}
+29-Feb-24 07:52:14 [INFO] Profiled 0.00015675899999999243 seconds at <function index at 0x7f57c3c40540> for permuterm_search_on_one_term
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Length of Results is: 111
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Query Term is: {'qid': '27', 'query': 'o*ject'}
+29-Feb-24 07:52:14 [INFO] Profiled 0.0002433510000000097 seconds at <function index at 0x7f57c3c40540> for permuterm_search_on_one_term
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Length of Results is: 409
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Query Term is: {'qid': '28', 'query': 'g*dm'}
+29-Feb-24 07:52:14 [INFO] Profiled 4.4284999999998076e-05 seconds at <function index at 0x7f57c3c40540> for permuterm_search_on_one_term
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Length of Results is: 50
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Query Term is: {'qid': '29', 'query': 'n*ural'}
+29-Feb-24 07:52:14 [INFO] Profiled 0.000596495999999995 seconds at <function index at 0x7f57c3c40540> for permuterm_search_on_one_term
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Length of Results is: 1206
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Query Term is: {'qid': '30', 'query': 'e*treme'}
+29-Feb-24 07:52:14 [INFO] Profiled 6.808999999999982e-05 seconds at <function index at 0x7f57c3c40540> for permuterm_search_on_one_term
+29-Feb-24 07:52:14 [INFO] Permuterm Search: Length of Results is: 91
+29-Feb-24 07:52:17 [INFO] Trie Search: Query Term is: {'qid': '1', 'query': 'l*ng'} --> l and ng
+29-Feb-24 07:52:17 [INFO] Trie Search: Length of Results is: 2214
+29-Feb-24 07:52:17 [INFO] Profiled 0.027953612000000003 seconds at <function index at 0x7f57c3c40540> for tree_based_search
+29-Feb-24 07:52:17 [INFO] Trie Search: Query Term is: {'qid': '2', 'query': 'in*e'} --> in and e
+29-Feb-24 07:52:17 [INFO] Trie Search: Length of Results is: 3133
+29-Feb-24 07:52:17 [INFO] Profiled 0.04404801100000001 seconds at <function index at 0x7f57c3c40540> for tree_based_search
+29-Feb-24 07:52:17 [INFO] Trie Search: Query Term is: {'qid': '3', 'query': 'ret*val'} --> ret and val
+29-Feb-24 07:52:17 [INFO] Trie Search: Length of Results is: 306
+29-Feb-24 07:52:17 [INFO] Profiled 0.0011414949999999924 seconds at <function index at 0x7f57c3c40540> for tree_based_search
+29-Feb-24 07:52:17 [INFO] Trie Search: Query Term is: {'qid': '4', 'query': 'mac*'} --> mac and 
+29-Feb-24 07:52:18 [INFO] Trie Search: Length of Results is: 858
+29-Feb-24 07:52:18 [INFO] Profiled 0.43844387300000015 seconds at <function index at 0x7f57c3c40540> for tree_based_search
+29-Feb-24 07:52:18 [INFO] Trie Search: Query Term is: {'qid': '5', 'query': '*nswering'} -->  and nswering
+29-Feb-24 07:52:18 [INFO] Trie Search: Length of Results is: 141
+29-Feb-24 07:52:18 [INFO] Profiled 0.320846082 seconds at <function index at 0x7f57c3c40540> for tree_based_search
+29-Feb-24 07:52:18 [INFO] Trie Search: Query Term is: {'qid': '6', 'query': '*ses'} -->  and ses
+29-Feb-24 07:52:18 [INFO] Trie Search: Length of Results is: 2512
+29-Feb-24 07:52:18 [INFO] Profiled 0.3246509919999999 seconds at <function index at 0x7f57c3c40540> for tree_based_search
+29-Feb-24 07:52:18 [INFO] Trie Search: Query Term is: {'qid': '7', 'query': 'tree*'} --> tree and 
+29-Feb-24 07:52:19 [INFO] Trie Search: Length of Results is: 357
+29-Feb-24 07:52:19 [INFO] Profiled 0.4304815980000001 seconds at <function index at 0x7f57c3c40540> for tree_based_search
+29-Feb-24 07:52:19 [INFO] Trie Search: Query Term is: {'qid': '8', 'query': 'sp*h'} --> sp and h
+29-Feb-24 07:52:19 [INFO] Trie Search: Length of Results is: 326
+29-Feb-24 07:52:19 [INFO] Profiled 0.0074943410000001265 seconds at <function index at 0x7f57c3c40540> for tree_based_search
+29-Feb-24 07:52:19 [INFO] Trie Search: Query Term is: {'qid': '9', 'query': 'm*g'} --> m and g
+29-Feb-24 07:52:19 [INFO] Trie Search: Length of Results is: 2230
+29-Feb-24 07:52:19 [INFO] Profiled 0.03900687999999963 seconds at <function index at 0x7f57c3c40540> for tree_based_search
+29-Feb-24 07:52:19 [INFO] Trie Search: Query Term is: {'qid': '10', 'query': 'v*n'} --> v and n
+29-Feb-24 07:52:19 [INFO] Trie Search: Length of Results is: 838
+29-Feb-24 07:52:19 [INFO] Profiled 0.022097075000000244 seconds at <function index at 0x7f57c3c40540> for tree_based_search
+29-Feb-24 07:52:19 [INFO] Trie Search: Query Term is: {'qid': '11', 'query': 'rein*'} --> rein and 
+29-Feb-24 07:52:19 [INFO] Trie Search: Length of Results is: 187
+29-Feb-24 07:52:19 [INFO] Profiled 0.40293927799999985 seconds at <function index at 0x7f57c3c40540> for tree_based_search
+29-Feb-24 07:52:19 [INFO] Trie Search: Query Term is: {'qid': '12', 'query': 'lan*ge'} --> lan and ge
+29-Feb-24 07:52:19 [INFO] Trie Search: Length of Results is: 830
+29-Feb-24 07:52:19 [INFO] Profiled 0.0024853070000001587 seconds at <function index at 0x7f57c3c40540> for tree_based_search
+29-Feb-24 07:52:19 [INFO] Trie Search: Query Term is: {'qid': '13', 'query': 'auto*'} --> auto and 
+29-Feb-24 07:52:20 [INFO] Trie Search: Length of Results is: 1214
+29-Feb-24 07:52:20 [INFO] Profiled 0.4400495000000002 seconds at <function index at 0x7f57c3c40540> for tree_based_search
+29-Feb-24 07:52:20 [INFO] Trie Search: Query Term is: {'qid': '14', 'query': 'on*y'} --> on and y
+29-Feb-24 07:52:20 [INFO] Trie Search: Length of Results is: 1272
+29-Feb-24 07:52:20 [INFO] Profiled 0.019855787000000014 seconds at <function index at 0x7f57c3c40540> for tree_based_search
+29-Feb-24 07:52:20 [INFO] Trie Search: Query Term is: {'qid': '15', 'query': 'senti*'} --> senti and 
+29-Feb-24 07:52:20 [INFO] Trie Search: Length of Results is: 123
+29-Feb-24 07:52:20 [INFO] Profiled 0.41789916699999985 seconds at <function index at 0x7f57c3c40540> for tree_based_search
+29-Feb-24 07:52:20 [INFO] Trie Search: Query Term is: {'qid': '16', 'query': 's*p'} --> s and p
+29-Feb-24 07:52:20 [INFO] Trie Search: Length of Results is: 455
+29-Feb-24 07:52:20 [INFO] Profiled 0.03151237599999979 seconds at <function index at 0x7f57c3c40540> for tree_based_search
+29-Feb-24 07:52:20 [INFO] Trie Search: Query Term is: {'qid': '17', 'query': 'l*m'} --> l and m
+29-Feb-24 07:52:20 [INFO] Trie Search: Length of Results is: 189
+29-Feb-24 07:52:20 [INFO] Profiled 0.013897755000000345 seconds at <function index at 0x7f57c3c40540> for tree_based_search
+29-Feb-24 07:52:20 [INFO] Trie Search: Query Term is: {'qid': '18', 'query': 'nat*l'} --> nat and l
+29-Feb-24 07:52:20 [INFO] Trie Search: Length of Results is: 736
+29-Feb-24 07:52:20 [INFO] Profiled 0.014396550000000286 seconds at <function index at 0x7f57c3c40540> for tree_based_search
+29-Feb-24 07:52:20 [INFO] Trie Search: Query Term is: {'qid': '19', 'query': 'we*'} --> we and 
+29-Feb-24 07:52:21 [INFO] Trie Search: Length of Results is: 6120
+29-Feb-24 07:52:21 [INFO] Profiled 0.41586577700000005 seconds at <function index at 0x7f57c3c40540> for tree_based_search
+29-Feb-24 07:52:21 [INFO] Trie Search: Query Term is: {'qid': '20', 'query': 'mo*c'} --> mo and c
+29-Feb-24 07:52:21 [INFO] Trie Search: Length of Results is: 168
+29-Feb-24 07:52:21 [INFO] Profiled 0.015392068999999342 seconds at <function index at 0x7f57c3c40540> for tree_based_search
+29-Feb-24 07:52:21 [INFO] Trie Search: Query Term is: {'qid': '21', 'query': 'com*er'} --> com and er
+29-Feb-24 07:52:21 [INFO] Trie Search: Length of Results is: 554
+29-Feb-24 07:52:21 [INFO] Profiled 0.009078241999999737 seconds at <function index at 0x7f57c3c40540> for tree_based_search
+29-Feb-24 07:52:21 [INFO] Trie Search: Query Term is: {'qid': '22', 'query': 'cl*g'} --> cl and g
+29-Feb-24 07:52:21 [INFO] Trie Search: Length of Results is: 290
+29-Feb-24 07:52:21 [INFO] Profiled 0.023213967000000224 seconds at <function index at 0x7f57c3c40540> for tree_based_search
+29-Feb-24 07:52:21 [INFO] Trie Search: Query Term is: {'qid': '23', 'query': 's*ic'} --> s and ic
+29-Feb-24 07:52:21 [INFO] Trie Search: Length of Results is: 1854
+29-Feb-24 07:52:21 [INFO] Profiled 0.032531448000000296 seconds at <function index at 0x7f57c3c40540> for tree_based_search
+29-Feb-24 07:52:21 [INFO] Trie Search: Query Term is: {'qid': '24', 'query': 're*s'} --> re and s
+29-Feb-24 07:52:21 [INFO] Trie Search: Length of Results is: 4039
+29-Feb-24 07:52:21 [INFO] Profiled 0.04960091600000016 seconds at <function index at 0x7f57c3c40540> for tree_based_search
+29-Feb-24 07:52:21 [INFO] Trie Search: Query Term is: {'qid': '25', 'query': '*ata'} -->  and ata
+29-Feb-24 07:52:21 [INFO] Trie Search: Length of Results is: 2183
+29-Feb-24 07:52:21 [INFO] Profiled 0.31509062099999996 seconds at <function index at 0x7f57c3c40540> for tree_based_search
+29-Feb-24 07:52:21 [INFO] Trie Search: Query Term is: {'qid': '26', 'query': 'f*sion'} --> f and sion
+29-Feb-24 07:52:21 [INFO] Trie Search: Length of Results is: 111
+29-Feb-24 07:52:21 [INFO] Profiled 0.010195248999999684 seconds at <function index at 0x7f57c3c40540> for tree_based_search
+29-Feb-24 07:52:21 [INFO] Trie Search: Query Term is: {'qid': '27', 'query': 'o*ject'} --> o and ject
+29-Feb-24 07:52:21 [INFO] Trie Search: Length of Results is: 409
+29-Feb-24 07:52:21 [INFO] Profiled 0.008336386000000306 seconds at <function index at 0x7f57c3c40540> for tree_based_search
+29-Feb-24 07:52:21 [INFO] Trie Search: Query Term is: {'qid': '28', 'query': 'g*dm'} --> g and dm
+29-Feb-24 07:52:21 [INFO] Trie Search: Length of Results is: 50
+29-Feb-24 07:52:21 [INFO] Profiled 0.0068313289999997195 seconds at <function index at 0x7f57c3c40540> for tree_based_search
+29-Feb-24 07:52:21 [INFO] Trie Search: Query Term is: {'qid': '29', 'query': 'n*ural'} --> n and ural
+29-Feb-24 07:52:21 [INFO] Trie Search: Length of Results is: 1206
+29-Feb-24 07:52:21 [INFO] Profiled 0.011285356999999774 seconds at <function index at 0x7f57c3c40540> for tree_based_search
+29-Feb-24 07:52:21 [INFO] Trie Search: Query Term is: {'qid': '30', 'query': 'e*treme'} --> e and treme
+29-Feb-24 07:52:21 [INFO] Trie Search: Length of Results is: 91
+29-Feb-24 07:52:21 [INFO] Profiled 0.011530731000000127 seconds at <function index at 0x7f57c3c40540> for tree_based_search

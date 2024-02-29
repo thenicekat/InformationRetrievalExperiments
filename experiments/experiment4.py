@@ -57,34 +57,33 @@ class Trie:
             node = node.children[char]
         # This will check if the prefix is a valid word or not
         # Now we have to do a DFS to get all the words that start with the prefix
-        results = []
+        results = set()
         self.dfs(node, prefix, results)
         return results
 
     def dfs(self, node, prefix, results):
         if node.is_end_of_word:
-            results.append(prefix)
+            results.add(prefix)
         for char in node.children:
             self.dfs(node.children[char], prefix + char, results)
 
 
 # GENERATE PERMUTERM INDICES
 def generate_permuterm_indices(term_freq: dict, postings: dict):
-    # Create a permuterm index
-    permuterm_index = {}
     # We can create a permutation index for each term in the collection
     # so like if we have a term "hello" we can create a permutation index for it
     # we store hello$, ello$h, llo$he, lo$hel, o$hell and map it to the term "hello"
+    permuterm_trie = Trie()
     for term in term_freq:
         original_term = term
         term = term + "$"
         for i in range(len(term)):
-            permuterm_index[term[i:] + term[:i]] = postings[original_term]
-    return permuterm_index
+            permuterm_trie.insert(term[i:] + term[:i], postings[original_term])
+    return permuterm_trie
 
 
 # PREFIX SEARCH ON PERMUTERM INDEX
-def permuterm_search_on_one_term(permuterm_index: dict, query: str):
+def permuterm_search_on_one_term(permuterm_index: Trie, postings: dict, query: str):
     query = query + "$"
     # We have to rotate it such that last char is *
     while query[-1] != "*":
@@ -92,14 +91,17 @@ def permuterm_search_on_one_term(permuterm_index: dict, query: str):
     # We remove the * from the end
     query = query[:-1]
     # Now we can search for the query in the permuterm index
-    results = set()
-    for key in permuterm_index:
-        if key.startswith(query):
-            # We remove the $ from the end
-            # and add postings list to the results
-            for posting in permuterm_index[key]:
-                results.add(posting)
-    return results
+    terms = permuterm_index.starts_with(prefix=query)
+
+    postings_result = set()
+    for term in terms:
+        try:
+            for posting in permuterm_index.search(term):
+                postings_result.add(posting)
+        except:
+            logging.info(f"Permuterm Search: Term not found: {term}")
+
+    return postings_result
 
 
 # GENERATE TRIE INDICES
@@ -146,7 +148,7 @@ def tree_based_search(start_trie: Trie, end_trie: Trie, postings: dict, term: di
         # logging.info(f"Trie Search: Result Term is: {result}")
         for posting in postings[result]:
             postings_result.add(posting)
-    logging.info(f"Trie Search: Result Term is: {len(postings_result)}")
+    logging.info(f"Trie Search: Length of Results is: {len(postings_result)}")
 
 
 @memory_profile
@@ -170,6 +172,7 @@ def permuterm_trial():
         permuterm_profiler.enable()
         results_per_query = permuterm_search_on_one_term(
             permuterm_index=permuterm_index,
+            postings=postings,
             query=term["query"],
         )
         permuterm_profiler.disable()
@@ -183,7 +186,9 @@ def permuterm_trial():
         logging.info(
             f"Profiled {current_iteration} seconds at {index} for {permuterm_search_on_one_term.__name__}"
         )
-        logging.info(f"Permuterm Search: Result Term is: {len(results_per_query)}")
+        logging.info(
+            f"Permuterm Search: Length of Results is: {len(results_per_query)}"
+        )
         # logging.info(f"Permuterm Search: Result Term is: {results_per_query}")
 
     return times
