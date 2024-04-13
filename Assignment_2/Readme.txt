@@ -7,3 +7,11 @@ Click on + and add all the jar files from the attached lucene_dependencies folde
 It should work now
 
 For python just do pip install py4j
+
+To check java-python interop
+
+First run server.java file
+Then run pyj_test.py file
+Server - Client conn should work
+
+*** Do note this is currently only working when both server and client are in the same directory
