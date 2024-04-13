@@ -9,8 +9,8 @@ import org.apache.lucene.search.TopDocs;
 
 public class LuceneTester {
 	
-   String indexDir = "Assignment_2/index";
-   String dataDir = "Assignment_2/nfcorpus/raw";
+   String indexDir = "../../index";
+   String dataDir = "../../nfcorpus/raw";
    Indexer indexer;
    Searcher searcher;
 
