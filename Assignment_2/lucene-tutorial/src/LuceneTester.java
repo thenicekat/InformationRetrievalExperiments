@@ -48,13 +48,12 @@ public class LuceneTester {
          " documents found. Time :" + (endTime - startTime));
       // for(ScoreDoc scoreDoc : hits.scoreDocs) {
       //    Document doc = searcher.getDocument(scoreDoc);
-      //       System.out.println("File: "
-      //       + doc.get(LuceneConstants.FILE_PATH));
-      //       FileReader fr = new FileReader(new File(doc.get(LuceneConstants.FILE_PATH)));
-      //       char [] buf = new char[10000];
-      //       fr.read(buf);
-      //       System.out.println(buf);
-      //       fr.close();
+      //    System.out.println("File: "+ doc.get(LuceneConstants.FILE_PATH));
+      //    FileReader fr = new FileReader(new File(doc.get(LuceneConstants.FILE_PATH)));
+      //    char [] buf = new char[10000];
+      //    fr.read(buf);
+      //    System.out.println(buf);
+      //    fr.close();
       // }
       searcher.close();
    }
