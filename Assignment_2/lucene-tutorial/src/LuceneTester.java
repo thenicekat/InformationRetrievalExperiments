@@ -6,6 +6,7 @@ import org.apache.lucene.document.Document;
 import org.apache.lucene.queryparser.classic.ParseException;
 import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TopDocs;
+import org.apache.lucene.index.IndexableField;
 
 public class LuceneTester {
 	
@@ -46,15 +47,28 @@ public class LuceneTester {
       long endTime = System.currentTimeMillis();
       System.out.println(hits.totalHits +
          " documents found. Time :" + (endTime - startTime));
-      // for(ScoreDoc scoreDoc : hits.scoreDocs) {
-      //    Document doc = searcher.getDocument(scoreDoc);
-      //    System.out.println("File: "+ doc.get(LuceneConstants.FILE_PATH));
-      //    FileReader fr = new FileReader(new File(doc.get(LuceneConstants.FILE_PATH)));
-      //    char [] buf = new char[10000];
-      //    fr.read(buf);
-      //    System.out.println(buf);
-      //    fr.close();
-      // }
+      for(ScoreDoc scoreDoc : hits.scoreDocs) {
+         Document doc = searcher.getDocument(scoreDoc);
+         if (doc != null) {
+            System.out.println("Document found with fields:");
+            // for (IndexableField field : doc.getFields()) {
+            //    System.out.println(field.name()); //field.stringValue()
+            // }
+            System.out.println("File: "+ doc.get(LuceneConstants.FILE_PATH));
+            FileReader fr = new FileReader(new File(doc.get(LuceneConstants.FILE_PATH)));
+            fr.close();
+         } else {
+            // Document is null, handle the case when no document is found
+            System.out.println("No document found.");
+         }
+
+         // System.out.println("File: "+ doc.get(LuceneConstants.FILE_PATH));
+         // FileReader fr = new FileReader(new File(doc.get(LuceneConstants.FILE_PATH)));
+         // char [] buf = new char[10000];
+         // fr.read(buf);
+         // System.out.println(buf);
+         // fr.close();
+      }
       searcher.close();
    }
 }

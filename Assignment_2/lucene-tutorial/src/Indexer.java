@@ -33,6 +33,8 @@ public class Indexer {
 
    private Document getDocument(File file) throws IOException {
       Document document = new Document();
+      TextField filePathField = new TextField("filepath", file.getCanonicalPath(), Field.Store.YES);
+      document.add(filePathField);
 
       if (isFileEqualsName(file, "doc_dump.txt")) {
          try {
