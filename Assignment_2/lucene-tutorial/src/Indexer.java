@@ -12,6 +12,13 @@ import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
+import org.apache.lucene.index.PostingsEnum;
+import org.apache.lucene.index.Terms;
+import org.apache.lucene.index.TermsEnum;
+import org.apache.lucene.index.IndexReader;
+import org.apache.lucene.index.DirectoryReader;
+import org.apache.lucene.search.DocIdSetIterator;
+import org.apache.lucene.index.MultiFields;
 
 public class Indexer {
 
@@ -126,5 +133,29 @@ public class Indexer {
       }
       return 0;
       
+   }
+
+   public void getPostings(String field, int docID) {
+      String indexDirectoryPath = "Assignment_2/index";
+      try (IndexReader reader = DirectoryReader.open(FSDirectory.open(new File(indexDirectoryPath).toPath()))) {
+         Terms terms = reader.getTermVector(docID, field);
+         if (terms != null) {
+            TermsEnum termsEnum = terms.iterator();
+            while (termsEnum.next() != null) {
+               String termText = termsEnum.term().utf8ToString();
+               PostingsEnum postings = termsEnum.postings(null);
+                 
+               int docFreq = termsEnum.docFreq();
+               int termFreq = 0;
+               while (postings.nextDoc() != PostingsEnum.NO_MORE_DOCS) {
+                  termFreq += postings.freq();
+               }  
+             }
+         }
+     } 
+     catch (IOException e) {
+         System.err.println("An IOException occurred: " + e.getMessage());
+         e.printStackTrace();
+      }
    }
 }
