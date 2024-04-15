@@ -34,7 +34,7 @@ public class Searcher {
         indexSearcher = new IndexSearcher(reader);
         String filePath = "Assignment_2/nfcorpus/raw/stopwords.large"; 
         CharArraySet stopwordsSet = readStopwordsFromFile(filePath);
-        queryParser = new QueryParser(LuceneConstants.ID,new StandardAnalyzer(stopwordsSet));
+        queryParser = new QueryParser(LuceneConstants.TITLE,new StandardAnalyzer(stopwordsSet));
    }
 
    public TopDocs search(String searchQuery)

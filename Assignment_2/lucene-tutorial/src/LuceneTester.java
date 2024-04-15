@@ -20,7 +20,7 @@ public class LuceneTester {
       try {
          tester = new LuceneTester();
          tester.createIndex();
-         tester.search("MED-1");
+         tester.search("Birth");
       } catch (IOException e) {
          e.printStackTrace();
       } catch (
@@ -50,7 +50,9 @@ public class LuceneTester {
       for(ScoreDoc scoreDoc : hits.scoreDocs) {
          Document doc = searcher.getDocument(scoreDoc);
          if (doc != null) {
-            System.out.println("Document found with fields:");
+            String id = doc.get("id");
+            System.out.println("Document ID: " + id);
+            // System.out.println("Document found with fields:");
             // for (IndexableField field : doc.getFields()) {
             //    System.out.println(field.name()); //field.stringValue()
             // }
