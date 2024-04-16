@@ -35,7 +35,7 @@ def language_model(self, query, docs, lmbda=0.5):
             
         scores[doc] = doc_score
 
-    return sum(scores)
+    return sum(scores)/len(scores)
 
     
 def okapi_bm25(self, query, docs, k1=1.5, k3=1.5, b=0.75):
@@ -74,4 +74,4 @@ def okapi_bm25(self, query, docs, k1=1.5, k3=1.5, b=0.75):
             
         scores[doc] = doc_score
 
-    return sum(scores)
+    return sum(scores)/len(scores)
