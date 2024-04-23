@@ -4,15 +4,20 @@ gateway = JavaGateway()
 java_object = gateway.entry_point 
 print("Hi from python client")
 
-df = java_object.getDocFreq("Assignment_2/index", "abstract", "birth")
+n = java_object.numDocs("Assignment_2/index")
+print("Number of documents = " + str(n))
+df = java_object.getDocFreq("Assignment_2/index", "abstract", "deep")
 print("Doc Freq = " + str(df))
-cf = java_object.getCollectionFreq("Assignment_2/index", "abstract", "birth")
+cf = java_object.getCollectionFreq("Assignment_2/index", "abstract", "deep")
 print("Collection Freq = " + str(cf))
-tf = java_object.getTermFreq("Assignment_2/index", "title", "birth")
-for t in tf[20:30]:
-    print("Term Freq = " + str(t))
-
-# c = java_object.add(2,3)
-# print(c)
-# b = java_object.test()
-# print(b)
+x = 0
+for i in range(n):
+    tf = java_object.getTermFreq("Assignment_2/index", "abstract", "deep", 0)
+    if(tf != 0):
+        x += tf
+    #print("Doc = " + str(i) + " Term Freq = " + str(t))
+print(x)
+coln_len = java_object.getCollectionLen("Assignment_2/index", "abstract")
+print("Collection Length = " + str(coln_len))
+avg_len = java_object.getAvgDocLen("Assignment_2/index", "abstract")
+print("Average Document Length = " + str(avg_len))

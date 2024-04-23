@@ -164,40 +164,34 @@ public class StatsCalculator {
         return 0;
     }
 
-    public static int[] getTermFreq(String indexDirPath, String field, String query_term) throws IOException, ParseException {
+    public static int getTermFreq(String indexDirPath, String field, String query_term, int docId) throws IOException, ParseException {
         try (Directory indexDir = FSDirectory.open(new File(indexDirPath).toPath());
              IndexReader indexReader = DirectoryReader.open(indexDir)) {
     
-            int numDocs = indexReader.numDocs();
-            HashMap<String, Integer> hashMap = new HashMap<>();
-            int [] tf_array = new int[numDocs];
-    
-            for (int i=0; i<numDocs; i++) {
-                Terms terms = indexReader.getTermVector(i, field);
-                if (terms != null) {
-                    TermsEnum termsEnum = terms.iterator();
-                    BytesRef term = null;
-                    while ((term = termsEnum.next()) != null) {
-                        String termText = term.utf8ToString();
-                        Term termInstance = new Term(field, term);   
+            HashMap<String, Integer> hashMap = new HashMap<>();    
+            Terms terms = indexReader.getTermVector(docId, field);
+            if (terms != null) {
+                TermsEnum termsEnum = terms.iterator();
+                BytesRef term = null;
+                while ((term = termsEnum.next()) != null) {
+                    String termText = term.utf8ToString();
+                    Term termInstance = new Term(field, term);   
 
-                        long tf = termsEnum.totalTermFreq();
-                        hashMap.put(termText, (int) tf);
-                    }
-                }   
-                if (hashMap.containsKey(query_term)) {
-                    int tf = hashMap.get(query_term);
-                    tf_array[i] = tf;
-                } else {
-                    tf_array[i] = 0;
-                }                     
-            }
-            return tf_array;    
-        } 
+                    long tf = termsEnum.totalTermFreq();
+                    hashMap.put(termText, (int) tf);
+                }
+            }   
+            if (hashMap.containsKey(query_term)) {
+                int tf = hashMap.get(query_term);
+                return (int)tf;
+            } else {
+                return 0;
+            }                     
+        }    
         catch (IOException e) {
             e.printStackTrace();
         }
-        return null;
+        return 0;
     }
 
     public static double getAvgDocLen(String indexDirPath, String field) throws IOException {
@@ -223,7 +217,7 @@ public class StatsCalculator {
         }
     }
 
-    public static int getTotalDocLen(String indexDirPath, String field) throws IOException {
+    public static int getCollectionLen(String indexDirPath, String field) throws IOException {
         try (Directory indexDir = FSDirectory.open(new File(indexDirPath).toPath());
              IndexReader indexReader = DirectoryReader.open(indexDir)) {
 
@@ -249,6 +243,26 @@ public class StatsCalculator {
 
             int numDocs = indexReader.numDocs();
             return numDocs;
+        }
+    }
+
+    public static int getDocumentLen(String indexDirPath, String field, int docId) throws IOException {
+        try (Directory indexDir = FSDirectory.open(new File(indexDirPath).toPath());
+             IndexReader indexReader = DirectoryReader.open(indexDir)) {
+
+            Terms terms = indexReader.getTermVector(docId, field);
+            int documentLength = 0;
+
+            // Iterate over the terms in the term vector
+            if (terms != null) {
+                TermsEnum termsEnum = terms.iterator();
+                while (termsEnum.next() != null) {
+                    // Increment the document length for each term occurrence
+                    documentLength += termsEnum.totalTermFreq();
+                }
+            }
+
+            return documentLength;
         }
     }
 }
