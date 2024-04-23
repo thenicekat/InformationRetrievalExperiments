@@ -19,6 +19,7 @@ import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.search.DocIdSetIterator;
 import org.apache.lucene.index.MultiFields;
+import org.apache.lucene.document.FieldType;
 
 public class Indexer {
 
@@ -38,53 +39,42 @@ public class Indexer {
       writer.close();
    }
 
-   private Document getDocument(File file) throws IOException {
+   private Document getDocument(File file, String line) throws IOException {
       Document document = new Document();
-      TextField filePathField = new TextField("filepath", file.getCanonicalPath(), Field.Store.YES);
+      FieldType fieldType = new FieldType(TextField.TYPE_STORED);
+      fieldType.setStoreTermVectors(true);
+
+      Field filePathField = new Field("filepath", file.getCanonicalPath(), fieldType);
       document.add(filePathField);
 
       if (isFileEqualsName(file, "doc_dump.txt")) {
-         try {
-            BufferedReader reader = new BufferedReader(new FileReader(file));
-            String line;
-            String[] stringArray = {"id", "url", "title", "abstract"};
-            while ((line = reader.readLine()) != null) {
-               String[] parts = line.split("\t");
-               int i = 0;
-               for (String part : parts) {
-                  TextField field = new TextField(stringArray[i], part, Field.Store.YES);
-                  document.add(field);
-                  i++;
-               }
+         String[] stringArray = {"id", "url", "title", "abstract"};
+         String[] parts = line.split("\t");
+         int i = 0;
+         for (String part : parts) {
+            if(i!=1){
+               Field field = new Field(stringArray[i], part, fieldType);
+               document.add(field);
             }
-            reader.close();
-         } 
-         catch (IOException e) {
-             e.printStackTrace();
+            i++;
          }
       } 
       else if (isFileEqualsName(file, "nfdump.txt")) {
-         try {
-            BufferedReader reader = new BufferedReader(new FileReader(file));
-            String line;
-            String[] stringArray = {
-            "id", "url", "title", "maintext", "comments", "topics tags", 
-            "description", "doctors note", "article links", "question links", 
-            "topic links", "video links", "medarticle links"
-            };
-            while ((line = reader.readLine()) != null) {
-               String[] parts = line.split("\t");
-               int i = 0;
-               for (String part : parts) {
-                  TextField field = new TextField(stringArray[i], part, Field.Store.YES);
-                  document.add(field);
-                  i++;
-               }
+         String[] stringArray = {
+         "id", "url", "title", "maintext", "comments", "topics tags", 
+         "description", "doctors note", "article links", "question links", 
+         "topic links", "video links", "medarticle links"
+         };
+         String[] parts = line.split("\t");
+         int i = 0;
+         int ignore[] = {1,8,9,10,11,12};
+         
+         for (String part : parts) {
+            if(!(i==1 || i>=8)){
+               Field field = new Field(stringArray[i], part, fieldType);
+               document.add(field);
             }
-            reader.close();
-         } 
-         catch (IOException e) {
-             e.printStackTrace();
+            i++;
          }
       } 
       else {
@@ -104,8 +94,18 @@ public class Indexer {
 
    private void indexFile(File file) throws IOException {
       System.out.println("Indexing " + file.getCanonicalPath());
-      Document document = getDocument(file);
-      writer.addDocument(document);
+      try {
+         BufferedReader reader = new BufferedReader(new FileReader(file));
+         String line;
+         while ((line = reader.readLine()) != null) {
+            Document document = getDocument(file, line);
+            writer.addDocument(document);
+         }
+         reader.close();
+      } 
+      catch (IOException e) {
+          e.printStackTrace();
+      }
    }
 
    public int createIndex(String dataDirPath, FileFilter filter)

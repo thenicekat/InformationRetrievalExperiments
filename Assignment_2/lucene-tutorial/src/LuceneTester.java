@@ -52,10 +52,11 @@ public class LuceneTester {
          if (doc != null) {
             String id = doc.get("id");
             System.out.println("Document ID: " + id);
-            // System.out.println("Document found with fields:");
-            // for (IndexableField field : doc.getFields()) {
-            //    System.out.println(field.name()); //field.stringValue()
-            // }
+            System.out.println("Document found with fields:");
+            for (IndexableField field : doc.getFields()) {
+               String v = field.stringValue().substring(0, Math.min(field.stringValue().length(), 50));
+               System.out.println(field.name() + " : " + v); //
+            }
             System.out.println("File: "+ doc.get(LuceneConstants.FILE_PATH));
             FileReader fr = new FileReader(new File(doc.get(LuceneConstants.FILE_PATH)));
             fr.close();
