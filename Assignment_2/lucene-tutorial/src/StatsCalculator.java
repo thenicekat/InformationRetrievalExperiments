@@ -16,6 +16,8 @@ import org.apache.lucene.document.Document;
 import org.apache.lucene.queryparser.classic.ParseException;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.util.BytesRef;
+import py4j.GatewayServer; 
+
 
 public class StatsCalculator {
 
@@ -24,9 +26,14 @@ public class StatsCalculator {
         System.out.println("Current directory: " + currentDirectory);
         System.out.println("Indexing to directory: " + currentDirectory + "/Assignment_2/index");
         String indexDirPath = "Assignment_2/index"; 
-        try {calculateStats(indexDirPath, "Birth");} 
-        catch (ParseException e) {e.printStackTrace();}
+        GatewayServer g = new GatewayServer(new StatsCalculator()); 
+		g.start(); 
+		System.out.println("Gateway Server Started"); 
     }
+
+    public static int add(int a, int b) { return a+b; } 
+
+    public static String Message() { return "Python Client Working"; } 
 
     public static void calculateStats(String indexDirPath, String searchQuery) throws IOException, ParseException {
         try (Directory indexDir = FSDirectory.open(new File(indexDirPath).toPath());
@@ -104,14 +111,17 @@ public class StatsCalculator {
 
             if (hashMap.containsKey(query_term)) {
                 int df = hashMap.get(query_term);
+                System.out.println("Case 1 : " + df);
                 return df;
             } else {
+                System.out.println("Case 2 : 0");
                 return 0;
             }
         } 
         catch (IOException e) {
             e.printStackTrace();
         }
+        System.out.println("Case 3 : catch");
         return 0;
     }
     
