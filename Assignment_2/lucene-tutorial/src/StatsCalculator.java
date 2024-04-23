@@ -29,6 +29,8 @@ public class StatsCalculator {
         GatewayServer g = new GatewayServer(new StatsCalculator()); 
 		g.start(); 
 		System.out.println("Gateway Server Started"); 
+        // double avg = getAvgDocLen(indexDirPath, "abstract");
+        // System.out.println("Average Document Length: " + avg);
     }
 
     public static int add(int a, int b) { return a+b; } 
@@ -196,5 +198,57 @@ public class StatsCalculator {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public static double getAvgDocLen(String indexDirPath, String field) throws IOException {
+        try (Directory indexDir = FSDirectory.open(new File(indexDirPath).toPath());
+             IndexReader indexReader = DirectoryReader.open(indexDir)) {
+
+            int numDocs = indexReader.numDocs();
+            long totalTerms = 0;
+            long totalDocLength = 0;
+
+            for (int i = 0; i < numDocs; i++) {
+                Terms terms = indexReader.getTermVector(i, field); 
+                if (terms != null) {
+                    totalTerms += terms.size();
+                    totalDocLength += terms.getSumTotalTermFreq();
+                }
+            }
+
+            // System.out.println(totalDocLength);
+            // System.out.println(totalTerms);
+            double avgDocLength = (double) totalDocLength / numDocs;
+            return avgDocLength;
+        }
+    }
+
+    public static int getTotalDocLen(String indexDirPath, String field) throws IOException {
+        try (Directory indexDir = FSDirectory.open(new File(indexDirPath).toPath());
+             IndexReader indexReader = DirectoryReader.open(indexDir)) {
+
+            int numDocs = indexReader.numDocs();
+            long totalTerms = 0;
+            long totalDocLength = 0;
+
+            for (int i = 0; i < numDocs; i++) {
+                Terms terms = indexReader.getTermVector(i, field); // Replace "content" with your field name
+                if (terms != null) {
+                    totalTerms += terms.size();
+                    totalDocLength += terms.getSumTotalTermFreq();
+                }
+            }
+
+            return (int) totalDocLength;
+        }
+    }
+
+    public static int numDocs(String indexDirPath) throws IOException {
+        try (Directory indexDir = FSDirectory.open(new File(indexDirPath).toPath());
+             IndexReader indexReader = DirectoryReader.open(indexDir)) {
+
+            int numDocs = indexReader.numDocs();
+            return numDocs;
+        }
     }
 }
