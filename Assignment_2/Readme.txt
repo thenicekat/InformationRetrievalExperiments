@@ -10,8 +10,9 @@ For python just do pip install py4j
 
 To check java-python interop
 
-First run server.java file
-Then run pyj_test.py file
+First run StatsCalculator.java file (Server)
+Then run pyj_server.py file (client - naming little bad, ik)
 Server - Client conn should work
+Check pyj_server.py file on how to use the java functions in python
 
 *** Do note this is currently only working when both server and client are in the same directory
