@@ -15,6 +15,7 @@ from py4j.java_gateway import JavaGateway
 import torch
 from torch.utils.data import random_split, DataLoader, Dataset  # type: ignore
 import logging
+import indexer
 
 logging.basicConfig(
     level=logging.INFO,
@@ -32,6 +33,12 @@ BATCH_SIZE = 128
 # Read the merged qrel file and delete the column named 'ZERO'
 merged_qrel = pd.read_csv('../../nfcorpus/merged.qrel', sep="\t")
 del merged_qrel['ZERO']
+
+postings, doc_freq = indexer.load_index_in_memory('../../nfcorpus/raw/')
+# Get the postings and term_freq
+# print(postings['deep'])
+# Get the doc_freq
+# print(doc_freq['deep'])
 
 class LTRDataset(Dataset):
     def __init__(self):

@@ -86,18 +86,16 @@ def construct_postings(dir):
     # construct postings from sorted pairs
     for pairs in sorted_pairs:
         if pairs[0] not in postings:
-            postings[pairs[0]] = []
-            postings[pairs[0]].append(pairs[1])
+            postings[pairs[0]] = {}
+            if pairs[1] not in postings[pairs[0]]:
+                postings[pairs[0]][pairs[1]] = 1
+            else:
+                postings[pairs[0]][pairs[1]] += 1
         else:
-            len_postings = len(postings[pairs[0]])
-            if len_postings >= 1:
-                # check for duplicates
-                # assuming the doc_ids are sorted
-                # the same doc_ids will appear
-                # one after another and detected by
-                # checking the last element of the postings
-                if pairs[1] != postings[pairs[0]][len_postings - 1]:
-                    postings[pairs[0]].append(pairs[1])
+            if pairs[1] not in postings[pairs[0]]:
+                postings[pairs[0]][pairs[1]] = 1
+            else:
+                postings[pairs[0]][pairs[1]] += 1
 
     # update doc_freq which is the size of postings list
     for token in postings:
@@ -105,14 +103,23 @@ def construct_postings(dir):
 
     # print("postings: " + str(postings))
     # print("doc freq: " + str(doc_freq))
-    print("Dictionary size: " + str(len(postings)))
+    print("Dictionary size before removing stop words: " + str(len(postings)))
+    
+    # open the stop words file
+    stop_words = open(dir + "/stopwords.large", "r")
+    for line in stop_words:
+        if line.strip() in postings:
+            del postings[line.strip()]
+            del doc_freq[line.strip()]
+            
+    print("Dictionary size after removing stop words: " + str(len(postings)))
 
     # write postings and document frequency to file
-
     for token in postings:
         o1.write(token + "\t" + str(doc_freq[token]))
         for l in postings[token]:
             o1.write("\t" + l)
+            o1.write("\t" + str(postings[token][l]))
         o1.write("\n")
     o1.close()
 
@@ -132,6 +139,7 @@ def index(dir):
     # converts (token, doc_id) pairs
     # into a dictionary of tokens
     # and an adjacency list of doc_id
+    # modified to give term frequency in each doc also
     construct_postings(dir)
 
 
@@ -150,8 +158,11 @@ def load_index_in_memory(dir):
 
         item_list = []
 
-        for item in range(2, len(splitline)):
-            item_list.append(splitline[item].strip())
+        for item in range(2, len(splitline), 2):
+            item_list.append({
+                "doc_id": splitline[item],
+                "term_freq": int(splitline[item + 1])
+            })
         postings[token] = item_list
 
     return postings, doc_freq
@@ -174,6 +185,18 @@ def intersection(l1, l2):
 
     return intersection_list
 
+def get_term_freq(token, doc_id, corpus):
+    # load postings in memory
+    postings, doc_freq = load_index_in_memory(corpus)
+
+    # get the postings list for the token
+    postings_list = postings[token]
+
+    # check if the doc_id is in the postings list
+    if doc_id in postings_list:
+        return 1
+    else:
+        return 0
 
 def and_query(query_terms, corpus):
     # load postings in memory
