@@ -245,5 +245,5 @@ for i in range(100):
     testing_loss, testing_acc, testing_ndcg = test(model, test_loader)
     logging.info(f"Epoch: {i} | Training Loss: {training_loss} | Training Accuracy: {training_acc}")
     logging.info(f"Epoch: {i} | Validation Loss: {validation_loss} | Validation Accuracy: {validation_acc}")
-    logging.info(f"Epoch: {i} | Testing Loss: {testing_loss} | Testing Accuracy: {testing_acc} | Testing NDCG: {testing_ndcg}testing_ndcg")
+    logging.info(f"Epoch: {i} | Testing Loss: {testing_loss} | Testing Accuracy: {testing_acc} | Testing NDCG: {testing_ndcg}")
     logging.info("")
