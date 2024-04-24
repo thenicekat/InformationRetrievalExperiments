@@ -113,6 +113,14 @@ def construct_postings(dir):
             del doc_freq[line.strip()]
             
     print("Dictionary size after removing stop words: " + str(len(postings)))
+    
+    # check if the term has any random symbosl
+    # for token in list(postings.keys()):
+    #     if not token.isalnum():
+    #         del postings[token]
+    #         del doc_freq[token]
+            
+    # print("Dictionary size after removing random symbols: " + str(len(postings)))
 
     # write postings and document frequency to file
     for token in postings:
@@ -147,6 +155,7 @@ def load_index_in_memory(dir):
     f = open(dir + "intermediate/postings.tsv", encoding="utf-8")
     postings = {}
     doc_freq = {}
+    doc_ids = {}
 
     for line in f:
         splitline = line.split("\t")
@@ -163,10 +172,24 @@ def load_index_in_memory(dir):
                 "doc_id": splitline[item],
                 "term_freq": int(splitline[item + 1])
             })
+            if splitline[item] not in doc_ids:
+                doc_ids[splitline[item]] = len(doc_ids)
         postings[token] = item_list
 
-    return postings, doc_freq
+    return postings, doc_freq, doc_ids
 
+def getTFIDFVector(query, postings, doc_freq, doc_ids):
+    number_of_docs = len(doc_ids)
+    tf_vector = np.zeros(number_of_docs)
+    for token in query.split(" "):
+        if token in doc_freq:
+            idf = np.log(number_of_docs / doc_freq[token])
+            # create a vector of term frequencies for documents
+            for i in range(len(postings[token])):
+                # print(doc_ids[postings[token][i]["doc_id"]], postings[token][i]["term_freq"])
+                tf_vector[doc_ids[postings[token][i]["doc_id"]]] += idf * postings[token][i]["term_freq"]
+    tf_vector = np.log(1 + tf_vector)
+    return tf_vector    
 
 def intersection(l1, l2):
     count1 = 0

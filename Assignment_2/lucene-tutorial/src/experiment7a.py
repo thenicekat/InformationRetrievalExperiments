@@ -34,11 +34,30 @@ BATCH_SIZE = 128
 merged_qrel = pd.read_csv('../../nfcorpus/merged.qrel', sep="\t")
 del merged_qrel['ZERO']
 
-postings, doc_freq = indexer.load_index_in_memory('../../nfcorpus/raw/')
+# read queries
+queries_dev = pd.read_csv('../../nfcorpus/dev.titles.queries', sep="	", names=['QUERY_ID', 'QUERY'])
+queries_train = pd.read_csv('../../nfcorpus/train.titles.queries', sep="	", names=['QUERY_ID', 'QUERY'])
+queries_test = pd.read_csv('../../nfcorpus/test.titles.queries', sep="	", names=['QUERY_ID', 'QUERY'])
+
+# add them to a single mapping between query id and query
+queries = pd.concat([queries_dev, queries_train, queries_test])
+del queries_dev, queries_train, queries_test
+# convert this into a dict
+queries = dict(zip(queries['QUERY_ID'], queries['QUERY']))
+
+# n = luceneServer.numDocs("Assignment_2/index")
+# print("Number of documents = " + str(n))
+
+# x = 0
+# for i in range(n):
+#     tf = luceneServer.getTermFreq("Assignment_2/index", "abstract", "deep", i)
+#     if(tf != 0):
+#         x += tf
+#         print("Doc = " + str(i) + " Term Freq = " + str(tf))
+# print(x)
+
+postings, doc_freq, doc_ids = indexer.load_index_in_memory('../../nfcorpus/raw/')
 # Get the postings and term_freq
-# print(postings['deep'])
-# Get the doc_freq
-# print(doc_freq['deep'])
 
 class LTRDataset(Dataset):
     def __init__(self):
@@ -55,14 +74,13 @@ class LTRDataset(Dataset):
             
             # Get the features for the query-document pair
             self.dataset.append({
-                "query_id": query_id,
-                "doc_id": doc_id,
-                "relevance": relevance,
-                "vector": [1, 0, 0, 0]
+                # "query_id": query_id,
+                # "query": queries[query_id],
+                # "doc_id": doc_id,
+                # "relevance": relevance,
+                "vector": torch.tensor(indexer.getTFIDFVector(queries[query_id], postings, doc_freq, doc_ids))
             })
             # one hot encode the relevance
-            output_vector = [0, 0, 0, 0]
-            output_vector[relevance] = 1
             self.outputs.append(relevance)
     
     def __len__(self):

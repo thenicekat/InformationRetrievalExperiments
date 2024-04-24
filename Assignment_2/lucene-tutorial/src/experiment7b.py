@@ -33,6 +33,17 @@ BATCH_SIZE = 128
 merged_qrel = pd.read_csv('../../nfcorpus/merged.qrel', sep="\t")
 del merged_qrel['ZERO']
 
+# read queries
+queries_dev = pd.read_csv('../../nfcorpus/dev.titles.queries', sep="	", names=['QUERY_ID', 'QUERY'])
+queries_train = pd.read_csv('../../nfcorpus/train.titles.queries', sep="	", names=['QUERY_ID', 'QUERY'])
+queries_test = pd.read_csv('../../nfcorpus/test.titles.queries', sep="	", names=['QUERY_ID', 'QUERY'])
+
+# add them to a single mapping between query id and query
+queries = pd.concat([queries_dev, queries_train, queries_test])
+del queries_dev, queries_train, queries_test
+# convert this into a dict
+queries = dict(zip(queries['QUERY_ID'], queries['QUERY']))
+
 class LTRDataset(Dataset):
     def __init__(self):
         # Create an array of datasets
