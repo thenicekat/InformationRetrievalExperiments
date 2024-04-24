@@ -47,7 +47,7 @@ del queries_dev, queries_train, queries_test
 queries = dict(zip(queries['QUERY_ID'], queries['QUERY']))
 
 postings, doc_freq, doc_ids = indexer.load_index_in_memory('../../nfcorpus/raw/')
-input_size = 4
+input_size = len(indexer.getTFIDFVector('deep', postings, doc_freq, doc_ids))
 # Get the postings and term_freq
 
 class LTRDataset(Dataset):
