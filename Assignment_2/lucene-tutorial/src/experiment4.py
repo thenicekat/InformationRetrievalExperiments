@@ -72,8 +72,8 @@ def okapi_bm25(query, field, k1=1.5, k3=1.5, b=0.75):
 
     return sum(scores)/len(scores)
 
-s1 = language_model("deep learning", "abstract", 0.5)
+s1 = language_model("weight", "title", 0.5)
 print("Language Model Score = " + str(s1))
-s2 = okapi_bm25("deep learning", "abstract", 1.5, 1.5, 0.75)
+s2 = okapi_bm25("weight", "title", 1.5, 1.5, 0.75)
 print("Okapi BM25 Score = " + str(s2))
 

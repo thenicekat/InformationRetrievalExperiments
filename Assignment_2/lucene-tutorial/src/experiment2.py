@@ -5,27 +5,22 @@ ment nnn, ntn, and ntc notations
 
 import math
 import numpy as np
+import math
+from py4j.java_gateway import JavaGateway 
 
 
-def vector_model(self, docs, query, notation):
+def vector_model(field, query, notation):
+    gateway = JavaGateway() 
+    java_object = gateway.entry_point
     dup_query_terms = query.split()
     query_terms = set(list(query.split()))
-    vocab_set = set()
-    n = len(docs)
-
-    # creating vocabulary
-    for doc in docs:
-        doc_terms = doc.split()
-        for term in doc_terms:
-            vocab_set.add(term)
+    vocab_set = java_object.buildVocabulary("Assignment_2/index", field) #vocabulary set
+    n = java_object.numDocs("Assignment_2/index") #total no of documents in collection
 
     # finding out doc freq for each term in vocab_set
     df = {term: 0 for term in vocab_set}
     for term in vocab_set:
-        for doc in docs:
-            doc_terms = doc.split()
-            if term in doc_terms:
-                df[term] += 1
+        df[term] = java_object.getDocFreq("Assignment_2/index", field, term)
 
     doc_vector_matrix = []
     query_vector = np.zeros(len(vocab_set))
@@ -49,13 +44,12 @@ def vector_model(self, docs, query, notation):
         sum_sq = math.sqrt(sum_sq)
         query_vector = query_vector / sum_sq
 
-    for doc in docs:
+    for i in range(n):
         doc_vector = np.zeros(len(vocab_set))
-        doc_terms = doc.split()
         sum_sq = 0
         i = 0
         for term in vocab_set:
-            tfd = doc_terms.count(term)
+            tfd = java_object.getTermFreq("Assignment_2/index", field, term, i)
             dfd = 1
 
             if(doc_not[1]=='t'):
@@ -72,6 +66,9 @@ def vector_model(self, docs, query, notation):
 
     scores = np.dot(doc_vector_matrix, query_vector)
     return sum(scores)/len(scores)
+
+s = vector_model("title", "birth weight", "ntc")
+print(s)
 
     
 

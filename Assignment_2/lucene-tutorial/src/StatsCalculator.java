@@ -2,6 +2,8 @@ import java.io.File;
 import java.io.IOException;
 import java.io.FileReader;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.IndexReader;
@@ -264,5 +266,27 @@ public class StatsCalculator {
 
             return documentLength;
         }
+    }
+
+    public static Set<String> buildVocabulary(String indexDirPath, String field) throws IOException {
+        Set<String> vocabulary = new HashSet<>();
+
+        try (Directory indexDir = FSDirectory.open(new File(indexDirPath).toPath());
+             IndexReader indexReader = DirectoryReader.open(indexDir)) {
+
+            // Iterate over all terms in the index
+            for (int docId = 0; docId < indexReader.maxDoc(); docId++) {
+                Terms terms = indexReader.getTermVector(docId, field);
+                if (terms != null) {
+                    TermsEnum termsEnum = terms.iterator();
+                    while (termsEnum.next() != null) {
+                        String termText = termsEnum.term().utf8ToString();
+                        vocabulary.add(termText);
+                    }
+                }
+            }
+        }
+
+        return vocabulary;
     }
 }
