@@ -47,7 +47,7 @@ del queries_dev, queries_train, queries_test
 queries = dict(zip(queries['QUERY_ID'], queries['QUERY']))
 
 postings, doc_freq, doc_ids = indexer.load_index_in_memory('../../nfcorpus/raw/')
-input_size = len(indexer.getTFIDFVector('deep', postings, doc_freq, doc_ids))
+input_size = 4
 # Get the postings and term_freq
 
 class LTRDataset(Dataset):
@@ -69,7 +69,7 @@ class LTRDataset(Dataset):
                 # "query": queries[query_id],
                 # "doc_id": doc_id,
                 # "relevance": relevance,
-                "vector": torch.tensor(indexer.getTFIDFVector(queries[query_id], postings, doc_freq, doc_ids))
+                "vector": [1, 0, 0, 0]
             })
             # one hot encode the relevance
             self.outputs.append(relevance)
@@ -188,7 +188,7 @@ def test(model, loader):
     counter = 0
     
     with torch.inference_mode():
-        # Iterate in batches over the training/test dataset.
+        # Iterate in batches over the testing dataset.
         for _, (x, y) in enumerate(loader):
             # Get output from model
             output = model(x)
@@ -196,16 +196,15 @@ def test(model, loader):
             target = y
             # Calculate accuracy using torch sum and argmax
             acc = torch.sum(torch.argmax(output, -1) == target)
-            # Add to training accuracy
+            # Add to testing accuracy
             testing_acc += acc.item()
             # Calculate loss
             loss = criterion(output, target)
-            # Add to training loss
+            # Add to testing loss
             testing_loss += loss.item()
-        
-        # calculate ndcg
-        testing_ndcg += sklearn.metrics.ndcg_score(y, output)
-        counter += 1
+            # Add to testing ndcg
+            testing_ndcg += sklearn.metrics.ndcg_score([y], [torch.argmax(output, -1)])
+            counter += 1
 
     testing_loss /= float(len(loader.dataset))
     testing_acc /= float(len(loader.dataset))
