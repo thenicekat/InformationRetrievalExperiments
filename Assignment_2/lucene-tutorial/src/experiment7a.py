@@ -9,6 +9,7 @@ referred here for your experiments
 # Basically a classification task
 
 from datetime import datetime
+import sklearn.metrics
 from tqdm import tqdm
 import pandas as pd
 from py4j.java_gateway import JavaGateway 
@@ -45,19 +46,8 @@ del queries_dev, queries_train, queries_test
 # convert this into a dict
 queries = dict(zip(queries['QUERY_ID'], queries['QUERY']))
 
-# n = luceneServer.numDocs("Assignment_2/index")
-# print("Number of documents = " + str(n))
-
-# x = 0
-# for i in range(n):
-#     tf = luceneServer.getTermFreq("Assignment_2/index", "abstract", "deep", i)
-#     if(tf != 0):
-#         x += tf
-#         print("Doc = " + str(i) + " Term Freq = " + str(tf))
-# print(x)
-
 postings, doc_freq, doc_ids = indexer.load_index_in_memory('../../nfcorpus/raw/')
-input_size = indexer.getTFIDFVector('deep', postings, doc_freq, doc_ids)
+input_size = len(indexer.getTFIDFVector('deep', postings, doc_freq, doc_ids))
 # Get the postings and term_freq
 
 class LTRDataset(Dataset):
@@ -194,13 +184,10 @@ def test(model, loader):
 
     testing_loss = 0.0
     testing_acc = 0.0
+    testing_ndcg = 0.0
+    counter = 0
     
     with torch.inference_mode():
-        true_positives = 0
-        false_positives = 0
-        false_negatives = 0
-        true_negatives = 0
-        
         # Iterate in batches over the training/test dataset.
         for _, (x, y) in enumerate(loader):
             # Get output from model
@@ -215,43 +202,22 @@ def test(model, loader):
             loss = criterion(output, target)
             # Add to training loss
             testing_loss += loss.item()
-            
-            output_array = torch.argmax(output, -1)
-            for i in range(len(output_array)):
-                if output_array[i] == 1 and target[i] == 1:
-                    true_positives += 1
-                elif output_array[i] == 1 and target[i] == 0:
-                    false_positives += 1
-                elif output_array[i] == 0 and target[i] == 1:
-                    false_negatives += 1
-                else:
-                    true_negatives += 1
+        
+        # calculate ndcg
+        testing_ndcg += sklearn.metrics.ndcg_score(y, output)
+        counter += 1
 
     testing_loss /= float(len(loader.dataset))
     testing_acc /= float(len(loader.dataset))
+    testing_ndcg /= counter
 
-    if true_positives + false_positives == 0:
-        testing_prec = 0
-    else:
-        testing_prec = true_positives / (true_positives + false_positives)
-    
-    if true_positives + false_negatives == 0:
-        testing_rec = 0
-    else:
-        testing_rec = true_positives / (true_positives + false_negatives)
-    
-    if testing_prec + testing_rec == 0:
-        testing_f1 = 0
-    else: 
-        testing_f1 = 2 * (testing_prec * testing_rec) / (testing_prec + testing_rec)
-
-    return testing_loss, testing_acc, testing_prec, testing_rec, testing_f1
+    return testing_loss, testing_acc, testing_ndcg
 
 for i in range(100):
     training_loss, training_acc = train(model, train_loader)
     validation_loss, validation_acc = validate(model, val_loader)
-    testing_loss, testing_acc, testing_prec, testing_rec, testing_f1 = test(model, test_loader)
+    testing_loss, testing_acc, testing_ndcg = test(model, test_loader)
     logging.info(f"Epoch: {i} | Training Loss: {training_loss} | Training Accuracy: {training_acc}")
     logging.info(f"Epoch: {i} | Validation Loss: {validation_loss} | Validation Accuracy: {validation_acc}")
-    logging.info(f"Epoch: {i} | Testing Loss: {testing_loss} | Testing Accuracy: {testing_acc}")
+    logging.info(f"Epoch: {i} | Testing Loss: {testing_loss} | Testing Accuracy: {testing_acc} | Testing NDCG: {testing_ndcg}")
     logging.info("")
