@@ -250,6 +250,20 @@ public class StatsCalculator {
         }
     }
 
+    public static String getDocId(String indexDirPath, int docno) throws IOException {
+        try (Directory indexDir = FSDirectory.open(new File(indexDirPath).toPath());
+             IndexReader indexReader = DirectoryReader.open(indexDir)) {
+
+            StoredFields sf = indexReader.storedFields();
+            Document doc = sf.document(docno);   
+            IndexableField id_Field = doc.getField("id");         
+            String id = id_Field.stringValue();
+
+            indexReader.close();
+            return id;
+        }
+    }
+
     public static int getDocumentLen(String indexDirPath, String field, int docId) throws IOException {
         try (Directory indexDir = FSDirectory.open(new File(indexDirPath).toPath());
              IndexReader indexReader = DirectoryReader.open(indexDir)) {
