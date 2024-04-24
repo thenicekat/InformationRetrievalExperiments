@@ -147,8 +147,10 @@ public class StatsCalculator {
                         Term termInstance = new Term(field, term);
 
                         // Collection frequency (cf)
-                        long cf = indexReader.totalTermFreq(termInstance);
-                        hashMap.put(termText, (int) cf);
+                        long tf = indexReader.totalTermFreq(termInstance);
+                        if (!hashMap.containsKey(termText)) {
+                            hashMap.put(termText, (int) tf);                        
+                        } 
                     }
                 }                        
             }
