@@ -57,6 +57,7 @@ queries = dict(zip(queries['QUERY_ID'], queries['QUERY']))
 # print(x)
 
 postings, doc_freq, doc_ids = indexer.load_index_in_memory('../../nfcorpus/raw/')
+input_size = indexer.getTFIDFVector('deep', postings, doc_freq, doc_ids)
 # Get the postings and term_freq
 
 class LTRDataset(Dataset):
@@ -128,7 +129,7 @@ class NeuralNet(torch.nn.Module):
         # logging.info(f"The output vector is: \n{x}")
         return x
 
-model = NeuralNet(n_features=4, output_size=4)
+model = NeuralNet(n_features=input_size, output_size=4)
 criterion = torch.nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
 
