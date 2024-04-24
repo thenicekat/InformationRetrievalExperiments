@@ -69,7 +69,7 @@ class LTRDataset(Dataset):
                 # "query": queries[query_id],
                 # "doc_id": doc_id,
                 # "relevance": relevance,
-                "vector": [1, 0, 0, 0]
+                "vector":  torch.tensor(indexer.getTFIDFVector(queries[query_id], postings, doc_freq, doc_ids))
             })
             # one hot encode the relevance
             self.outputs.append(relevance)
