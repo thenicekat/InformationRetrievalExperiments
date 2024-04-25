@@ -96,9 +96,9 @@ class LTRDataset(Dataset):
                     
                     # Get the output
                     if relevance1 > relevance2:
-                        self.outputs.append(1)
+                        self.outputs.append(2)
                     else:
-                        self.outputs.append(0)           
+                        self.outputs.append(1)           
     
 
     def __len__(self):
