@@ -173,3 +173,21 @@ cached_train = train.shuffle(10000).batch(8192).cache()
 listwise_model = LTRModel(tfr.keras.losses.ListMLELoss())
 listwise_model.compile(optimizer=tf.keras.optimizers.Adagrad(0.1))
 listwise_model.fit(cached_train, epochs=5, verbose=True)
+
+# save the model
+listwise_model.save_weights('./ltr_models/listwise_model')
+
+# def pred_grouped(model, temp):
+#     temp['score'] = pd.NA
+
+#     for group in temp["cnt_res_per_cust"].unique():
+#         idx = np.where(temp["cnt_res_per_cust"] == group)[0]
+#         query_list = temp['query_id'][idx].values
+#         doc_list = np.array(temp['document_id'][idx].tolist())
+
+#         temp['score'][idx] = (model({'query_id': query_list, 
+#                         'document_id': doc_list}).numpy()).reshape(len(doc_list),group).tolist()
+    
+#     return temp
+
+# print(pred_grouped(listwise_model, train))
