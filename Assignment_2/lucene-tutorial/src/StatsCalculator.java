@@ -305,4 +305,73 @@ public class StatsCalculator {
 
         return vocabulary;
     }
+
+    //Debugging functions
+
+    public static int checkFn(String indexDirPath, String field, String query_term) throws IOException, ParseException {
+        try (Directory indexDir = FSDirectory.open(new File(indexDirPath).toPath());
+             IndexReader indexReader = DirectoryReader.open(indexDir)) {
+    
+            int numDocs = indexReader.numDocs();
+            StoredFields sf = indexReader.storedFields();
+            int cf = 0;
+            int df = 0;
+            
+            for (int i=0;i<numDocs;i++){
+                Document doc = sf.document(i);   
+                IndexableField Field = doc.getField(field);
+                String val = Field.stringValue();
+                String[] terms = val.split(" ");
+                int flag = 0;
+                for (String term : terms) {
+                    if(term.toLowerCase().equals(query_term.toLowerCase())) {
+                        flag = 1;
+                        cf++;
+                    }
+                }
+                if(flag==1) {
+                   df++;
+                }
+            }
+            int df_ = getDocFreq(indexDirPath, field, query_term);
+            int cf_ = getCollectionFreq(indexDirPath, field, query_term);
+            System.out.println(query_term);
+            System.out.println("CF: " + cf + " CF_: " + cf_);
+            System.out.println("DF: " + df + " DF_: " + df_);
+            return cf-cf_;
+                                   
+        } 
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+    public static int checkFn2(String indexDirPath, String field, String query_term, int docid) throws IOException, ParseException {
+        try (Directory indexDir = FSDirectory.open(new File(indexDirPath).toPath());
+             IndexReader indexReader = DirectoryReader.open(indexDir)) {
+    
+            int numDocs = indexReader.numDocs();
+            StoredFields sf = indexReader.storedFields();
+            int tf = 0;
+            
+            Document doc = sf.document(docid);   
+            IndexableField Field = doc.getField(field);
+            String val = Field.stringValue();
+            String[] terms = val.split(" ");
+            for (String term : terms) {
+                System.out.println(term);
+                if(term.toLowerCase().equals(query_term.toLowerCase())) {
+                    tf++;
+                }
+            }
+            int tf_ = getTermFreq(indexDirPath, field, query_term, docid);
+            System.out.println(tf + " " + tf_);
+            return tf-tf_;
+                                   
+        } 
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
 }

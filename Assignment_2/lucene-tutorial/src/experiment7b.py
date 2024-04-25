@@ -96,9 +96,9 @@ class LTRDataset(Dataset):
                     
                     # Get the output
                     if relevance1 > relevance2:
-                        self.outputs.append(1)
+                        self.outputs.append(2)
                     else:
-                        self.outputs.append(0)           
+                        self.outputs.append(1)           
     
 
     def __len__(self):
@@ -146,7 +146,7 @@ class NeuralNet(torch.nn.Module):
         # logging.info(f"The output vector is: \n{x}")
         return x
 
-model = NeuralNet(n_features=input_size, output_size=2)
+model = NeuralNet(n_features=input_size, output_size=3)
 criterion = torch.nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
 
