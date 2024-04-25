@@ -1,0 +1,30 @@
+Epoch 1/5
+1/3 [=========>....................] - ETA: 4s - ndcg_metric: 0.9404 - root_mean_squared_error: 1.8744 - loss: 15.1028 - regular
+2/3 [===================>..........] - ETA: 0s - ndcg_metric: 0.9339 - root_mean_squared_error: 1.9007 - loss: 15.1021 - regular
+3/3 [==============================] - ETA: 0s - ndcg_metric: 0.9326 - root_mean_squared_error: 1.9073 - loss: 15.1013 - regular
+3/3 [==============================] - 2s 92ms/step - ndcg_metric: 0.9326 - root_mean_squared_error: 1.9073 - loss: 15.1009 - regular
+ization_loss: 0.0000e+00 - total_loss: 15.1009
+Epoch 2/5
+1/3 [=========>....................] - ETA: 0s - ndcg_metric: 0.9525 - root_mean_squared_error: 1.8684 - loss: 15.0974 - regular
+2/3 [===================>..........] - ETA: 0s - ndcg_metric: 0.9439 - root_mean_squared_error: 1.8942 - loss: 15.0965 - regular
+3/3 [==============================] - ETA: 0s - ndcg_metric: 0.9417 - root_mean_squared_error: 1.9007 - loss: 15.0957 - regular
+3/3 [==============================] - 0s 90ms/step - ndcg_metric: 0.9417 - root_mean_squared_error: 1.9007 - loss: 15.0953 - regular
+ization_loss: 0.0000e+00 - total_loss: 15.0953
+Epoch 3/5
+1/3 [=========>....................] - ETA: 0s - ndcg_metric: 0.9584 - root_mean_squared_error: 1.8609 - loss: 15.0898 - regular
+2/3 [===================>..........] - ETA: 0s - ndcg_metric: 0.9492 - root_mean_squared_error: 1.8865 - loss: 15.0895 - regular
+3/3 [==============================] - ETA: 0s - ndcg_metric: 0.9467 - root_mean_squared_error: 1.8931 - loss: 15.0887 - regular
+3/3 [==============================] - 0s 92ms/step - ndcg_metric: 0.9467 - root_mean_squared_error: 1.8931 - loss: 15.0882 - regular
+ization_loss: 0.0000e+00 - total_loss: 15.0882
+Epoch 4/5
+1/3 [=========>....................] - ETA: 0s - ndcg_metric: 0.9616 - root_mean_squared_error: 1.8536 - loss: 15.0807 - regular
+2/3 [===================>..........] - ETA: 0s - ndcg_metric: 0.9521 - root_mean_squared_error: 1.8780 - loss: 15.0802 - regular
+3/3 [==============================] - ETA: 0s - ndcg_metric: 0.9495 - root_mean_squared_error: 1.8837 - loss: 15.0788 - regular
+3/3 [==============================] - 0s 82ms/step - ndcg_metric: 0.9495 - root_mean_squared_error: 1.8837 - loss: 15.0781 - regular
+ization_loss: 0.0000e+00 - total_loss: 15.0781
+Epoch 5/5
+1/3 [=========>....................] - ETA: 0s - ndcg_metric: 0.9637 - root_mean_squared_error: 1.8410 - loss: 15.0659 - regular
+2/3 [===================>..........] - ETA: 0s - ndcg_metric: 0.9539 - root_mean_squared_error: 1.8648 - loss: 15.0652 - regular
+3/3 [==============================] - ETA: 0s - ndcg_metric: 0.9512 - root_mean_squared_error: 1.8706 - loss: 15.0625 - regular
+3/3 [==============================] - 0s 88ms/step - ndcg_metric: 0.9512 - root_mean_squared_error: 1.8706 - loss: 15.0611 - regular
+ization_loss: 0.0000e+00 - total_loss: 15.0611
