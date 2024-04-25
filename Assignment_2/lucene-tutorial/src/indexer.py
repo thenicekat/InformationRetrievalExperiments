@@ -16,12 +16,24 @@ import pandas as pd
 
 def read_corpus(path):
     f = pd.read_csv(path + '/doc_dump.txt', sep="	", names=['id', 'url', 'title', 'abstract'])
+    f2 = pd.read_csv(path + '/nfdump.txt', sep="	", names=['id', 'url', 'title', 'abstract', 'comments', 'topicstags', 'desc', 'doctorsnote', 'articlelinks', 'questionlinks', 'topiclinks', 'videolinks', 'metalinks'])
     
     if not os.path.exists(path + "/intermediate/"):
         os.mkdir(path + "/intermediate/")
     o = open(path + "/intermediate/output.tsv", "w", encoding="utf-8")
     
     for _, json_object in f.iterrows():
+        doc_no = json_object["id"]
+        title = json_object["title"]
+        paper_abstract = json_object["abstract"]
+        tokens = title.split(" ")
+        for t in tokens:
+            o.write(t.lower() + "\t" + str(doc_no) + "\n")
+        tokens = paper_abstract.split(" ")
+        for t in tokens:
+            o.write(t.lower() + "\t" + str(doc_no) + "\n")
+    
+    for _, json_object in f2.iterrows():
         doc_no = json_object["id"]
         title = json_object["title"]
         paper_abstract = json_object["abstract"]
