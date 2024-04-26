@@ -256,5 +256,5 @@ for i in tqdm(range(0, 30)):
     doc_id = merged_qrel.iloc[i]['DOC_ID']
     relevance = merged_qrel.iloc[i]['RELEVANCE']
     
-    score = model(torch.tensor(indexer.getTFIDFVector(queries[query_id], postings, doc_freq, doc_ids)))
+    score = model(torch.tensor(indexer.getTFIDFVector(queries[query_id], postings, doc_freq, doc_ids), dtype=torch.float32))
     print(f"{query_id} Q0 {doc_id} {100} {score} STANDARD")
