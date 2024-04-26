@@ -127,12 +127,20 @@ def construct_postings(dir):
     print("Dictionary size after removing stop words: " + str(len(postings)))
     
     # check if the term has any random symbosl
-    # for token in list(postings.keys()):
-    #     if not token.isalnum():
-    #         del postings[token]
-    #         del doc_freq[token]
+    for token in list(postings.keys()):
+        if not token.isalnum():
+            del postings[token]
+            del doc_freq[token]
             
-    # print("Dictionary size after removing random symbols: " + str(len(postings)))
+    print("Dictionary size after removing random symbols: " + str(len(postings)))
+    
+    # check if the term has less than 5 occurrences
+    for token in list(postings.keys()):
+        if doc_freq[token] < 15:
+            del postings[token]
+            del doc_freq[token]
+    
+    print("Dictionary size after removing less occurring terms: " + str(len(postings)))        
 
     # write postings and document frequency to file
     for token in postings:
@@ -166,6 +174,7 @@ def index(dir):
 def load_index_in_memory(dir):
     f = open(dir + "intermediate/postings.tsv", encoding="utf-8")
     postings = {}
+    query_term_id_mapping = {}
     doc_freq = {}
     doc_ids = {}
 
@@ -176,6 +185,7 @@ def load_index_in_memory(dir):
         freq = int(splitline[1])
 
         doc_freq[token] = freq
+        query_term_id_mapping[token] = len(query_term_id_mapping)
 
         item_list = []
 
@@ -188,20 +198,31 @@ def load_index_in_memory(dir):
                 doc_ids[splitline[item]] = len(doc_ids)
         postings[token] = item_list
 
-    return postings, doc_freq, doc_ids
+    return postings, doc_freq, doc_ids, query_term_id_mapping
 
-def getTFIDFVector(query, postings, doc_freq, doc_ids):
-    number_of_docs = len(doc_ids)
-    tf_vector = np.zeros(number_of_docs)
+def getTermVector(query, postings, doc_freq, doc_ids, query_term_id_mapping):
+    number_of_terms = len(query_term_id_mapping)
+    tf_vector = np.zeros(number_of_terms)
+    
     for token in query.split(" "):
-        if token in doc_freq:
-            idf = np.log(number_of_docs / doc_freq[token])
-            # create a vector of term frequencies for documents
-            for i in range(len(postings[token])):
-                # print(doc_ids[postings[token][i]["doc_id"]], postings[token][i]["term_freq"])
-                tf_vector[doc_ids[postings[token][i]["doc_id"]]] += idf * postings[token][i]["term_freq"]
+        if token in query_term_id_mapping:
+            tf_vector[query_term_id_mapping[token]] += 1
     tf_vector = np.log(1 + tf_vector)
     return tf_vector    
+
+def getDocumentVector(doc_id, postings, doc_freq, doc_ids, query_term_id_mapping):
+    number_of_terms = len(query_term_id_mapping)
+    tf_vector = np.zeros(number_of_terms)
+    
+    for token in postings:
+        for item in postings[token]:
+            if item["doc_id"] == doc_id:
+                idf = np.log(len(doc_ids) / doc_freq[token])
+                if token in query_term_id_mapping:
+                    tf_vector[query_term_id_mapping[token]] = idf * item["term_freq"]
+                    break
+    tf_vector = np.log(1 + tf_vector)
+    return tf_vector
 
 def intersection(l1, l2):
     count1 = 0

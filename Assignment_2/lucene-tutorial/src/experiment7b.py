@@ -46,8 +46,8 @@ del queries_dev, queries_train, queries_test
 # convert this into a dict
 queries = dict(zip(queries['QUERY_ID'], queries['QUERY']))
 
-postings, doc_freq, doc_ids = indexer.load_index_in_memory('../../nfcorpus/raw/')
-input_size = len(indexer.getTFIDFVector('deep', postings, doc_freq, doc_ids))
+postings, doc_freq, doc_ids, query_term_id_mapping = indexer.load_index_in_memory('../../nfcorpus/raw/')
+input_size = len(indexer.getTermVector('deep', postings, doc_freq, doc_ids, query_term_id_mapping))
 # Get the postings and term_freq
 
 class LTRDataset(Dataset):
@@ -82,16 +82,12 @@ class LTRDataset(Dataset):
             for i in range(0, len(query_document_id_map[query_id]), 2):
                 if i + 1 < len(query_document_id_map[query_id]):
                     # Get the features for each query-document-document pair
-                    # query = luceneServer.getQuery(query_id)
-                    # document1 = luceneServer.getDocument(query_document_id_map[query_id][i]['document_id'])
-                    # document2 = luceneServer.getDocument(query_document_id_map[query_id][j]['document_id'])
                     relevance1 = query_document_id_map[query_id][i]['relevance']
                     relevance2 = query_document_id_map[query_id][i + 1]['relevance']
                     
                     # Get the features
-                    # features = luceneServer.getFeatures(query, document1, document2)
                     self.dataset.append({
-                        "vector": torch.tensor(indexer.getTFIDFVector(queries[query_id], postings, doc_freq, doc_ids))
+                        "vector": torch.tensor(indexer.getTermVector(queries[query_id], postings, doc_freq, doc_ids, query_term_id_mapping), dtype=torch.float32) + torch.tensor(indexer.getDocumentVector(query_document_id_map[query_id][i]['document_id'], postings, doc_freq, doc_ids, query_term_id_mapping), dtype=torch.float32) + torch.tensor(indexer.getDocumentVector(query_document_id_map[query_id][i + 1]['document_id'], postings, doc_freq, doc_ids, query_term_id_mapping), dtype=torch.float32)
                     })
                     
                     # Get the output

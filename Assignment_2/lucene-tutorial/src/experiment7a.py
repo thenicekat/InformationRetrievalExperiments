@@ -12,7 +12,6 @@ from datetime import datetime
 import sklearn.metrics
 from tqdm import tqdm
 import pandas as pd
-from py4j.java_gateway import JavaGateway 
 import torch
 from torch.utils.data import random_split, DataLoader, Dataset  # type: ignore
 import logging
@@ -25,9 +24,6 @@ logging.basicConfig(
     filemode="w",
     format="%(asctime)s [%(levelname)s] %(message)s ",
 )
-
-gateway = JavaGateway() 
-luceneServer = gateway.entry_point
 
 BATCH_SIZE = 128
 
@@ -46,8 +42,8 @@ del queries_dev, queries_train, queries_test
 # convert this into a dict
 queries = dict(zip(queries['QUERY_ID'], queries['QUERY']))
 
-postings, doc_freq, doc_ids = indexer.load_index_in_memory('../../nfcorpus/raw/')
-input_size = len(indexer.getTFIDFVector('deep', postings, doc_freq, doc_ids))
+postings, doc_freq, doc_ids, query_term_id_mapping = indexer.load_index_in_memory('../../nfcorpus/raw/')
+input_size = len(indexer.getTermVector('deep', postings, doc_freq, doc_ids, query_term_id_mapping))
 # Get the postings and term_freq
 
 class LTRDataset(Dataset):
@@ -65,11 +61,7 @@ class LTRDataset(Dataset):
             
             # Get the features for the query-document pair
             self.dataset.append({
-                # "query_id": query_id,
-                # "query": queries[query_id],
-                # "doc_id": doc_id,
-                # "relevance": relevance,
-                "vector":  torch.tensor(indexer.getTFIDFVector(queries[query_id], postings, doc_freq, doc_ids))
+                "vector":  torch.tensor(indexer.getTermVector(queries[query_id], postings, doc_freq, doc_ids, query_term_id_mapping), dtype=torch.float32) + torch.tensor(indexer.getDocumentVector(doc_id, postings, doc_freq, doc_ids, query_term_id_mapping), dtype=torch.float32)
             })
             # one hot encode the relevance
             self.outputs.append(relevance - 1)

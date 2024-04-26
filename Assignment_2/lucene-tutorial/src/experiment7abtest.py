@@ -17,8 +17,8 @@ del queries_dev, queries_train, queries_test
 # convert this into a dict
 queries = dict(zip(queries['QUERY_ID'], queries['QUERY']))
 
-postings, doc_freq, doc_ids = indexer.load_index_in_memory('../../nfcorpus/raw/')
-input_size = len(indexer.getTFIDFVector('deep', postings, doc_freq, doc_ids))
+postings, doc_freq, doc_ids, query_term_id_mapping = indexer.load_index_in_memory('../../nfcorpus/raw/')
+input_size = len(indexer.getTermVector('deep', postings, doc_freq, doc_ids, query_term_id_mapping))
 
 class NeuralNet(torch.nn.Module):
     def __init__(self, n_features, output_size):
@@ -42,14 +42,14 @@ model = NeuralNet(n_features=input_size, output_size=3)
 criterion = torch.nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
 
-model.load_state_dict(torch.load('./ltr_models/7b.pth'))
+model.load_state_dict(torch.load('./ltr_models/7a.pth'))
 
 
 # print into this format query-id Q0 document-id rank score STANDARD
-for i in (range(0, 1000)):
+for i in (range(0, 6000)):
     query_id = merged_qrel.iloc[i]['QUERY_ID']
     doc_id = merged_qrel.iloc[i]['DOC_ID']
     relevance = merged_qrel.iloc[i]['RELEVANCE']
     
-    score = model(torch.tensor(indexer.getTFIDFVector(queries[query_id], postings, doc_freq, doc_ids), dtype=torch.float32))
+    score = model(torch.tensor(indexer.getTermVector(queries[query_id], postings, doc_freq, doc_ids, query_term_id_mapping), dtype=torch.float32 + torch.tensor(indexer.getDocumentVector(doc_id, postings, doc_freq, doc_ids, query_term_id_mapping), dtype=torch.float32)))
     print(f"{query_id} Q0 {doc_id} {100} {torch.argmax(score, -1)} STANDARD")
