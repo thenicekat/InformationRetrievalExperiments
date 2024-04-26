@@ -239,7 +239,7 @@ def test(model, loader):
 
     return testing_loss, testing_acc, testing_ndcg
 
-for i in range(100):
+for i in range(10):
     training_loss, training_acc = train(model, train_loader)
     validation_loss, validation_acc = validate(model, val_loader)
     testing_loss, testing_acc, testing_ndcg = test(model, test_loader)
@@ -247,3 +247,14 @@ for i in range(100):
     logging.info(f"Epoch: {i} | Validation Loss: {validation_loss} | Validation Accuracy: {validation_acc}")
     logging.info(f"Epoch: {i} | Testing Loss: {testing_loss} | Testing Accuracy: {testing_acc} | Testing NDCG: {testing_ndcg}")
     logging.info("")
+    # save the model 
+    torch.save(model.state_dict(), f"./ltr_models/7b.pth")
+    
+# print into this format query-id Q0 document-id rank score STANDARD
+for i in tqdm(range(0, 30)):
+    query_id = merged_qrel.iloc[i]['QUERY_ID']
+    doc_id = merged_qrel.iloc[i]['DOC_ID']
+    relevance = merged_qrel.iloc[i]['RELEVANCE']
+    
+    score = model(torch.tensor(indexer.getTFIDFVector(queries[query_id], postings, doc_freq, doc_ids)))
+    print(f"{query_id} Q0 {doc_id} {100} {score} STANDARD")
