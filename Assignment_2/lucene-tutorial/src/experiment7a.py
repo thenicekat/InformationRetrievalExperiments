@@ -225,7 +225,7 @@ for i in range(10):
     
 # print into this format query-id Q0 document-id rank score STANDARD
 trec_values = []
-for i in tqdm(range(0, len(merged_qrel))):
+for i in tqdm(range(0, 1000)):
     query_id = merged_qrel.iloc[i]['QUERY_ID']
     doc_id = merged_qrel.iloc[i]['DOC_ID']
     relevance = merged_qrel.iloc[i]['RELEVANCE']
