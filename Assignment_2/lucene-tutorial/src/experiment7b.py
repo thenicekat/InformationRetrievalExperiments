@@ -96,9 +96,9 @@ class LTRDataset(Dataset):
                     
                     # Get the output
                     if relevance1 > relevance2:
-                        self.outputs.append(2)
+                        self.outputs.append(1)
                     else:
-                        self.outputs.append(1)           
+                        self.outputs.append(0)           
     
 
     def __len__(self):
@@ -146,7 +146,7 @@ class NeuralNet(torch.nn.Module):
         # logging.info(f"The output vector is: \n{x}")
         return x
 
-model = NeuralNet(n_features=input_size, output_size=3)
+model = NeuralNet(n_features=input_size, output_size=2)
 criterion = torch.nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
 
@@ -249,16 +249,3 @@ for i in range(10):
     logging.info("")
     # save the model 
     torch.save(model.state_dict(), f"./ltr_models/7b.pth")
-
-# print into this format query-id Q0 document-id rank score STANDARD
-trec_values = []
-for i in tqdm(range(0, 1000)):
-    query_id = merged_qrel.iloc[i]['QUERY_ID']
-    doc_id = merged_qrel.iloc[i]['DOC_ID']
-    relevance = merged_qrel.iloc[i]['RELEVANCE']
-    
-    score = model(torch.tensor(indexer.getTFIDFVector(queries[query_id], postings, doc_freq, doc_ids), dtype=torch.float32))
-    trec_values.append(f"{query_id} Q0 {doc_id} {100} {torch.argmax(score, -1)} STANDARD")
-
-# Write the trec values to a csv
-pd.DataFrame(trec_values).to_csv(f"./ltr_trec/7b.csv", index=False, header=False)
