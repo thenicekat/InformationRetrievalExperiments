@@ -6,7 +6,7 @@ from datetime import datetime
 import os
 import pandas as pd
 import logging
-import sklearn
+import sklearn.metrics
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -25,7 +25,7 @@ logging.basicConfig(
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-SKIPGRAM_MODEL_LEAST_LOSS_SAVE_NAME = './ltr_logs/skipgram.pth'
+SKIPGRAM_MODEL_LEAST_LOSS_SAVE_NAME = './ltr_models/skipgram.pth'
 BATCH_SIZE = 128
 
 # Read the merged qrel file and delete the column named 'ZERO'
@@ -44,7 +44,6 @@ del queries_dev, queries_train, queries_test
 queries = dict(zip(queries['QUERY_ID'], queries['QUERY']))
 
 postings, doc_freq, doc_ids, query_term_id_mapping = indexer.load_index_in_memory('../../nfcorpus/raw/')
-input_size = len(indexer.getTermVector('deep', postings, doc_freq, doc_ids, query_term_id_mapping))
 
 word_pairs = []
 for x in queries:
@@ -71,7 +70,7 @@ class CustomDataset(Dataset):
 
 
 customDataset = CustomDataset()
-logging.info("Custom Dataset created")
+logging.info(f"Custom Dataset created with length: {len(customDataset)}")
 logging.info(f"RAM Used (GB): {psutil.virtual_memory()[3] / 1000000000}")
 
 # Custom Dataloader
@@ -154,6 +153,8 @@ for epoch in range(0, 5):
         previous_least_loss = loss
         torch.save(model.state_dict(), SKIPGRAM_MODEL_LEAST_LOSS_SAVE_NAME)
 
+input_size = len(model.prediction(torch.tensor([query_term_id_mapping['deep']], dtype=torch.long))[0])
+logging.info(f"Input Vector Example for Neural Network: {input_size}")
 
 class LTRDataset(Dataset):
     def __init__(self):
@@ -167,21 +168,22 @@ class LTRDataset(Dataset):
             query_id = merged_qrel.iloc[i]['QUERY_ID']
             doc_id = merged_qrel.iloc[i]['DOC_ID']
             relevance = merged_qrel.iloc[i]['RELEVANCE']
-            query = queries[query_id]
-            
-            # split query into parts
-            query = query.split(' ')
-            vector = torch.zeros(128)
-            for x in query:
-                if x in query_term_id_mapping:
-                    vector += model.prediction(torch.tensor([query_term_id_mapping[x]], dtype=torch.long))
-            
-            # Get the features for the query-document pair
-            self.dataset.append({
-                "vector":  vector
-            })
-            # one hot encode the relevance
-            self.outputs.append(relevance - 1)
+            if query_id in queries:
+                query = queries[query_id]
+                
+                # split query into parts
+                query = query.split(' ')
+                vector = torch.zeros((1, 128))
+                for x in query:
+                    if x in query_term_id_mapping:
+                        vector += model.prediction(torch.tensor([query_term_id_mapping[x]], dtype=torch.long))
+                
+                # Get the features for the query-document pair
+                self.dataset.append({
+                    "vector":  vector[0]
+                })
+                # one hot encode the relevance
+                self.outputs.append(relevance - 1)
     
     def __len__(self):
         return len(self.dataset)

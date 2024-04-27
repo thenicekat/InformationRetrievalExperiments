@@ -1,0 +1,58 @@
+27-Apr-24 19:27:05 [INFO] Custom Dataset created with length: 6119 
+27-Apr-24 19:27:05 [INFO] RAM Used (GB): 4.748627968 
+27-Apr-24 19:27:05 [INFO] Custom Dataloader created 
+27-Apr-24 19:27:05 [INFO] RAM Used (GB): 4.748627968 
+27-Apr-24 19:27:05 [INFO] SkipgramModel(
+  (embedding): Embedding(5180, 128)
+  (linear): Linear(in_features=128, out_features=384, bias=True)
+  (linear2): Linear(in_features=384, out_features=5180, bias=True)
+) 
+27-Apr-24 19:27:05 [INFO] Loss function and optimizer created 
+27-Apr-24 19:27:05 [INFO] Model loaded from disk
+
+ 
+27-Apr-24 19:27:06 [INFO] [Epoch: 0] Starting the train 
+27-Apr-24 19:27:06 [INFO] [Epoch: 0] Loss: 0.008409174230095217 
+27-Apr-24 19:27:06 [INFO] [Epoch: 1] Starting the train 
+27-Apr-24 19:27:07 [INFO] [Epoch: 1] Loss: 0.00840873877233414 
+27-Apr-24 19:27:07 [INFO] [Epoch: 2] Starting the train 
+27-Apr-24 19:27:07 [INFO] [Epoch: 2] Loss: 0.008408323575671464 
+27-Apr-24 19:27:07 [INFO] [Epoch: 3] Starting the train 
+27-Apr-24 19:27:08 [INFO] [Epoch: 3] Loss: 0.0084079590317548 
+27-Apr-24 19:27:08 [INFO] [Epoch: 4] Starting the train 
+27-Apr-24 19:27:08 [INFO] [Epoch: 4] Loss: 0.008407534483815938 
+27-Apr-24 19:27:08 [INFO] Input Vector Example for Neural Network: 128 
+27-Apr-24 19:27:08 [INFO] Getting features for each query-document pair 
+27-Apr-24 19:27:41 [INFO] Dataset size: 154475 
+27-Apr-24 19:27:41 [INFO] Training Size: 92685 
+27-Apr-24 19:27:41 [INFO] Validation Size: 30895 
+27-Apr-24 19:27:41 [INFO] Testing Size: 30895 
+27-Apr-24 19:27:41 [INFO]  
+27-Apr-24 19:27:45 [INFO] Epoch: 0 | Training Loss: 0.006188409344023432 | Training Accuracy: 0.7604035172897449 
+27-Apr-24 19:27:45 [INFO] Epoch: 0 | Validation Loss: 0.0061931624808421815 | Validation Accuracy: 0.7608350865835896 
+27-Apr-24 19:27:45 [INFO] Epoch: 0 | Testing Loss: 0.006196772577616366 | Testing Accuracy: 0.7603172034309759 | Testing NDCG: 0.8745582226566818 
+27-Apr-24 19:27:45 [INFO]  
+27-Apr-24 19:27:51 [INFO] Epoch: 1 | Training Loss: 0.0061819442526103285 | Training Accuracy: 0.7611263958569348 
+27-Apr-24 19:27:51 [INFO] Epoch: 1 | Validation Loss: 0.006191419283729056 | Validation Accuracy: 0.7608350865835896 
+27-Apr-24 19:27:51 [INFO] Epoch: 1 | Testing Loss: 0.006195465213061344 | Testing Accuracy: 0.7603172034309759 | Testing NDCG: 0.8738361685530395 
+27-Apr-24 19:27:51 [INFO]  
+27-Apr-24 19:27:56 [INFO] Epoch: 2 | Training Loss: 0.0061819443008419555 | Training Accuracy: 0.7611263958569348 
+27-Apr-24 19:27:56 [INFO] Epoch: 2 | Validation Loss: 0.006192726692657175 | Validation Accuracy: 0.7608350865835896 
+27-Apr-24 19:27:56 [INFO] Epoch: 2 | Testing Loss: 0.0061980801003711245 | Testing Accuracy: 0.7603172034309759 | Testing NDCG: 0.8745666848068797 
+27-Apr-24 19:27:56 [INFO]  
+27-Apr-24 19:28:02 [INFO] Epoch: 3 | Training Loss: 0.006181198673327519 | Training Accuracy: 0.7611263958569348 
+27-Apr-24 19:28:02 [INFO] Epoch: 3 | Validation Loss: 0.006193598340409997 | Validation Accuracy: 0.7608350865835896 
+27-Apr-24 19:28:02 [INFO] Epoch: 3 | Testing Loss: 0.006197208512425519 | Testing Accuracy: 0.7603172034309759 | Testing NDCG: 0.8744258384327461 
+27-Apr-24 19:28:02 [INFO]  
+27-Apr-24 19:28:08 [INFO] Epoch: 4 | Training Loss: 0.00618045303552367 | Training Accuracy: 0.7611263958569348 
+27-Apr-24 19:28:08 [INFO] Epoch: 4 | Validation Loss: 0.006191855176094377 | Validation Accuracy: 0.7608350865835896 
+27-Apr-24 19:28:08 [INFO] Epoch: 4 | Testing Loss: 0.006197644292893466 | Testing Accuracy: 0.7603172034309759 | Testing NDCG: 0.8731281188136774 
+27-Apr-24 19:28:08 [INFO]  
+27-Apr-24 19:28:14 [INFO] Epoch: 5 | Training Loss: 0.006181198670755166 | Training Accuracy: 0.7611263958569348 
+27-Apr-24 19:28:14 [INFO] Epoch: 5 | Validation Loss: 0.006191419304950972 | Validation Accuracy: 0.7608350865835896 
+27-Apr-24 19:28:14 [INFO] Epoch: 5 | Testing Loss: 0.006195901068770629 | Testing Accuracy: 0.7603172034309759 | Testing NDCG: 0.8738667840541902 
+27-Apr-24 19:28:14 [INFO]  
+27-Apr-24 19:28:20 [INFO] Epoch: 6 | Training Loss: 0.0061841812689160175 | Training Accuracy: 0.7611263958569348 
+27-Apr-24 19:28:20 [INFO] Epoch: 6 | Validation Loss: 0.006193162505922628 | Validation Accuracy: 0.7608350865835896 
+27-Apr-24 19:28:20 [INFO] Epoch: 6 | Testing Loss: 0.006198951676741139 | Testing Accuracy: 0.7603172034309759 | Testing NDCG: 0.8738182264152363 
+27-Apr-24 19:28:20 [INFO]  
