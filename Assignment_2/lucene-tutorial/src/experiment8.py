@@ -170,7 +170,7 @@ class LTRDataset(Dataset):
             
             # Get the features for the query-document pair
             self.dataset.append({
-                "vector":  torch.tensor(indexer.getTermVector(queries[query_id], postings, doc_freq, doc_ids, query_term_id_mapping), dtype=torch.float32) + torch.tensor(indexer.getDocumentVector(doc_id, postings, doc_freq, doc_ids, query_term_id_mapping), dtype=torch.float32)
+                "vector":  model.prediction(torch.tensor([query_term_id_mapping[queries[query_id]]], dtype=torch.long))
             })
             # one hot encode the relevance
             self.outputs.append(relevance - 1)
@@ -220,9 +220,9 @@ class NeuralNet(torch.nn.Module):
         # logging.info(f"The output vector is: \n{x}")
         return x
 
-model = NeuralNet(n_features=input_size, output_size=3)
+neuralNet = NeuralNet(n_features=input_size, output_size=3)
 criterion = torch.nn.CrossEntropyLoss()
-optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
+optimizer = torch.optim.Adam(neuralNet.parameters(), lr=0.01)
 
 # Train function
 def train(model, train_loader):
@@ -314,12 +314,12 @@ def test(model, loader):
     return testing_loss, testing_acc, testing_ndcg
 
 for i in range(10):
-    training_loss, training_acc = train(model, train_loader)
-    validation_loss, validation_acc = validate(model, val_loader)
-    testing_loss, testing_acc, testing_ndcg = test(model, test_loader)
+    training_loss, training_acc = train(neuralNet, train_loader)
+    validation_loss, validation_acc = validate(neuralNet, val_loader)
+    testing_loss, testing_acc, testing_ndcg = test(neuralNet, test_loader)
     logging.info(f"Epoch: {i} | Training Loss: {training_loss} | Training Accuracy: {training_acc}")
     logging.info(f"Epoch: {i} | Validation Loss: {validation_loss} | Validation Accuracy: {validation_acc}")
     logging.info(f"Epoch: {i} | Testing Loss: {testing_loss} | Testing Accuracy: {testing_acc} | Testing NDCG: {testing_ndcg}")
     logging.info("")
     # save the model
-    torch.save(model.state_dict(), f"./ltr_models/8.pth")
+    torch.save(neuralNet.state_dict(), f"./ltr_models/8.pth")
