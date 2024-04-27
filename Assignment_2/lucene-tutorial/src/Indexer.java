@@ -68,14 +68,25 @@ public class Indexer {
          String[] parts = line.split("\t");
          int i = 0;
          int ignore[] = {1,8,9,10,11,12};
+         String abs = "";
          
          for (String part : parts) {
-            if(!(i==1 || i>=8)){
+            if(i==0 || i==2){
                Field field = new Field(stringArray[i], part, fieldType);
                document.add(field);
             }
+            else if(i==1 || i>=8){
+               
+            }
+            else{
+               abs += part;
+               abs += " ";
+            }
             i++;
          }
+         Field field = new Field("abstract", abs, fieldType);
+         document.add(field);
+
       } 
       else {
          System.out.println("File name does not match.");

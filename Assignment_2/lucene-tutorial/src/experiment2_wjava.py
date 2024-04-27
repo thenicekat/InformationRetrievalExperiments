@@ -12,28 +12,13 @@ import time
 gateway = JavaGateway() 
 java_object = gateway.entry_point
 
-# Function to tokenize a query string into terms
-def tokenize_query(query):
-    return query.lower().split()  # Split query string into lowercase terms
-
-
-# Function to calculate query term frequencies (TF)
-def calculate_query_tf(tokens):
-    query_tf = {}
-    for term in tokens:
-        if term in query_tf:
-            query_tf[term] += 1
-        else:
-            query_tf[term] = 1
-    return query_tf
-
 
 # Function to calculate nnn (binary representation) vectors for documents and query
-def calculate_nnn_vectors(tokens, field, postings):
-    query_terms = set(tokens.split())
-    document_vectors = []
+def calculate_nnn_vectors(query, field):
+    query_terms = list(set(query.split()))
     vocab_set = java_object.buildVocabulary("Assignment_2/index", field) #vocabulary set
     n = java_object.numDocs("Assignment_2/index") #total no of documents in collection
+    vocab_set = list(vocab_set)[0:10]
     
     doc_vector_matrix = []
     # Iterate over each term in the query
@@ -46,7 +31,7 @@ def calculate_nnn_vectors(tokens, field, postings):
 
     query_vector = [0] * n
     for term in vocab_set:
-        tfq = tokens.count(term)
+        tfq = query_terms.count(term)
         query_vector.append(tfq)
 
     similarities = []
@@ -156,43 +141,12 @@ def calculate_similarity(query_vector, document_vectors):
     return similarities
 
 
-# Main function to retrieve and rank documents based on cosine similarity with the query
-def retrieve_documents(query, notation="ntc", field="abstract"):
-    # Load index data into memory
-    postings, doc_freq, doc_ids = indexer.load_index_in_memory("../../nfcorpus/raw/")
-    num_documents = doc_ids.__len__()
-
-    tokens = tokenize_query(query)
-
-    if notation == "nnn":
-        similarities = calculate_nnn_vectors(tokens, field, postings)
-    elif notation == "ntn":
-        similarities = calculate_ntn_vectors(
-            tokens, field, postings, num_documents, doc_freq
-        )
-    elif notation == "ntc":
-        similarities = calculate_ntc_vectors(
-            tokens, field, postings, num_documents, doc_freq
-        )
-    else:
-        raise ValueError("Invalid notation type. Choose 'nnn', 'ntn', or 'ntc'.")
-
-    # Rank documents by similarity (descending order)
-    ranked_documents = sorted(similarities, key=lambda x: x[1], reverse=True)
-    return ranked_documents
-
 
 # Example usage
 query_string = "birth weight"  # Input query string
 notation_type = "nnn"  # Choose the notation type: 'nnn', 'ntn', or 'ntc'
-
-# Retrieve and rank documents based on cosine similarity with the query
-ranked_results = retrieve_documents(query_string, notation_type)
-
-# Print ranked documents based on similarity score
-for rank, (doc_id, similarity) in enumerate(ranked_results, 1):
-    print(f"Rank {rank}: Document {doc_id}, Similarity Score: {similarity:.4f}")
-
+sim = calculate_nnn_vectors(query_string, "title")
+print(sim)
 
 
 # old code for vector model
