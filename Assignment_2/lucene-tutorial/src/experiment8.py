@@ -52,7 +52,8 @@ for x in queries:
     # add them to the word pairs
     for i in range(0, len(queries_split)):
         for j in range(i + 1, len(queries_split)):
-            word_pairs.append((queries_split[i], queries_split[j]))
+            if queries_split[i] in query_term_id_mapping and queries_split[j] in query_term_id_mapping:
+                word_pairs.append((queries_split[i], queries_split[j]))
 
 # Create a skipgram
 class CustomDataset(Dataset):
