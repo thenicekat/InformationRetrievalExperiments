@@ -101,27 +101,38 @@ for query_id, feature_lists in tqdm(doc_lists_by_query.items()):
         tensor_slices["query_id"].append(query_id)
         
         random_indices = np.random.choice(len(feature_lists["document_id"]), num_docs_per_list, replace=False)
-        tensor_slices["document_id"].append(tf.stack(np.array(feature_lists["document_id"])[random_indices]))
+        x = tf.stack(np.array(feature_lists["document_id"])[random_indices]) 
+        tensor_slices["document_id"].append(x)
         tensor_slices["relevance"].append(tf.stack(np.array(feature_lists["relevance"], dtype=np.float32)[random_indices]))
         
-        logging.info(f"Iteration {_}: Reduced to {len(tensor_slices['document_id'])} from {len(feature_lists['document_id'])}")
+        logging.info(f"Iteration {_}: Reduced to {len(x)} from {len(feature_lists['document_id'])}")
 
 logging.info("Number of slices: %d" % len(tensor_slices["query_id"]))
 logging.info("Number of unique documents: %d" % len(document_id_vocab))
 
 buffer_size = len(relevance_rank)
-train = tf.data.Dataset.from_tensor_slices(tensor_slices)
+dataset = tf.data.Dataset.from_tensor_slices(tensor_slices)
+
+# split into train and test
+train_size = int(0.8 * len(dataset))
+train = dataset.take(train_size)
+test = dataset.skip(train_size)
 
 class LTRModel(tfrs.Model):
   def __init__(self, loss):
     super().__init__()
-    embedding_dimension = 32
+    embedding_dimension = 256
 
     # Query embeddings
+    # self.query_embeddings = tf.keras.Sequential([
+    #   tf.keras.layers.StringLookup(
+    #     vocabulary=unique_query_ids),
+    #   tf.keras.layers.Embedding(len(unique_query_ids) + 2, embedding_dimension)
+    # ])
+    # convert query sentence to a vector instead of just lookup table
     self.query_embeddings = tf.keras.Sequential([
-      tf.keras.layers.StringLookup(
-        vocabulary=unique_query_ids),
-      tf.keras.layers.Embedding(len(unique_query_ids) + 2, embedding_dimension)
+      tf.keras.layers.TextVectorization(max_tokens=20000),
+      tf.keras.layers.Embedding(20002, embedding_dimension)
     ])
 
     # Document embeddings
@@ -168,11 +179,15 @@ class LTRModel(tfrs.Model):
         predictions=tf.squeeze(scores, axis=-1),
     )
 
-cached_train = train.shuffle(10000).batch(8192).cache()
+cached_train = train.shuffle(1000).batch(8192).cache()
 
 listwise_model = LTRModel(tfr.keras.losses.ListMLELoss())
 listwise_model.compile(optimizer=tf.keras.optimizers.Adagrad(0.1))
 listwise_model.fit(cached_train, epochs=5, verbose=True)
 
+# Evaluate on test set
+cached_test = test.batch(8192).cache()
+print(listwise_model.evaluate(cached_test))
+
 # save the model
-listwise_model.save_weights('./ltr_models/7c.pth')
+listwise_model.save_weights('./ltr_models/7c')
