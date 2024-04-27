@@ -99,7 +99,7 @@ class SkipgramModel(nn.Module):
         embeds = self.embedding(inputs)
         return embeds
 
-model = SkipgramModel(len(query_term_id_mapping), 512)
+model = SkipgramModel(len(query_term_id_mapping), 128)
 model.to(device)
 logging.info(model)
 
@@ -167,10 +167,17 @@ class LTRDataset(Dataset):
             query_id = merged_qrel.iloc[i]['QUERY_ID']
             doc_id = merged_qrel.iloc[i]['DOC_ID']
             relevance = merged_qrel.iloc[i]['RELEVANCE']
+            query = queries[query_id]
+            
+            # split query into parts
+            query = query.split(' ')
+            vector = torch.zeros(128)
+            for x in query:
+                vector += model.prediction(torch.tensor([query_term_id_mapping[x]], dtype=torch.long))
             
             # Get the features for the query-document pair
             self.dataset.append({
-                "vector":  model.prediction(torch.tensor([query_term_id_mapping[queries[query_id]]], dtype=torch.long))
+                "vector":  vector
             })
             # one hot encode the relevance
             self.outputs.append(relevance - 1)
