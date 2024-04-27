@@ -98,7 +98,7 @@ class SkipgramModel(nn.Module):
         embeds = self.embedding(inputs)
         return embeds
 
-model = SkipgramModel(len(query_term_id_mapping), 128)
+model = SkipgramModel(len(query_term_id_mapping), 64)
 model.to(device)
 logging.info(model)
 
@@ -143,7 +143,7 @@ if os.path.exists(SKIPGRAM_MODEL_LEAST_LOSS_SAVE_NAME):
     # Save the least loss model
     previous_least_loss = skipgram_train()
 
-for epoch in range(0, 5):
+for epoch in range(0, 30):
     logging.info(f"[Epoch: {epoch}] Starting the train")
     loss = skipgram_train()
     logging.info(f"[Epoch: {epoch}] Loss: {loss}")
@@ -173,7 +173,7 @@ class LTRDataset(Dataset):
                 
                 # split query into parts
                 query = query.split(' ')
-                vector = torch.zeros((1, 128))
+                vector = torch.zeros((1, 64))
                 for x in query:
                     if x in query_term_id_mapping:
                         vector += model.prediction(torch.tensor([query_term_id_mapping[x]], dtype=torch.long))
