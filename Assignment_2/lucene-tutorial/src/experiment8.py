@@ -173,7 +173,8 @@ class LTRDataset(Dataset):
             query = query.split(' ')
             vector = torch.zeros(128)
             for x in query:
-                vector += model.prediction(torch.tensor([query_term_id_mapping[x]], dtype=torch.long))
+                if x in query_term_id_mapping:
+                    vector += model.prediction(torch.tensor([query_term_id_mapping[x]], dtype=torch.long))
             
             # Get the features for the query-document pair
             self.dataset.append({
